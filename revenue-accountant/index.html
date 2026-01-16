@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revenue Accountant - Carbon Lab</title>
+    <title>Contract Wizard - Carbon Lab</title>
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -26,10 +26,10 @@
                 <span>←</span> Back to All Demos
             </a>
             <div class="flex gap-6 text-sm">
-                <a href="/revenue-accountant/" class="text-blue-400 font-semibold">Revenue</a>
-                <a href="/fraud-detection/" class="text-white hover:text-blue-400 transition">Fraud Detection</a>
-                <a href="/ap-automation/" class="text-white hover:text-blue-400 transition">AP Automation</a>
-                <a href="/tax-compliance/" class="text-white hover:text-blue-400 transition">Tax Compliance</a>
+                <a href="/revenue-accountant/" class="text-blue-400 font-semibold">Contract Wizard</a>
+                <a href="/fraud-detection/" class="text-white hover:text-blue-400 transition">Fraud Fighter</a>
+                <a href="/ap-automation/" class="text-white hover:text-blue-400 transition">Invoice Magic</a>
+                <a href="/tax-compliance/" class="text-white hover:text-blue-400 transition">Tax Navigator</a>
             </div>
         </div>
     </nav>
@@ -413,8 +413,9 @@ Respond ONLY with valid JSON in this exact format:
                             <div className="flex items-center justify-between">
                                 <CarbonLabLogo size="large" />
                                 <div className="text-right">
-                                    <div className="text-2xl font-bold text-slate-900">AI Revenue Accountant</div>
-                                    <div className="text-slate-600 mt-1">Automated ASC 606 Contract Analysis</div>
+                                    <div className="text-sm text-blue-600 font-semibold mb-1">YOUR AI SIDE-KICK FOR</div>
+                                    <div className="text-2xl font-bold text-slate-900">Contract Wizard</div>
+                                    <div className="text-slate-600 mt-1">ASC 606 Revenue Recognition Made Easy</div>
                                 </div>
                             </div>
                         </div>
@@ -425,9 +426,9 @@ Respond ONLY with valid JSON in this exact format:
                         {!analysis && (
                             <div className="bg-white rounded-xl shadow-lg border border-slate-200 p-8">
                                 <div className="max-w-2xl mx-auto">
-                                    <h2 className="text-2xl font-bold text-slate-900 mb-2">Upload Contract</h2>
+                                    <h2 className="text-2xl font-bold text-slate-900 mb-2">Let Your Side-Kick Review This Contract</h2>
                                     <p className="text-slate-600 mb-6">
-                                        Upload a customer contract (PDF) to automatically extract revenue accounting terms and generate journal entries.
+                                        Upload any customer contract (PDF) and watch your AI Side-Kick extract revenue terms, identify obligations, and generate journal entries automatically.
                                     </p>
 
                                     <div className="border-2 border-dashed border-slate-300 rounded-lg p-12 text-center hover:border-blue-400 transition-colors">
@@ -739,7 +740,7 @@ Respond ONLY with valid JSON in this exact format:
                         <div className="flex items-center justify-center gap-2 mb-2">
                             <CarbonLabLogo size="small" />
                         </div>
-                        <p className="mt-1">Always review AI-generated entries with a qualified accountant</p>
+                        <p className="mt-1">Your Side-Kick helps, you approve. Always review AI-generated entries with your team.</p>
                     </div>
                 </div>
             );
