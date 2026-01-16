@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection - Carbon Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-red-50 to-slate-100 min-h-screen">
+    
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-3 hover:opacity-80 transition">
+                <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 5 L85 27.5 L85 72.5 L50 95 L15 72.5 L15 27.5 Z" 
+                          fill="#1e293b" stroke="#0ea5e9" stroke-width="3"/>
+                    <circle cx="50" cy="50" r="8" fill="#0ea5e9"/>
+                    <circle cx="50" cy="30" r="4" fill="#60a5fa"/>
+                    <circle cx="67" cy="50" r="4" fill="#60a5fa"/>
+                    <circle cx="50" cy="70" r="4" fill="#60a5fa"/>
+                    <circle cx="33" cy="50" r="4" fill="#60a5fa"/>
+                    <ellipse cx="50" cy="50" rx="20" ry="20" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4"/>
+                    <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" transform="rotate(60 50 50)"/>
+                    <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" transform="rotate(-60 50 50)"/>
+                </svg>
+                <span class="font-semibold text-slate-900">← Back to All Demos</span>
+            </a>
+            <div class="flex gap-6 text-sm">
+                <a href="/revenue-accountant/" class="text-slate-600 hover:text-blue-600 transition">Revenue</a>
+                <a href="/fraud-detection/" class="text-red-600 font-semibold">Fraud Detection</a>
+                <a href="/ap-automation/" class="text-slate-600 hover:text-blue-600 transition">AP Automation</a>
+                <a href="/tax-compliance/" class="text-slate-600 hover:text-blue-600 transition">Tax Compliance</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="max-w-5xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <div class="text-8xl mb-6">🔍</div>
+            <h1 class="text-5xl font-bold text-slate-900 mb-4">
+                Fraud Detection AI
+            </h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+                Real-time transaction monitoring and anomaly detection to protect your organization from financial fraud
+            </p>
+        </div>
+
+        <!-- Coming Soon Card -->
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-12 text-center">
+            <div class="inline-block px-6 py-3 bg-red-100 border border-red-300 rounded-full text-red-700 font-semibold mb-6">
+                🚧 Coming Soon
+            </div>
+            <h2 class="text-3xl font-bold text-slate-900 mb-6">
+                This Demo is Under Development
+            </h2>
+            <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+                We're building an intelligent fraud detection system that will analyze transactions, identify suspicious patterns, and flag potential fraud in real-time.
+            </p>
+
+            <!-- Feature Preview -->
+            <div class="grid md:grid-cols-2 gap-6 text-left max-w-3xl mx-auto mb-12">
+                <div class="p-6 bg-red-50 rounded-xl border border-red-200">
+                    <div class="text-3xl mb-3">⚡</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Real-Time Analysis</h3>
+                    <p class="text-sm text-slate-700">Monitor transactions as they happen and flag suspicious activity instantly</p>
+                </div>
+                <div class="p-6 bg-red-50 rounded-xl border border-red-200">
+                    <div class="text-3xl mb-3">🎯</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Pattern Recognition</h3>
+                    <p class="text-sm text-slate-700">Identify complex fraud schemes that traditional rules-based systems miss</p>
+                </div>
+                <div class="p-6 bg-red-50 rounded-xl border border-red-200">
+                    <div class="text-3xl mb-3">📊</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Risk Scoring</h3>
+                    <p class="text-sm text-slate-700">Assign risk scores to transactions and entities based on behavior patterns</p>
+                </div>
+                <div class="p-6 bg-red-50 rounded-xl border border-red-200">
+                    <div class="text-3xl mb-3">🔔</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Smart Alerts</h3>
+                    <p class="text-sm text-slate-700">Get prioritized alerts with context and recommended actions</p>
+                </div>
+            </div>
+
+            <!-- Notify Me Form -->
+            <div class="max-w-md mx-auto">
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Get Notified When It Launches</h3>
+                <form class="flex gap-3">
+                    <input 
+                        type="email" 
+                        placeholder="Enter your email" 
+                        class="flex-1 px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                        required
+                    />
+                    <button 
+                        type="submit"
+                        class="px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition"
+                    >
+                        Notify Me
+                    </button>
+                </form>
+                <p class="text-xs text-slate-500 mt-3">We'll email you when the fraud detection demo is ready</p>
+            </div>
+
+            <!-- Try Other Demos -->
+            <div class="mt-12 pt-12 border-t border-slate-200">
+                <h3 class="text-lg font-semibold text-slate-900 mb-4">Try Our Other Demos</h3>
+                <div class="flex justify-center gap-4">
+                    <a href="/revenue-accountant/" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+                        📊 Revenue Accountant
+                    </a>
+                    <a href="/" class="px-6 py-3 bg-slate-600 text-white font-semibold rounded-lg hover:bg-slate-700 transition">
+                        View All Demos
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- What to Expect -->
+        <div class="mt-12 bg-white rounded-xl shadow-lg border border-slate-200 p-8">
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">What to Expect in This Demo</h3>
+            <div class="space-y-4 text-slate-700">
+                <div class="flex gap-4">
+                    <div class="text-2xl">1️⃣</div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900 mb-1">Upload Transaction Data</h4>
+                        <p class="text-sm">Import CSV files or connect to your accounting system to analyze recent transactions</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="text-2xl">2️⃣</div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900 mb-1">AI Analysis</h4>
+                        <p class="text-sm">Our AI examines patterns, identifies anomalies, and flags suspicious transactions</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="text-2xl">3️⃣</div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900 mb-1">Review Findings</h4>
+                        <p class="text-sm">See detailed explanations of flagged items with risk scores and recommended actions</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="text-2xl">4️⃣</div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900 mb-1">Take Action</h4>
+                        <p class="text-sm">Export findings, generate reports, or escalate to investigation teams</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-20 pb-8 text-center text-sm text-slate-500">
+        <div class="flex items-center justify-center gap-2 mb-2">
+            <svg width="24" height="24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 5 L85 27.5 L85 72.5 L50 95 L15 72.5 L15 27.5 Z" 
+                      fill="#1e293b" stroke="#0ea5e9" stroke-width="3"/>
+                <circle cx="50" cy="50" r="8" fill="#0ea5e9"/>
+                <circle cx="50" cy="30" r="4" fill="#60a5fa"/>
+                <circle cx="67" cy="50" r="4" fill="#60a5fa"/>
+                <circle cx="50" cy="70" r="4" fill="#60a5fa"/>
+                <circle cx="33" cy="50" r="4" fill="#60a5fa"/>
+                <ellipse cx="50" cy="50" rx="20" ry="20" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4"/>
+                <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" transform="rotate(60 50 50)"/>
+                <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" transform="rotate(-60 50 50)"/>
+            </svg>
+            <span class="font-semibold">Carbon Lab</span>
+        </div>
+        <p>Your Finance Team's AI Side-Kick</p>
+        <p class="mt-2">© 2025 Carbon Lab. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
