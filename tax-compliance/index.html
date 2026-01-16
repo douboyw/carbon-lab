@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Compliance - Carbon Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-purple-50 to-slate-100 min-h-screen">
+    
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-3 hover:opacity-80 transition">
+                <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 5 L85 27.5 L85 72.5 L50 95 L15 72.5 L15 27.5 Z" 
+                          fill="#1e293b" stroke="#0ea5e9" stroke-width="3"/>
+                    <circle cx="50" cy="50" r="8" fill="#0ea5e9"/>
+                    <circle cx="50" cy="30" r="4" fill="#60a5fa"/>
+                    <circle cx="67" cy="50" r="4" fill="#60a5fa"/>
+                    <circle cx="50" cy="70" r="4" fill="#60a5fa"/>
+                    <circle cx="33" cy="50" r="4" fill="#60a5fa"/>
+                    <ellipse cx="50" cy="50" rx="20" ry="20" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4"/>
+                    <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" transform="rotate(60 50 50)"/>
+                    <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" transform="rotate(-60 50 50)"/>
+                </svg>
+                <span class="font-semibold text-slate-900">← Back to All Demos</span>
+            </a>
+            <div class="flex gap-6 text-sm">
+                <a href="/revenue-accountant/" class="text-slate-600 hover:text-blue-600 transition">Revenue</a>
+                <a href="/fraud-detection/" class="text-slate-600 hover:text-blue-600 transition">Fraud Detection</a>
+                <a href="/ap-automation/" class="text-slate-600 hover:text-blue-600 transition">AP Automation</a>
+                <a href="/tax-compliance/" class="text-purple-600 font-semibold">Tax Compliance</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="max-w-5xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <div class="text-8xl mb-6">📋</div>
+            <h1 class="text-5xl font-bold text-slate-900 mb-4">
+                Tax Compliance AI
+            </h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+                Automated tax provision calculations, multi-jurisdiction compliance, and ASC 740 reporting for complex corporate structures
+            </p>
+        </div>
+
+        <!-- Coming Soon Card -->
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-12 text-center">
+            <div class="inline-block px-6 py-3 bg-purple-100 border border-purple-300 rounded-full text-purple-700 font-semibold mb-6">
+                🚧 Coming Soon
+            </div>
+            <h2 class="text-3xl font-bold text-slate-900 mb-6">
+                This Demo is Under Development
+            </h2>
+            <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+                We're building an intelligent tax compliance system that will calculate provisions, determine jurisdictions, track temporary differences, and generate complete tax reporting packages.
+            </p>
+
+            <!-- Feature Preview -->
+            <div class="grid md:grid-cols-2 gap-6 text-left max-w-3xl mx-auto mb-12">
+                <div class="p-6 bg-purple-50 rounded-xl border border-purple-200">
+                    <div class="text-3xl mb-3">🌎</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Multi-Jurisdiction Support</h3>
+                    <p class="text-sm text-slate-700">Handle federal, state, and international tax calculations across multiple entities</p>
+                </div>
+                <div class="p-6 bg-purple-50 rounded-xl border border-purple-200">
+                    <div class="text-3xl mb-3">📊</div>
+                    <h3 class="font-bold text-slate-900 mb-2">ASC 740 Compliance</h3>
+                    <p class="text-sm text-slate-700">Automated deferred tax calculations, rate reconciliations, and uncertain tax positions</p>
+                </div>
+                <div class="p-6 bg-purple-50 rounded-xl border border-purple-200">
+                    <div class="text-3xl mb-3">🔍</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Provision Analysis</h3>
+                    <p class="text-sm text-slate-700">Track temporary and permanent differences, calculate effective tax rates</p>
+                </div>
+                <div class="p-6 bg-purple-50 rounded-xl border border-purple-200">
+                    <div class="text-3xl mb-3">📝</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Reporting Automation</h3>
+                    <p class="text-sm text-slate-700">Generate disclosure notes, reconciliations, and supporting schedules automatically</p>
+                </div>
+            </div>
+
+            <!-- Notify Me Form -->
+            <div class="max-w-md mx-auto">
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Get Notified When It Launches</h3>
+                <form class="flex gap-3">
+                    <input 
+                        type="email" 
+                        placeholder="Enter your email" 
+                        class="flex-1 px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        required
+                    />
+                    <button 
+                        type="submit"
+                        class="px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition"
+                    >
+                        Notify Me
+                    </button>
+                </form>
+                <p class="text-xs text-slate-500 mt-3">We'll email you when the tax compliance demo is ready</p>
+            </div>
+
+            <!-- Try Other Demos -->
+            <div class="mt-12 pt-12 border-t border-slate-200">
+                <h3 class="text-lg font-semibold text-slate-900 mb-4">Try Our Other Demos</h3>
+                <div class="flex justify-center gap-4">
+                    <a href="/revenue-accountant/" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+                        📊 Revenue Accountant
+                    </a>
+                    <a href="/" class="px-6 py-3 bg-slate-600 text-white font-semibold rounded-lg hover:bg-slate-700 transition">
+                        View All Demos
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- What to Expect -->
+        <div class="mt-12 bg-white rounded-xl shadow-lg border border-slate-200 p-8">
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">What to Expect in This Demo</h3>
+            <div class="space-y-4 text-slate-700">
+                <div class="flex gap-4">
+                    <div class="text-2xl">1️⃣</div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900 mb-1">Upload Trial Balance</h4>
+                        <p class="text-sm">Import your trial balance and tax-specific data to begin the provision calculation</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="text-2xl">2️⃣</div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900 mb-1">Jurisdiction Determination</h4>
+                        <p class="text-sm">AI analyzes entity structure and operations to determine tax filing requirements</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="text-2xl">3️⃣</div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900 mb-1">Provision Calculation</h4>
+                        <p class="text-sm">Automated calculation of current and deferred tax, UTPs, and rate reconciliation</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="text-2xl">4️⃣</div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900 mb-1">Report Generation</h4>
+                        <p class="text-sm">Complete tax reporting package with journal entries, disclosures, and supporting schedules</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Complexity Handled -->
+        <div class="mt-12 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl shadow-lg border border-purple-200 p-8">
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">Complexity We Handle</h3>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="flex items-start gap-3">
+                    <div class="text-green-600 text-xl">✓</div>
+                    <div>
+                        <div class="font-semibold text-slate-900">Multi-Entity Structures</div>
+                        <div class="text-sm text-slate-700">Consolidated and separate company provisions</div>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="text-green-600 text-xl">✓</div>
+                    <div>
+                        <div class="font-semibold text-slate-900">International Operations</div>
+                        <div class="text-sm text-slate-700">GILTI, FDII, Section 250 deductions</div>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="text-green-600 text-xl">✓</div>
+                    <div>
+                        <div class="font-semibold text-slate-900">State & Local</div>
+                        <div class="text-sm text-slate-700">Apportionment, nexus determination, combined groups</div>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="text-green-600 text-xl">✓</div>
+                    <div>
+                        <div class="font-semibold text-slate-900">Valuation Allowances</div>
+                        <div class="text-sm text-slate-700">DTA realizability analysis and documentation</div>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="text-green-600 text-xl">✓</div>
+                    <div>
+                        <div class="font-semibold text-slate-900">Uncertain Tax Positions</div>
+                        <div class="text-sm text-slate-700">FIN 48 measurement and disclosure</div>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="text-green-600 text-xl">✓</div>
+                    <div>
+                        <div class="font-semibold text-slate-900">Rate Changes</div>
+                        <div class="text-sm text-slate-700">Remeasurement of deferred taxes for enacted changes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estimated Impact -->
+        <div class="mt-12 bg-white rounded-xl shadow-lg border border-slate-200 p-8">
+            <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center">Estimated Impact</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">75%</div>
+                    <div class="text-sm text-slate-700">Reduction in Provision Time</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">90%</div>
+                    <div class="text-sm text-slate-700">Fewer Manual Errors</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">100%</div>
+                    <div class="text-sm text-slate-700">Audit Trail Coverage</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-20 pb-8 text-center text-sm text-slate-500">
+        <div class="flex items-center justify-center gap-2 mb-2">
+            <svg width="24" height="24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 5 L85 27.5 L85 72.5 L50 95 L15 72.5 L15 27.5 Z" 
+                      fill="#1e293b" stroke="#0ea5e9" stroke-width="3"/>
+                <circle cx="50" cy="50" r="8" fill="#0ea5e9"/>
+                <circle cx="50" cy="30" r="4" fill="#60a5fa"/>
+                <circle cx="67" cy="50" r="4" fill="#60a5fa"/>
+                <circle cx="50" cy="70" r="4" fill="#60a5fa"/>
+                <circle cx="33" cy="50" r="4" fill="#60a5fa"/>
+                <ellipse cx="50" cy="50" rx="20" ry="20" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4"/>
+                <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" transform="rotate(60 50 50)"/>
+                <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" transform="rotate(-60 50 50)"/>
+            </svg>
+            <span class="font-semibold">Carbon Lab</span>
+        </div>
+        <p>Your Finance Team's AI Side-Kick</p>
+        <p class="mt-2">© 2025 Carbon Lab. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
