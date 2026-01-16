@@ -284,6 +284,238 @@
                     </div>
                 </div>
 
+                <!-- Generated Output -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-white mb-4">Generated Output (After Your Corrections):</h3>
+                    
+                    <!-- Tabs -->
+                    <div class="flex gap-2 mb-4">
+                        <button onclick="showTab2('memo')" id="tab2-memo" class="tab2-btn px-4 py-2 bg-cyan-500 text-white rounded-lg font-semibold transition">
+                            📝 Revenue Memo
+                        </button>
+                        <button onclick="showTab2('journal')" id="tab2-journal" class="tab2-btn px-4 py-2 bg-white/10 text-slate-300 rounded-lg font-semibold transition">
+                            📊 Journal Entries
+                        </button>
+                        <button onclick="showTab2('schedule')" id="tab2-schedule" class="tab2-btn px-4 py-2 bg-white/10 text-slate-300 rounded-lg font-semibold transition">
+                            📅 Rev Rec Schedule
+                        </button>
+                    </div>
+
+                    <!-- Memo Tab -->
+                    <div id="tab2-memo-content" class="tab2-content bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                        <div class="prose prose-invert max-w-none">
+                            <div class="text-sm text-slate-400 mb-4">REVENUE RECOGNITION MEMO</div>
+                            <h4 class="text-lg font-bold text-white mb-3">Enterprise_Deal_MegaCorp.pdf</h4>
+                            
+                            <div class="space-y-4 text-sm text-slate-300">
+                                <div>
+                                    <strong class="text-white">Contract Overview:</strong><br/>
+                                    Total Contract Value: $1,100,000<br/>
+                                    Term: 2 years (Jan 15, 2026 - Jan 14, 2028)<br/>
+                                    Customer: MegaCorp Inc.
+                                </div>
+
+                                <div>
+                                    <strong class="text-white">Performance Obligations Identified:</strong>
+                                    <ol class="list-decimal ml-5 mt-2 space-y-2">
+                                        <li><strong>SaaS Subscription</strong> - $1,000,000 (2-year term)
+                                            <br/><span class="text-slate-400">Recognition: Ratable over 24 months ($41,667/month)</span>
+                                        </li>
+                                        <li><strong>Implementation Services</strong> - $75,000 (distinct obligation per company policy for fees ≥$5K)
+                                            <br/><span class="text-slate-400">Recognition: Percentage of completion (estimated 3 months)</span>
+                                        </li>
+                                        <li><strong>Training Services</strong> - $25,000 (separately priced, distinct)
+                                            <br/><span class="text-slate-400">Recognition: Point in time when training delivered</span>
+                                        </li>
+                                    </ol>
+                                </div>
+
+                                <div>
+                                    <strong class="text-white">ASC 606 Analysis:</strong><br/>
+                                    The contract contains three distinct performance obligations based on the following criteria:
+                                    <ul class="list-disc ml-5 mt-2 space-y-1">
+                                        <li>Each service is separately identifiable and customer can benefit from each independently</li>
+                                        <li>Implementation and Training are not integral to SaaS functionality</li>
+                                        <li>Company policy treats implementation fees ≥$5K as separate obligations</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <strong class="text-white">Revenue Recognition Pattern:</strong><br/>
+                                    <div class="mt-2 bg-slate-800/50 rounded p-3 text-xs font-mono">
+                                        Jan 2026: $41,667 (subscription) + POC% × $75K (implementation)<br/>
+                                        Feb-Dec 2026: $41,667/month (subscription) + remaining implementation<br/>
+                                        Training: Recognized upon delivery (estimated Q2 2026)<br/>
+                                        Jan 2027-Jan 2028: $41,667/month (subscription only)
+                                    </div>
+                                </div>
+
+                                <div class="border-t border-slate-700 pt-4">
+                                    <strong class="text-white">Prepared by:</strong> Side-Kick AI (Contract Wizard)<br/>
+                                    <strong class="text-white">Date:</strong> January 16, 2026<br/>
+                                    <strong class="text-white">Confidence:</strong> 96%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Journal Entries Tab -->
+                    <div id="tab2-journal-content" class="tab2-content hidden bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                        <div class="text-sm text-slate-400 mb-4">INITIAL BOOKING - JANUARY 15, 2026</div>
+                        
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-slate-700">
+                                        <th class="text-left py-2 text-white">Account</th>
+                                        <th class="text-right py-2 text-white">Debit</th>
+                                        <th class="text-right py-2 text-white">Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-300 font-mono text-xs">
+                                    <tr class="border-b border-slate-800">
+                                        <td class="py-2">Accounts Receivable</td>
+                                        <td class="text-right text-cyan-400">$1,100,000.00</td>
+                                        <td class="text-right">—</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-800">
+                                        <td class="py-2 pl-4">Deferred Revenue - Subscription</td>
+                                        <td class="text-right">—</td>
+                                        <td class="text-right text-cyan-400">$1,000,000.00</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-800">
+                                        <td class="py-2 pl-4">Deferred Revenue - Implementation</td>
+                                        <td class="text-right">—</td>
+                                        <td class="text-right text-cyan-400">$75,000.00</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-800">
+                                        <td class="py-2 pl-4">Deferred Revenue - Training</td>
+                                        <td class="text-right">—</td>
+                                        <td class="text-right text-cyan-400">$25,000.00</td>
+                                    </tr>
+                                    <tr class="border-t-2 border-slate-700">
+                                        <td class="py-2 font-bold text-white">TOTAL</td>
+                                        <td class="text-right font-bold text-white">$1,100,000.00</td>
+                                        <td class="text-right font-bold text-white">$1,100,000.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="mt-6 text-sm text-slate-400 mb-4">MONTHLY RECOGNITION - JANUARY 2026</div>
+                        
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-slate-700">
+                                        <th class="text-left py-2 text-white">Account</th>
+                                        <th class="text-right py-2 text-white">Debit</th>
+                                        <th class="text-right py-2 text-white">Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-300 font-mono text-xs">
+                                    <tr class="border-b border-slate-800">
+                                        <td class="py-2">Deferred Revenue - Subscription</td>
+                                        <td class="text-right text-cyan-400">$41,666.67</td>
+                                        <td class="text-right">—</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-800">
+                                        <td class="py-2 pl-4">Revenue - SaaS Subscription</td>
+                                        <td class="text-right">—</td>
+                                        <td class="text-right text-cyan-400">$41,666.67</td>
+                                    </tr>
+                                    <tr class="border-t-2 border-slate-700">
+                                        <td class="py-2 font-bold text-white">TOTAL</td>
+                                        <td class="text-right font-bold text-white">$41,666.67</td>
+                                        <td class="text-right font-bold text-white">$41,666.67</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="mt-4 text-xs text-slate-500">
+                            Note: Implementation revenue recognized monthly based on % completion. Training revenue recognized upon delivery.
+                        </div>
+                    </div>
+
+                    <!-- Schedule Tab -->
+                    <div id="tab2-schedule-content" class="tab2-content hidden bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                        <div class="text-sm text-slate-400 mb-4">24-MONTH REVENUE RECOGNITION SCHEDULE</div>
+                        
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-xs">
+                                <thead>
+                                    <tr class="border-b border-slate-700">
+                                        <th class="text-left py-2 text-white">Month</th>
+                                        <th class="text-right py-2 text-white">Subscription</th>
+                                        <th class="text-right py-2 text-white">Implementation</th>
+                                        <th class="text-right py-2 text-white">Training</th>
+                                        <th class="text-right py-2 text-white">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-300 font-mono">
+                                    <tr class="border-b border-slate-800">
+                                        <td class="py-2">Jan 2026</td>
+                                        <td class="text-right">$41,667</td>
+                                        <td class="text-right">$25,000</td>
+                                        <td class="text-right">—</td>
+                                        <td class="text-right text-cyan-400">$66,667</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-800">
+                                        <td class="py-2">Feb 2026</td>
+                                        <td class="text-right">$41,667</td>
+                                        <td class="text-right">$25,000</td>
+                                        <td class="text-right">—</td>
+                                        <td class="text-right text-cyan-400">$66,667</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-800">
+                                        <td class="py-2">Mar 2026</td>
+                                        <td class="text-right">$41,667</td>
+                                        <td class="text-right">$25,000</td>
+                                        <td class="text-right">—</td>
+                                        <td class="text-right text-cyan-400">$66,667</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-800 bg-green-500/5">
+                                        <td class="py-2">Apr 2026</td>
+                                        <td class="text-right">$41,667</td>
+                                        <td class="text-right">—</td>
+                                        <td class="text-right text-green-400">$25,000</td>
+                                        <td class="text-right text-cyan-400">$66,667</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-800">
+                                        <td class="py-2">May 2026</td>
+                                        <td class="text-right">$41,667</td>
+                                        <td class="text-right">—</td>
+                                        <td class="text-right">—</td>
+                                        <td class="text-right text-cyan-400">$41,667</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-800 opacity-50">
+                                        <td class="py-2" colspan="5" class="text-center text-slate-500">... continues for 24 months ...</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-800">
+                                        <td class="py-2">Jan 2028</td>
+                                        <td class="text-right">$41,667</td>
+                                        <td class="text-right">—</td>
+                                        <td class="text-right">—</td>
+                                        <td class="text-right text-cyan-400">$41,667</td>
+                                    </tr>
+                                    <tr class="border-t-2 border-slate-700">
+                                        <td class="py-2 font-bold text-white">TOTAL</td>
+                                        <td class="text-right font-bold text-white">$1,000,000</td>
+                                        <td class="text-right font-bold text-white">$75,000</td>
+                                        <td class="text-right font-bold text-white">$25,000</td>
+                                        <td class="text-right font-bold text-cyan-400">$1,100,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="mt-4 text-xs text-slate-500">
+                            * Training revenue recognition timing estimated based on typical delivery schedule
+                        </div>
+                    </div>
+                </div>
+
                 <div class="flex justify-between">
                     <button onclick="goToStep1()" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-cyan-500/30">
                         ← Back to Step 1
@@ -308,7 +540,7 @@
 
                     <div class="space-y-3">
                         <!-- Auto-processed -->
-                        <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
+                        <div onclick="showContractDetail()" class="bg-slate-800/50 rounded-lg p-4 border border-slate-700 cursor-pointer hover:border-cyan-500/50 transition">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3 flex-1">
                                     <div class="text-2xl">📄</div>
@@ -325,6 +557,7 @@
                                     <div class="px-3 py-1 bg-green-500/20 text-green-300 rounded text-xs font-semibold">
                                         COMPLETE
                                     </div>
+                                    <div class="text-cyan-400">→</div>
                                 </div>
                             </div>
                         </div>
@@ -384,6 +617,189 @@
                                     <div class="text-slate-400">+ 20 more contracts auto-processed</div>
                                 </div>
                                 <div class="text-green-400 text-sm font-semibold">✓ All Complete</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contract Detail View (Hidden by default) -->
+                <div id="contract-detail" class="hidden mb-8 slide-up">
+                    <div class="bg-gradient-to-r from-slate-800/50 to-cyan-900/20 rounded-xl p-6 border border-cyan-500/30">
+                        <div class="flex items-start justify-between mb-6">
+                            <div>
+                                <div class="text-sm text-slate-400 mb-2">CONTRACT DETAILS</div>
+                                <div class="text-2xl font-bold text-white mb-1">Standard_SaaS_Contract_ClientA.pdf</div>
+                                <div class="text-slate-300">2-year subscription • $120K total • Auto-processed Jan 16, 2026</div>
+                            </div>
+                            <button onclick="hideContractDetail()" class="text-slate-400 hover:text-white text-2xl">✕</button>
+                        </div>
+
+                        <!-- Tabs for Detail View -->
+                        <div class="flex gap-2 mb-4">
+                            <button onclick="showTab3('summary')" id="tab3-summary" class="tab3-btn px-4 py-2 bg-cyan-500 text-white rounded-lg text-sm font-semibold transition">
+                                📋 Summary
+                            </button>
+                            <button onclick="showTab3('journal')" id="tab3-journal" class="tab3-btn px-4 py-2 bg-white/10 text-slate-300 rounded-lg text-sm font-semibold transition">
+                                📊 Journal Entries
+                            </button>
+                            <button onclick="showTab3('export')" id="tab3-export" class="tab3-btn px-4 py-2 bg-white/10 text-slate-300 rounded-lg text-sm font-semibold transition">
+                                🚀 Export
+                            </button>
+                        </div>
+
+                        <!-- Summary Tab -->
+                        <div id="tab3-summary-content" class="tab3-content">
+                            <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                                <div class="grid md:grid-cols-2 gap-6 text-sm">
+                                    <div>
+                                        <div class="text-cyan-300 font-semibold mb-3">Performance Obligations:</div>
+                                        <div class="space-y-2">
+                                            <div class="bg-slate-800/50 rounded p-3">
+                                                <div class="text-white font-semibold mb-1">SaaS Subscription</div>
+                                                <div class="text-slate-400">$120,000 • Ratable over 24 months</div>
+                                                <div class="text-xs text-cyan-400 mt-1">$5,000/month revenue</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="text-cyan-300 font-semibold mb-3">Recognition Summary:</div>
+                                        <div class="space-y-2 text-slate-300">
+                                            <div>Start Date: <span class="text-white">Jan 15, 2026</span></div>
+                                            <div>End Date: <span class="text-white">Jan 14, 2028</span></div>
+                                            <div>Monthly Revenue: <span class="text-white">$5,000</span></div>
+                                            <div>Q1 2026 Total: <span class="text-white">$15,000</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Journal Entries Tab -->
+                        <div id="tab3-journal-content" class="tab3-content hidden">
+                            <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                                <div class="text-xs text-slate-400 mb-3">INITIAL BOOKING</div>
+                                <div class="overflow-x-auto mb-6">
+                                    <table class="w-full text-xs font-mono">
+                                        <thead>
+                                            <tr class="border-b border-slate-700">
+                                                <th class="text-left py-2 text-white">Account</th>
+                                                <th class="text-right py-2 text-white">Debit</th>
+                                                <th class="text-right py-2 text-white">Credit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-slate-300">
+                                            <tr class="border-b border-slate-800">
+                                                <td class="py-2">Accounts Receivable</td>
+                                                <td class="text-right text-cyan-400">$120,000</td>
+                                                <td class="text-right">—</td>
+                                            </tr>
+                                            <tr class="border-b border-slate-800">
+                                                <td class="py-2 pl-4">Deferred Revenue</td>
+                                                <td class="text-right">—</td>
+                                                <td class="text-right text-cyan-400">$120,000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="text-xs text-slate-400 mb-3">MONTHLY RECOGNITION</div>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-xs font-mono">
+                                        <thead>
+                                            <tr class="border-b border-slate-700">
+                                                <th class="text-left py-2 text-white">Account</th>
+                                                <th class="text-right py-2 text-white">Debit</th>
+                                                <th class="text-right py-2 text-white">Credit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-slate-300">
+                                            <tr class="border-b border-slate-800">
+                                                <td class="py-2">Deferred Revenue</td>
+                                                <td class="text-right text-cyan-400">$5,000</td>
+                                                <td class="text-right">—</td>
+                                            </tr>
+                                            <tr class="border-b border-slate-800">
+                                                <td class="py-2 pl-4">Revenue - SaaS</td>
+                                                <td class="text-right">—</td>
+                                                <td class="text-right text-cyan-400">$5,000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Export Tab -->
+                        <div id="tab3-export-content" class="tab3-content hidden">
+                            <div class="space-y-4">
+                                <!-- Export to Accounting Systems -->
+                                <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                                    <h4 class="text-white font-semibold mb-4">Export to Accounting System:</h4>
+                                    <div class="grid md:grid-cols-2 gap-3">
+                                        <button class="flex items-center gap-3 p-4 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition group">
+                                            <div class="text-3xl">🔷</div>
+                                            <div class="text-left flex-1">
+                                                <div class="font-semibold text-white group-hover:text-cyan-400 transition">NetSuite</div>
+                                                <div class="text-xs text-slate-400">Direct integration</div>
+                                            </div>
+                                            <div class="text-cyan-400 opacity-0 group-hover:opacity-100 transition">→</div>
+                                        </button>
+                                        <button class="flex items-center gap-3 p-4 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition group">
+                                            <div class="text-3xl">🟢</div>
+                                            <div class="text-left flex-1">
+                                                <div class="font-semibold text-white group-hover:text-cyan-400 transition">QuickBooks</div>
+                                                <div class="text-xs text-slate-400">Direct integration</div>
+                                            </div>
+                                            <div class="text-cyan-400 opacity-0 group-hover:opacity-100 transition">→</div>
+                                        </button>
+                                        <button class="flex items-center gap-3 p-4 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition group">
+                                            <div class="text-3xl">🔵</div>
+                                            <div class="text-left flex-1">
+                                                <div class="font-semibold text-white group-hover:text-cyan-400 transition">Xero</div>
+                                                <div class="text-xs text-slate-400">Direct integration</div>
+                                            </div>
+                                            <div class="text-cyan-400 opacity-0 group-hover:opacity-100 transition">→</div>
+                                        </button>
+                                        <button class="flex items-center gap-3 p-4 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition group">
+                                            <div class="text-3xl">⬛</div>
+                                            <div class="text-left flex-1">
+                                                <div class="font-semibold text-white group-hover:text-cyan-400 transition">Sage Intacct</div>
+                                                <div class="text-xs text-slate-400">Direct integration</div>
+                                            </div>
+                                            <div class="text-cyan-400 opacity-0 group-hover:opacity-100 transition">→</div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Download Options -->
+                                <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                                    <h4 class="text-white font-semibold mb-4">Download Files:</h4>
+                                    <div class="grid md:grid-cols-3 gap-3">
+                                        <button class="flex items-center gap-2 p-3 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition text-sm group">
+                                            <span class="text-xl">📊</span>
+                                            <span class="text-slate-300 group-hover:text-cyan-400 transition">Excel (.xlsx)</span>
+                                        </button>
+                                        <button class="flex items-center gap-2 p-3 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition text-sm group">
+                                            <span class="text-xl">📄</span>
+                                            <span class="text-slate-300 group-hover:text-cyan-400 transition">CSV</span>
+                                        </button>
+                                        <button class="flex items-center gap-2 p-3 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition text-sm group">
+                                            <span class="text-xl">📝</span>
+                                            <span class="text-slate-300 group-hover:text-cyan-400 transition">PDF Report</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- API Integration -->
+                                <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                                    <h4 class="text-white font-semibold mb-3">API Integration:</h4>
+                                    <div class="bg-slate-800/50 rounded p-4 border border-slate-700">
+                                        <div class="text-xs text-slate-400 mb-2">Webhook URL configured:</div>
+                                        <div class="font-mono text-xs text-cyan-400 bg-slate-900/50 p-2 rounded break-all">
+                                            https://your-company.com/api/revenue-recognition
+                                        </div>
+                                        <div class="text-xs text-green-400 mt-2">✓ Auto-sync enabled • Last synced: 2 minutes ago</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -537,6 +953,50 @@
             document.getElementById('step-3').classList.remove('hidden');
             updateProgressIndicators(3);
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Tab switching for Step 2
+        function showTab2(tab) {
+            // Hide all tabs
+            document.querySelectorAll('.tab2-content').forEach(el => el.classList.add('hidden'));
+            // Reset all buttons
+            document.querySelectorAll('.tab2-btn').forEach(btn => {
+                btn.classList.remove('bg-cyan-500', 'text-white');
+                btn.classList.add('bg-white/10', 'text-slate-300');
+            });
+            // Show selected tab
+            document.getElementById(`tab2-${tab}-content`).classList.remove('hidden');
+            // Highlight selected button
+            const button = document.getElementById(`tab2-${tab}`);
+            button.classList.remove('bg-white/10', 'text-slate-300');
+            button.classList.add('bg-cyan-500', 'text-white');
+        }
+
+        // Tab switching for Step 3 contract detail
+        function showTab3(tab) {
+            // Hide all tabs
+            document.querySelectorAll('.tab3-content').forEach(el => el.classList.add('hidden'));
+            // Reset all buttons
+            document.querySelectorAll('.tab3-btn').forEach(btn => {
+                btn.classList.remove('bg-cyan-500', 'text-white');
+                btn.classList.add('bg-white/10', 'text-slate-300');
+            });
+            // Show selected tab
+            document.getElementById(`tab3-${tab}-content`).classList.remove('hidden');
+            // Highlight selected button
+            const button = document.getElementById(`tab3-${tab}`);
+            button.classList.remove('bg-white/10', 'text-slate-300');
+            button.classList.add('bg-cyan-500', 'text-white');
+        }
+
+        // Show/hide contract detail
+        function showContractDetail() {
+            document.getElementById('contract-detail').classList.remove('hidden');
+            window.scrollTo({ top: document.getElementById('contract-detail').offsetTop - 100, behavior: 'smooth' });
+        }
+
+        function hideContractDetail() {
+            document.getElementById('contract-detail').classList.add('hidden');
         }
     </script>
 
