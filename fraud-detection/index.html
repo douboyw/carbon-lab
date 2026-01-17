@@ -3,183 +3,819 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fraud Fighter - Carbon Lab</title>
+    <title>Fraud Fighter Training Demo - Carbon Lab</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        .step-inactive { opacity: 0.4; }
+        .step-active { opacity: 1; }
+        .pulse-red { animation: pulseRed 2s infinite; }
+        @keyframes pulseRed { 0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); } 50% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); } }
     </style>
 </head>
-<body class="bg-gradient-to-br from-slate-50 via-red-50 to-slate-100 min-h-screen">
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 min-h-screen">
     
-    <!-- Navigation -->
-    <nav class="bg-white border-b border-slate-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="flex items-center gap-3 hover:opacity-80 transition">
-                <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 5 L85 27.5 L85 72.5 L50 95 L15 72.5 L15 27.5 Z" 
-                          fill="#1e293b" stroke="#0ea5e9" stroke-width="3"/>
-                    <circle cx="50" cy="50" r="8" fill="#0ea5e9"/>
-                    <circle cx="50" cy="30" r="4" fill="#60a5fa"/>
-                    <circle cx="67" cy="50" r="4" fill="#60a5fa"/>
-                    <circle cx="50" cy="70" r="4" fill="#60a5fa"/>
-                    <circle cx="33" cy="50" r="4" fill="#60a5fa"/>
-                    <ellipse cx="50" cy="50" rx="20" ry="20" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4"/>
-                    <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" transform="rotate(60 50 50)"/>
-                    <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" transform="rotate(-60 50 50)"/>
-                </svg>
-                <span class="font-semibold text-slate-900">← Back to All Demos</span>
-            </a>
-            <div class="flex gap-6 text-sm">
-                <a href="/revenue-accountant/" class="text-slate-600 hover:text-blue-600 transition">Contract Wizard</a>
-                <a href="/fraud-detection/" class="text-red-600 font-semibold">Fraud Fighter</a>
-                <a href="/ap-automation/" class="text-slate-600 hover:text-blue-600 transition">Invoice Magic</a>
-                <a href="/tax-compliance/" class="text-slate-600 hover:text-blue-600 transition">Tax Navigator</a>
+    <!-- Header -->
+    <header class="container mx-auto px-6 py-6">
+        <div class="flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-white">← Carbon Lab</a>
+            <div class="text-red-400 font-semibold">Fraud Fighter Training Demo</div>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <section class="container mx-auto px-6 py-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center justify-between mb-8">
+                <div id="step-1-indicator" class="flex-1 text-center step-active transition-all">
+                    <div class="w-12 h-12 mx-auto bg-red-500/20 border-2 border-red-400 rounded-full flex items-center justify-center mb-2">
+                        <span class="text-xl">📚</span>
+                    </div>
+                    <div class="text-sm font-semibold text-white">Step 1</div>
+                    <div class="text-xs text-slate-400">Show Examples</div>
+                </div>
+                <div class="flex-1 h-1 bg-slate-700 mx-2">
+                    <div id="progress-1-2" class="h-full bg-red-500 transition-all duration-500" style="width: 0%"></div>
+                </div>
+                <div id="step-2-indicator" class="flex-1 text-center step-inactive transition-all">
+                    <div class="w-12 h-12 mx-auto bg-red-500/20 border-2 border-slate-600 rounded-full flex items-center justify-center mb-2">
+                        <span class="text-xl">🎯</span>
+                    </div>
+                    <div class="text-sm font-semibold text-slate-500">Step 2</div>
+                    <div class="text-xs text-slate-600">Review & Correct</div>
+                </div>
+                <div class="flex-1 h-1 bg-slate-700 mx-2">
+                    <div id="progress-2-3" class="h-full bg-red-500 transition-all duration-500" style="width: 0%"></div>
+                </div>
+                <div id="step-3-indicator" class="flex-1 text-center step-inactive transition-all">
+                    <div class="w-12 h-12 mx-auto bg-red-500/20 border-2 border-slate-600 rounded-full flex items-center justify-center mb-2">
+                        <span class="text-xl">🚀</span>
+                    </div>
+                    <div class="text-sm font-semibold text-slate-500">Step 3</div>
+                    <div class="text-xs text-slate-600">Automate</div>
+                </div>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- Hero Section -->
-    <div class="max-w-5xl mx-auto px-6 py-20">
-        <div class="text-center mb-12">
-            <div class="inline-block px-4 py-2 bg-red-100 border border-red-300 rounded-full text-red-700 font-semibold mb-4 text-sm">
-                🦸 YOUR AI SIDE-KICK FOR FRAUD PREVENTION
-            </div>
-            <div class="text-8xl mb-6">🔍</div>
-            <h1 class="text-5xl font-bold text-slate-900 mb-4">
-                Fraud Fighter
-            </h1>
-            <p class="text-xl text-slate-600 max-w-2xl mx-auto">
-                Your Side-Kick monitors transactions 24/7, spots anomalies instantly, and protects your organization from financial fraud
-            </p>
-        </div>
+    <!-- Demo Content -->
+    <section class="container mx-auto px-6 pb-16">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Step 1: Show Examples -->
+            <div id="step-1" class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-red-500/20">
+                <h2 class="text-3xl font-bold text-white mb-4">Step 1: Show Examples</h2>
+                <p class="text-slate-300 mb-8">Upload 10-20 examples of BOTH valid and fraudulent transactions so your Fraud Fighter learns YOUR company's normal patterns vs. suspicious activity.</p>
+                
+                <!-- Valid Examples -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-green-400 mb-4">✓ Valid Customer Examples</h3>
+                    <div class="space-y-3">
+                        <div class="bg-slate-800/50 rounded-lg p-4 border border-green-500/30">
+                            <div class="flex items-start justify-between">
+                                <div class="flex items-start gap-4 flex-1">
+                                    <div class="text-3xl">✅</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-white mb-1">TechCorp Industries - $50K Annual Contract</div>
+                                        <div class="text-sm text-slate-300 mb-2">Verified company, 3 years in business, Fortune 1000</div>
+                                        <div class="flex gap-2 flex-wrap">
+                                            <span class="px-2 py-1 bg-green-500/20 text-green-300 rounded text-xs">Domain: techcorp.com (2015)</span>
+                                            <span class="px-2 py-1 bg-green-500/20 text-green-300 rounded text-xs">Email: procurement@techcorp.com</span>
+                                            <span class="px-2 py-1 bg-green-500/20 text-green-300 rounded text-xs">LinkedIn: 500+ employees</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-green-400 text-sm font-semibold">✓ Learned</div>
+                            </div>
+                        </div>
 
-        <!-- Coming Soon Card -->
-        <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-12 text-center">
-            <div class="inline-block px-6 py-3 bg-red-100 border border-red-300 rounded-full text-red-700 font-semibold mb-6">
-                🚧 Coming Soon
-            </div>
-            <h2 class="text-3xl font-bold text-slate-900 mb-6">
-                This Demo is Under Development
-            </h2>
-            <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-                We're building your AI Side-Kick for fraud prevention—one that analyzes transactions, identifies suspicious patterns, and flags potential fraud in real-time while you focus on strategy.
-            </p>
+                        <div class="bg-slate-800/50 rounded-lg p-4 border border-green-500/30">
+                            <div class="flex items-start justify-between">
+                                <div class="flex items-start gap-4 flex-1">
+                                    <div class="text-3xl">✅</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-white mb-1">Global Solutions LLC - $25K Contract</div>
+                                        <div class="text-sm text-slate-300 mb-2">Established customer, 5 renewals, payment history clean</div>
+                                        <div class="flex gap-2 flex-wrap">
+                                            <span class="px-2 py-1 bg-green-500/20 text-green-300 rounded text-xs">Domain: globalsolutions.com (2010)</span>
+                                            <span class="px-2 py-1 bg-green-500/20 text-green-300 rounded text-xs">Verified Address</span>
+                                            <span class="px-2 py-1 bg-green-500/20 text-green-300 rounded text-xs">D&B Rating: A+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-green-400 text-sm font-semibold">✓ Learned</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Feature Preview -->
-            <div class="grid md:grid-cols-2 gap-6 text-left max-w-3xl mx-auto mb-12">
-                <div class="p-6 bg-red-50 rounded-xl border border-red-200">
-                    <div class="text-3xl mb-3">⚡</div>
-                    <h3 class="font-bold text-slate-900 mb-2">Real-Time Analysis</h3>
-                    <p class="text-sm text-slate-700">Monitor transactions as they happen and flag suspicious activity instantly</p>
-                </div>
-                <div class="p-6 bg-red-50 rounded-xl border border-red-200">
-                    <div class="text-3xl mb-3">🎯</div>
-                    <h3 class="font-bold text-slate-900 mb-2">Pattern Recognition</h3>
-                    <p class="text-sm text-slate-700">Identify complex fraud schemes that traditional rules-based systems miss</p>
-                </div>
-                <div class="p-6 bg-red-50 rounded-xl border border-red-200">
-                    <div class="text-3xl mb-3">📊</div>
-                    <h3 class="font-bold text-slate-900 mb-2">Risk Scoring</h3>
-                    <p class="text-sm text-slate-700">Assign risk scores to transactions and entities based on behavior patterns</p>
-                </div>
-                <div class="p-6 bg-red-50 rounded-xl border border-red-200">
-                    <div class="text-3xl mb-3">🔔</div>
-                    <h3 class="font-bold text-slate-900 mb-2">Smart Alerts</h3>
-                    <p class="text-sm text-slate-700">Get prioritized alerts with context and recommended actions</p>
-                </div>
-            </div>
+                <!-- Fraudulent Examples -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-red-400 mb-4">⚠️ Fraudulent/Suspicious Examples</h3>
+                    <div class="space-y-3">
+                        <div class="bg-slate-800/50 rounded-lg p-4 border border-red-500/30">
+                            <div class="flex items-start justify-between">
+                                <div class="flex items-start gap-4 flex-1">
+                                    <div class="text-3xl">🚨</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-white mb-1">XYZ Consulting Inc - $75K Contract</div>
+                                        <div class="text-sm text-slate-300 mb-2">Domain registered 2 weeks ago, no online presence, PO Box address</div>
+                                        <div class="flex gap-2 flex-wrap">
+                                            <span class="px-2 py-1 bg-red-500/20 text-red-300 rounded text-xs">⚠️ Domain: xyzconsulting.biz (14 days old)</span>
+                                            <span class="px-2 py-1 bg-red-500/20 text-red-300 rounded text-xs">⚠️ Email: Gmail account</span>
+                                            <span class="px-2 py-1 bg-red-500/20 text-red-300 rounded text-xs">⚠️ No LinkedIn/social</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-red-400 text-sm font-semibold">✓ Learned</div>
+                            </div>
+                        </div>
 
-            <!-- Notify Me Form -->
-            <div class="max-w-md mx-auto">
-                <h3 class="text-xl font-bold text-slate-900 mb-4">Get Notified When It Launches</h3>
-                <form class="flex gap-3">
-                    <input 
-                        type="email" 
-                        placeholder="Enter your email" 
-                        class="flex-1 px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                        required
-                    />
-                    <button 
-                        type="submit"
-                        class="px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition"
-                    >
-                        Notify Me
+                        <div class="bg-slate-800/50 rounded-lg p-4 border border-red-500/30">
+                            <div class="flex items-start justify-between">
+                                <div class="flex items-start gap-4 flex-1">
+                                    <div class="text-3xl">🚨</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-white mb-1">AcctServices Ltd - $30K Contract</div>
+                                        <div class="text-sm text-slate-300 mb-2">Email from CFO we've never met, urgent payment request, offshore address</div>
+                                        <div class="flex gap-2 flex-wrap">
+                                            <span class="px-2 py-1 bg-red-500/20 text-red-300 rounded text-xs">⚠️ Unsolicited contact</span>
+                                            <span class="px-2 py-1 bg-red-500/20 text-red-300 rounded text-xs">⚠️ Pressure tactics</span>
+                                            <span class="px-2 py-1 bg-red-500/20 text-red-300 rounded text-xs">⚠️ Unusual payment terms</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-red-400 text-sm font-semibold">✓ Learned</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700 opacity-50">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-4">
+                                    <div class="text-3xl">📄</div>
+                                    <div class="text-slate-400">+ 16 more examples (valid & fraudulent)...</div>
+                                </div>
+                                <div class="text-green-400 text-sm font-semibold">✓ All Learned</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What Side-Kick Learned -->
+                <div class="bg-gradient-to-r from-slate-800/50 to-red-900/20 rounded-xl p-6 border border-red-500/20 mb-8">
+                    <h3 class="text-lg font-semibold text-white mb-4">🧠 What Your Fraud Fighter Learned:</h3>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <div class="text-red-300 font-semibold mb-2">Valid Customer Patterns:</div>
+                            <ul class="space-y-1 text-slate-300">
+                                <li>✓ Domain age typically 2+ years</li>
+                                <li>✓ Corporate email addresses</li>
+                                <li>✓ Verifiable physical address</li>
+                                <li>✓ Active LinkedIn/social presence</li>
+                                <li>✓ D&B or credit rating available</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="text-red-300 font-semibold mb-2">Red Flags to Watch:</div>
+                            <ul class="space-y-1 text-slate-300">
+                                <li>⚠️ New domains (< 6 months)</li>
+                                <li>⚠️ Personal email addresses</li>
+                                <li>⚠️ PO Box or offshore addresses</li>
+                                <li>⚠️ No online presence</li>
+                                <li>⚠️ Urgent/pressure tactics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-end">
+                    <button onclick="goToStep2()" class="px-8 py-4 bg-red-500 text-white font-bold rounded-lg hover:bg-red-600 transition shadow-lg shadow-red-500/50">
+                        Continue to Step 2 →
                     </button>
-                </form>
-                <p class="text-xs text-slate-500 mt-3">We'll email you when the fraud detection demo is ready</p>
+                </div>
             </div>
 
-            <!-- Try Other Demos -->
-            <div class="mt-12 pt-12 border-t border-slate-200">
-                <h3 class="text-lg font-semibold text-slate-900 mb-4">Try Our Other Demos</h3>
-                <div class="flex justify-center gap-4">
-                    <a href="/revenue-accountant/" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
-                        📊 Try Contract Wizard
+            <!-- Step 2: Review & Correct -->
+            <div id="step-2" class="hidden bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-red-500/20">
+                <h2 class="text-3xl font-bold text-white mb-4">Step 2: Review & Correct</h2>
+                <p class="text-slate-300 mb-8">Now your Fraud Fighter will analyze a NEW customer contract. Review its assessment and make corrections. It learns from your expertise.</p>
+                
+                <!-- New Customer Contract -->
+                <div class="bg-slate-800/50 rounded-lg p-6 border border-yellow-500/30 mb-6">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="text-4xl">📄</div>
+                        <div>
+                            <div class="text-xl font-bold text-white mb-2">NEW: CloudTech Solutions - $85K Annual SaaS Contract</div>
+                            <div class="text-slate-300 mb-2">Inbound sales lead, contract signed quickly, requesting immediate setup</div>
+                            <div class="grid grid-cols-2 gap-3 text-sm mt-4">
+                                <div><span class="text-slate-400">Company:</span> <span class="text-white">CloudTech Solutions Inc</span></div>
+                                <div><span class="text-slate-400">Contact:</span> <span class="text-white">james.mitchell@cloudtechsol.com</span></div>
+                                <div><span class="text-slate-400">Value:</span> <span class="text-white">$85,000/year</span></div>
+                                <div><span class="text-slate-400">Payment:</span> <span class="text-white">Wire transfer (unusual)</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side-Kick's First Assessment -->
+                <div class="mb-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="text-2xl">🤖</div>
+                        <h3 class="text-lg font-semibold text-white">Fraud Fighter's Initial Assessment:</h3>
+                    </div>
+
+                    <!-- Risk Score - WRONG -->
+                    <div class="bg-slate-900/50 rounded-lg p-6 border-2 border-red-500/30 mb-4">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <div class="text-sm text-slate-400 mb-1">RISK ASSESSMENT</div>
+                                <div class="text-3xl font-bold text-green-400">LOW RISK</div>
+                                <div class="text-sm text-green-300 mt-1">Score: 25/100 (Low Fraud Risk)</div>
+                            </div>
+                            <div class="px-3 py-1 bg-red-500/20 text-red-300 rounded-full text-xs font-semibold">
+                                ⚠️ INCORRECT
+                            </div>
+                        </div>
+                        <div class="bg-red-500/10 border border-red-500/30 rounded p-3">
+                            <div class="text-red-300 text-sm font-semibold mb-1">❌ Your Correction:</div>
+                            <div class="text-slate-300 text-sm">This should be HIGH RISK (75/100). Multiple red flags present that Side-Kick missed.</div>
+                        </div>
+                    </div>
+
+                    <!-- Risk Factors Analysis -->
+                    <div class="space-y-3">
+                        <!-- Domain Age - MISSED -->
+                        <div class="bg-slate-900/50 rounded-lg p-4 border-2 border-red-500/30">
+                            <div class="flex justify-between items-start mb-2">
+                                <div class="flex-1">
+                                    <div class="font-semibold text-white mb-1">Domain Age Check</div>
+                                    <div class="text-sm text-slate-300">cloudtechsol.com registered 45 days ago</div>
+                                </div>
+                                <div class="px-3 py-1 bg-red-500/20 text-red-300 rounded-full text-xs font-semibold">
+                                    MISSED
+                                </div>
+                            </div>
+                            <div class="bg-red-500/10 border border-red-500/30 rounded p-3 mt-2">
+                                <div class="text-red-300 text-sm font-semibold mb-1">✏️ Your Correction:</div>
+                                <div class="text-slate-300 text-sm">RED FLAG: Domain less than 6 months old. This is a major warning sign based on your training examples.</div>
+                            </div>
+                        </div>
+
+                        <!-- Email Verification - CORRECT -->
+                        <div class="bg-slate-900/50 rounded-lg p-4 border-2 border-green-500/30">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <div class="font-semibold text-white mb-1">Email Verification</div>
+                                    <div class="text-sm text-slate-300">Corporate email domain matches company</div>
+                                </div>
+                                <div class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold">
+                                    ✓ CORRECT
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Online Presence - MISSED -->
+                        <div class="bg-slate-900/50 rounded-lg p-4 border-2 border-red-500/30">
+                            <div class="flex justify-between items-start mb-2">
+                                <div class="flex-1">
+                                    <div class="font-semibold text-white mb-1">Online Presence Verification</div>
+                                    <div class="text-sm text-slate-300">LinkedIn shows 3 employees, company page created 30 days ago</div>
+                                </div>
+                                <div class="px-3 py-1 bg-red-500/20 text-red-300 rounded-full text-xs font-semibold">
+                                    MISSED
+                                </div>
+                            </div>
+                            <div class="bg-red-500/10 border border-red-500/30 rounded p-3 mt-2">
+                                <div class="text-red-300 text-sm font-semibold mb-1">✏️ Your Correction:</div>
+                                <div class="text-slate-300 text-sm">YELLOW FLAG: Minimal online presence. Legitimate $85K/year companies typically have established digital footprint.</div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Terms - MISSED -->
+                        <div class="bg-slate-900/50 rounded-lg p-4 border-2 border-red-500/30">
+                            <div class="flex justify-between items-start mb-2">
+                                <div class="flex-1">
+                                    <div class="font-semibold text-white mb-1">Payment Terms Analysis</div>
+                                    <div class="text-sm text-slate-300">Requesting wire transfer instead of standard ACH/check</div>
+                                </div>
+                                <div class="px-3 py-1 bg-red-500/20 text-red-300 rounded-full text-xs font-semibold">
+                                    MISSED
+                                </div>
+                            </div>
+                            <div class="bg-red-500/10 border border-red-500/30 rounded p-3 mt-2">
+                                <div class="text-red-300 text-sm font-semibold mb-1">✏️ Your Correction:</div>
+                                <div class="text-slate-300 text-sm">RED FLAG: Wire transfer unusual for new customers. Your company policy requires ACH/check for first transaction.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Feedback -->
+                <div class="bg-gradient-to-r from-slate-800/50 to-red-900/20 rounded-xl p-6 border border-red-500/20 mb-8 mt-6">
+                    <div class="flex items-start gap-3">
+                        <div class="text-2xl">💡</div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Fraud Fighter Updated Its Model:</h3>
+                            <ul class="space-y-2 text-sm text-slate-300">
+                                <li>✓ Learned: Domains < 90 days = HIGH RISK (previously was 30 days threshold)</li>
+                                <li>✓ Learned: Small LinkedIn presence on large contracts = YELLOW FLAG</li>
+                                <li>✓ Learned: Wire transfer requests from new customers = RED FLAG</li>
+                                <li>✓ Pattern reinforced: Multiple yellow flags together = escalate to HIGH RISK</li>
+                                <li>✓ Confidence increased: 72% → 89% for new customer fraud detection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generated Output -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-white mb-4">Generated Output (After Your Corrections):</h3>
+                    
+                    <!-- Tabs -->
+                    <div class="flex gap-2 mb-4">
+                        <button onclick="showTab2('report')" id="tab2-report" class="tab2-btn px-4 py-2 bg-red-500 text-white rounded-lg font-semibold transition">
+                            🚨 Fraud Alert
+                        </button>
+                        <button onclick="showTab2('analysis')" id="tab2-analysis" class="tab2-btn px-4 py-2 bg-white/10 text-slate-300 rounded-lg font-semibold transition">
+                            📊 Risk Analysis
+                        </button>
+                        <button onclick="showTab2('actions')" id="tab2-actions" class="tab2-btn px-4 py-2 bg-white/10 text-slate-300 rounded-lg font-semibold transition">
+                            ✅ Recommended Actions
+                        </button>
+                    </div>
+
+                    <!-- Fraud Alert Tab -->
+                    <div id="tab2-report-content" class="tab2-content bg-slate-900/50 rounded-lg p-6 border border-red-500/30">
+                        <div class="flex items-start gap-4 mb-6 pulse-red">
+                            <div class="text-5xl">🚨</div>
+                            <div>
+                                <div class="text-2xl font-bold text-red-400 mb-2">HIGH FRAUD RISK DETECTED</div>
+                                <div class="text-slate-300">Customer: CloudTech Solutions Inc • Contract Value: $85,000</div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 text-sm">
+                            <div>
+                                <div class="text-red-300 font-semibold mb-2">Risk Score: 75/100 (High Risk)</div>
+                                <div class="bg-slate-700 rounded-full h-3 mb-4">
+                                    <div class="bg-red-500 rounded-full h-3" style="width: 75%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-red-500/10 border border-red-500/30 rounded p-4">
+                                <div class="text-red-300 font-semibold mb-3">🚩 Critical Red Flags (3):</div>
+                                <ul class="space-y-2 text-slate-300">
+                                    <li><strong>• Domain Age:</strong> Registered only 45 days ago (threshold: 90 days)</li>
+                                    <li><strong>• Payment Terms:</strong> Wire transfer requested (policy violation for new customers)</li>
+                                    <li><strong>• Urgency:</strong> Immediate setup requested without standard onboarding</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-yellow-500/10 border border-yellow-500/30 rounded p-4">
+                                <div class="text-yellow-300 font-semibold mb-3">⚠️ Warning Signs (2):</div>
+                                <ul class="space-y-2 text-slate-300">
+                                    <li><strong>• Limited Online Presence:</strong> Only 3 LinkedIn employees for $85K contract</li>
+                                    <li><strong>• Company Age:</strong> LinkedIn page created 30 days ago</li>
+                                </ul>
+                            </div>
+
+                            <div class="border-t border-slate-700 pt-4">
+                                <div class="text-white font-semibold mb-2">Recommendation:</div>
+                                <div class="text-red-300">🛑 DO NOT PROCEED until enhanced verification complete</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Risk Analysis Tab -->
+                    <div id="tab2-analysis-content" class="tab2-content hidden bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                        <div class="text-sm text-slate-400 mb-4">DETAILED RISK BREAKDOWN</div>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-white font-semibold">Customer Verification Risk</span>
+                                    <span class="text-red-400 font-bold">85/100</span>
+                                </div>
+                                <div class="bg-slate-700 rounded-full h-2">
+                                    <div class="bg-red-500 rounded-full h-2" style="width: 85%"></div>
+                                </div>
+                                <div class="text-xs text-slate-400 mt-1">New entity, minimal verification possible</div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-white font-semibold">Contract Validity Risk</span>
+                                    <span class="text-yellow-400 font-bold">65/100</span>
+                                </div>
+                                <div class="bg-slate-700 rounded-full h-2">
+                                    <div class="bg-yellow-500 rounded-full h-2" style="width: 65%"></div>
+                                </div>
+                                <div class="text-xs text-slate-400 mt-1">Unusual terms, rapid execution</div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-white font-semibold">Payment Fraud Risk</span>
+                                    <span class="text-red-400 font-bold">90/100</span>
+                                </div>
+                                <div class="bg-slate-700 rounded-full h-2">
+                                    <div class="bg-red-500 rounded-full h-2" style="width: 90%"></div>
+                                </div>
+                                <div class="text-xs text-slate-400 mt-1">Wire transfer = high fraud indicator</div>
+                            </div>
+
+                            <div class="bg-slate-800/50 rounded p-4 mt-4">
+                                <div class="text-white font-semibold mb-3">Pattern Comparison:</div>
+                                <div class="grid grid-cols-2 gap-4 text-xs">
+                                    <div>
+                                        <div class="text-green-400 mb-1">Similar to Valid Customers:</div>
+                                        <div class="text-slate-300">• Corporate email format</div>
+                                        <div class="text-slate-300">• Contract value in range</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-red-400 mb-1">Similar to Fraud Cases:</div>
+                                        <div class="text-slate-300">• New domain</div>
+                                        <div class="text-slate-300">• Unusual payment request</div>
+                                        <div class="text-slate-300">• Limited verification data</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommended Actions Tab -->
+                    <div id="tab2-actions-content" class="tab2-content hidden bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                        <div class="text-sm text-slate-400 mb-4">SUGGESTED NEXT STEPS</div>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-red-500/10 border border-red-500/30 rounded p-4">
+                                <div class="text-red-300 font-semibold mb-3">🛑 Immediate Actions:</div>
+                                <ul class="space-y-2 text-sm text-slate-300">
+                                    <li>1. <strong>Pause contract execution</strong> - Do not proceed with setup</li>
+                                    <li>2. <strong>Block wire transfer</strong> - Require ACH or check for first payment</li>
+                                    <li>3. <strong>Escalate to finance manager</strong> - Manual review required</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-yellow-500/10 border border-yellow-500/30 rounded p-4">
+                                <div class="text-yellow-300 font-semibold mb-3">⚠️ Enhanced Verification Required:</div>
+                                <ul class="space-y-2 text-sm text-slate-300">
+                                    <li>• <strong>D&B Report:</strong> Request Dun & Bradstreet business verification</li>
+                                    <li>• <strong>Video Call:</strong> Schedule meeting with signing authority</li>
+                                    <li>• <strong>Reference Check:</strong> Request 2 customer/vendor references</li>
+                                    <li>• <strong>Physical Verification:</strong> Confirm office address exists</li>
+                                    <li>• <strong>Background Check:</strong> Verify signing authority identity</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-green-500/10 border border-green-500/30 rounded p-4">
+                                <div class="text-green-300 font-semibold mb-3">✅ If Verification Passes:</div>
+                                <ul class="space-y-2 text-sm text-slate-300">
+                                    <li>• Start with pilot/trial period (30 days)</li>
+                                    <li>• Require ACH payment (no wire transfer)</li>
+                                    <li>• Monthly billing instead of annual prepay</li>
+                                    <li>• Monitor account activity closely</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-slate-800/50 rounded p-4">
+                                <div class="text-white font-semibold mb-2">Notification Sent:</div>
+                                <div class="text-xs text-slate-400 mb-2">Email sent to: finance@yourcompany.com, risk@yourcompany.com</div>
+                                <div class="text-xs text-slate-300">Subject: HIGH RISK ALERT - CloudTech Solutions contract flagged for fraud review</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between">
+                    <button onclick="goToStep1()" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-red-500/30">
+                        ← Back to Step 1
+                    </button>
+                    <button onclick="goToStep3()" class="px-8 py-4 bg-red-500 text-white font-bold rounded-lg hover:bg-red-600 transition shadow-lg shadow-red-500/50">
+                        Continue to Step 3 →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 3: Automate & Scale -->
+            <div id="step-3" class="hidden bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-red-500/20">
+                <h2 class="text-3xl font-bold text-white mb-4">Step 3: Automate & Scale</h2>
+                <p class="text-slate-300 mb-8">After 2-3 weeks of training, your Fraud Fighter now monitors ALL new customers automatically. You only review flagged cases.</p>
+                
+                <!-- Processing Queue -->
+                <div class="mb-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-white">Today's Monitoring Queue</h3>
+                        <div class="text-cyan-400 font-semibold">47 new customers analyzed automatically</div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <!-- Auto-approved -->
+                        <div class="bg-slate-800/50 rounded-lg p-4 border border-green-500/30">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3 flex-1">
+                                    <div class="text-2xl">✅</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-white">DataFlow Systems Inc - $45K Contract</div>
+                                        <div class="text-sm text-slate-300">Established company, all verification passed</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="text-sm">
+                                        <div class="text-green-400 font-semibold">✓ Auto-approved</div>
+                                        <div class="text-slate-500 text-xs">Risk: 15/100 (Low)</div>
+                                    </div>
+                                    <div class="px-3 py-1 bg-green-500/20 text-green-300 rounded text-xs font-semibold">
+                                        CLEARED
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/50 rounded-lg p-4 border border-green-500/30">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3 flex-1">
+                                    <div class="text-2xl">✅</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-white">Enterprise Solutions LLC - $120K Contract</div>
+                                        <div class="text-sm text-slate-300">Fortune 500 company, verified domain 8 years old</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="text-sm">
+                                        <div class="text-green-400 font-semibold">✓ Auto-approved</div>
+                                        <div class="text-slate-500 text-xs">Risk: 8/100 (Very Low)</div>
+                                    </div>
+                                    <div class="px-3 py-1 bg-green-500/20 text-green-300 rounded text-xs font-semibold">
+                                        CLEARED
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Flagged for Review -->
+                        <div class="bg-slate-800/50 rounded-lg p-4 border-2 border-red-500/50 pulse-red">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3 flex-1">
+                                    <div class="text-2xl">🚨</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-white">QuickTech Consulting - $95K Contract</div>
+                                        <div class="text-sm text-red-300">Multiple fraud indicators detected</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="text-sm">
+                                        <div class="text-red-400 font-semibold">🚨 High Risk Alert</div>
+                                        <div class="text-slate-500 text-xs">Risk: 82/100 (High)</div>
+                                    </div>
+                                    <div class="px-3 py-1 bg-red-500/20 text-red-300 rounded text-xs font-semibold">
+                                        REVIEW
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3 pt-3 border-t border-red-500/30">
+                                <div class="text-sm text-red-300 font-semibold mb-2">Red Flags:</div>
+                                <div class="grid grid-cols-2 gap-2 text-xs text-slate-300">
+                                    <div>• Domain: 22 days old</div>
+                                    <div>• Email: Gmail account</div>
+                                    <div>• Address: PO Box</div>
+                                    <div>• Payment: Wire transfer requested</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Medium Risk -->
+                        <div class="bg-slate-800/50 rounded-lg p-4 border-2 border-yellow-500/30">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3 flex-1">
+                                    <div class="text-2xl">⚠️</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-white">StartupCo Technologies - $35K Contract</div>
+                                        <div class="text-sm text-yellow-300">New company, some verification needed</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="text-sm">
+                                        <div class="text-yellow-400 font-semibold">⚠️ Medium Risk</div>
+                                        <div class="text-slate-500 text-xs">Risk: 45/100 (Medium)</div>
+                                    </div>
+                                    <div class="px-3 py-1 bg-yellow-500/20 text-yellow-300 rounded text-xs font-semibold">
+                                        VERIFY
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3 pt-3 border-t border-yellow-500/30">
+                                <div class="text-sm text-slate-400">
+                                    <strong class="text-yellow-400">Suggested:</strong> Request D&B report before approval
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700 opacity-50">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="text-2xl">📄</div>
+                                    <div class="text-slate-400">+ 43 more customers auto-processed</div>
+                                </div>
+                                <div class="text-green-400 text-sm font-semibold">✓ All Cleared</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Dashboard -->
+                <div class="bg-gradient-to-r from-slate-800/50 to-red-900/20 rounded-xl p-6 border border-red-500/20 mb-8">
+                    <h3 class="text-xl font-bold text-white mb-6">Performance This Month</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-green-400 mb-2">92%</div>
+                            <div class="text-sm text-slate-300">Auto-Cleared</div>
+                            <div class="text-xs text-slate-500 mt-1">412 of 448 customers</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-red-400 mb-2">100%</div>
+                            <div class="text-sm text-slate-300">Fraud Caught</div>
+                            <div class="text-xs text-slate-500 mt-1">8 fraudulent attempts blocked</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-cyan-400 mb-2">$680K</div>
+                            <div class="text-sm text-slate-300">Fraud Prevented</div>
+                            <div class="text-xs text-slate-500 mt-1">Estimated loss avoided</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continuous Learning -->
+                <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700 mb-8">
+                    <div class="flex items-start gap-3 mb-4">
+                        <div class="text-2xl">📈</div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Continuous Improvement</h3>
+                            <p class="text-sm text-slate-400 mb-4">Your Fraud Fighter keeps learning from every review you make:</p>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <div class="text-red-300 font-semibold mb-2">Month 1 (Training):</div>
+                            <div class="text-slate-400">65% accuracy • Many false positives</div>
+                        </div>
+                        <div>
+                            <div class="text-red-300 font-semibold mb-2">Month 2:</div>
+                            <div class="text-slate-400">88% accuracy • Learning your patterns</div>
+                        </div>
+                        <div>
+                            <div class="text-red-300 font-semibold mb-2">Month 3 (Now):</div>
+                            <div class="text-green-400">97% accuracy • Catches subtle indicators</div>
+                        </div>
+                        <div>
+                            <div class="text-red-300 font-semibold mb-2">Month 6 (Projected):</div>
+                            <div class="text-slate-400">99%+ accuracy • Expert-level detection</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integration Options -->
+                <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                    <h3 class="text-lg font-semibold text-white mb-4">Automated Integrations:</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-slate-800/50 rounded p-4 border border-green-500/30">
+                            <div class="font-semibold text-white mb-2">✓ Active Integrations</div>
+                            <ul class="text-sm text-slate-300 space-y-1">
+                                <li>• Email alerts to finance team</li>
+                                <li>• Slack notifications for high-risk</li>
+                                <li>• CRM tagging (Salesforce)</li>
+                                <li>• Auto-block in payment system</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-800/50 rounded p-4 border border-cyan-500/30">
+                            <div class="font-semibold text-white mb-2">📊 Data Sources</div>
+                            <ul class="text-sm text-slate-300 space-y-1">
+                                <li>• WHOIS domain lookup</li>
+                                <li>• LinkedIn API verification</li>
+                                <li>• D&B credit checks</li>
+                                <li>• Your historical customer data</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8">
+                    <button onclick="goToStep2()" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-red-500/30">
+                        ← Back to Step 2
+                    </button>
+                    <a href="/" class="px-8 py-4 bg-red-500 text-white font-bold rounded-lg hover:bg-red-600 transition shadow-lg shadow-red-500/50">
+                        Back to Home
                     </a>
-                    <a href="/" class="px-6 py-3 bg-slate-600 text-white font-semibold rounded-lg hover:bg-slate-700 transition">
-                        View All Demos
-                    </a>
                 </div>
             </div>
-        </div>
 
-        <!-- What to Expect -->
-        <div class="mt-12 bg-white rounded-xl shadow-lg border border-slate-200 p-8">
-            <h3 class="text-2xl font-bold text-slate-900 mb-6">What to Expect in This Demo</h3>
-            <div class="space-y-4 text-slate-700">
-                <div class="flex gap-4">
-                    <div class="text-2xl">1️⃣</div>
-                    <div>
-                        <h4 class="font-semibold text-slate-900 mb-1">Upload Transaction Data</h4>
-                        <p class="text-sm">Import CSV files or connect to your accounting system to analyze recent transactions</p>
-                    </div>
-                </div>
-                <div class="flex gap-4">
-                    <div class="text-2xl">2️⃣</div>
-                    <div>
-                        <h4 class="font-semibold text-slate-900 mb-1">AI Analysis</h4>
-                        <p class="text-sm">Our AI examines patterns, identifies anomalies, and flags suspicious transactions</p>
-                    </div>
-                </div>
-                <div class="flex gap-4">
-                    <div class="text-2xl">3️⃣</div>
-                    <div>
-                        <h4 class="font-semibold text-slate-900 mb-1">Review Findings</h4>
-                        <p class="text-sm">See detailed explanations of flagged items with risk scores and recommended actions</p>
-                    </div>
-                </div>
-                <div class="flex gap-4">
-                    <div class="text-2xl">4️⃣</div>
-                    <div>
-                        <h4 class="font-semibold text-slate-900 mb-1">Take Action</h4>
-                        <p class="text-sm">Export findings, generate reports, or escalate to investigation teams</p>
-                    </div>
-                </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="max-w-3xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-red-500/20 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Train Your Own Fraud Fighter?</h2>
+            <p class="text-slate-300 mb-8">
+                This demo showed customer validation, but the same training process works for ALL fraud detection: invoice fraud, payment fraud, expense fraud, and more.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="mailto:hello@carbon-lab.io?subject=Fraud Fighter Demo" class="px-8 py-4 bg-red-500 text-white font-bold rounded-lg hover:bg-red-600 transition shadow-lg shadow-red-500/50">
+                    Become a Pilot Customer
+                </a>
+                <a href="/" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-red-500/30">
+                    Learn More
+                </a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="mt-20 pb-8 text-center text-sm text-slate-500">
-        <div class="flex items-center justify-center gap-2 mb-2">
-            <svg width="24" height="24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 5 L85 27.5 L85 72.5 L50 95 L15 72.5 L15 27.5 Z" 
-                      fill="#1e293b" stroke="#0ea5e9" stroke-width="3"/>
-                <circle cx="50" cy="50" r="8" fill="#0ea5e9"/>
-                <circle cx="50" cy="30" r="4" fill="#60a5fa"/>
-                <circle cx="67" cy="50" r="4" fill="#60a5fa"/>
-                <circle cx="50" cy="70" r="4" fill="#60a5fa"/>
-                <circle cx="33" cy="50" r="4" fill="#60a5fa"/>
-                <ellipse cx="50" cy="50" rx="20" ry="20" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4"/>
-                <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" transform="rotate(60 50 50)"/>
-                <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" transform="rotate(-60 50 50)"/>
-            </svg>
-            <span class="font-semibold">Carbon Lab</span>
-        </div>
-        <p>Your Finance Team's AI Side-Kick</p>
-        <p class="mt-2">© 2025 Carbon Lab. All rights reserved.</p>
-    </footer>
+    <script>
+        function updateProgressIndicators(activeStep) {
+            // Update step indicators
+            for (let i = 1; i <= 3; i++) {
+                const indicator = document.getElementById(`step-${i}-indicator`);
+                const border = indicator.querySelector('div div');
+                const stepTitle = indicator.querySelectorAll('div')[2];
+                const stepDesc = indicator.querySelectorAll('div')[3];
+                
+                if (i < activeStep) {
+                    indicator.classList.remove('step-inactive');
+                    indicator.classList.add('step-active');
+                    border.classList.remove('border-slate-600');
+                    border.classList.add('border-red-400');
+                    stepTitle.classList.remove('text-slate-500');
+                    stepTitle.classList.add('text-white');
+                    stepDesc.classList.remove('text-slate-600');
+                    stepDesc.classList.add('text-slate-400');
+                } else if (i === activeStep) {
+                    indicator.classList.remove('step-inactive');
+                    indicator.classList.add('step-active');
+                    border.classList.remove('border-slate-600');
+                    border.classList.add('border-red-400');
+                    stepTitle.classList.remove('text-slate-500');
+                    stepTitle.classList.add('text-white');
+                    stepDesc.classList.remove('text-slate-600');
+                    stepDesc.classList.add('text-slate-400');
+                } else {
+                    indicator.classList.remove('step-active');
+                    indicator.classList.add('step-inactive');
+                    border.classList.remove('border-red-400');
+                    border.classList.add('border-slate-600');
+                    stepTitle.classList.remove('text-white');
+                    stepTitle.classList.add('text-slate-500');
+                    stepDesc.classList.remove('text-slate-400');
+                    stepDesc.classList.add('text-slate-600');
+                }
+            }
+            
+            // Update progress bars
+            document.getElementById('progress-1-2').style.width = activeStep >= 2 ? '100%' : '0%';
+            document.getElementById('progress-2-3').style.width = activeStep >= 3 ? '100%' : '0%';
+        }
+
+        function goToStep1() {
+            document.getElementById('step-1').classList.remove('hidden');
+            document.getElementById('step-2').classList.add('hidden');
+            document.getElementById('step-3').classList.add('hidden');
+            updateProgressIndicators(1);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function goToStep2() {
+            document.getElementById('step-1').classList.add('hidden');
+            document.getElementById('step-2').classList.remove('hidden');
+            document.getElementById('step-3').classList.add('hidden');
+            updateProgressIndicators(2);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function goToStep3() {
+            document.getElementById('step-1').classList.add('hidden');
+            document.getElementById('step-2').classList.add('hidden');
+            document.getElementById('step-3').classList.remove('hidden');
+            updateProgressIndicators(3);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Tab switching for Step 2
+        function showTab2(tab) {
+            // Hide all tabs
+            document.querySelectorAll('.tab2-content').forEach(el => el.classList.add('hidden'));
+            // Reset all buttons
+            document.querySelectorAll('.tab2-btn').forEach(btn => {
+                btn.classList.remove('bg-red-500', 'text-white');
+                btn.classList.add('bg-white/10', 'text-slate-300');
+            });
+            // Show selected tab
+            document.getElementById(`tab2-${tab}-content`).classList.remove('hidden');
+            // Highlight selected button
+            const button = document.getElementById(`tab2-${tab}`);
+            button.classList.remove('bg-white/10', 'text-slate-300');
+            button.classList.add('bg-red-500', 'text-white');
+        }
+    </script>
 
 </body>
 </html>
