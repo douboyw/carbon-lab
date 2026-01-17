@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Early Access - Carbon Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 min-h-screen">
+    
+    <!-- Header -->
+    <header class="container mx-auto px-6 py-6">
+        <div class="flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-white">← Carbon Lab</a>
+            <nav class="flex gap-6">
+                <a href="/" class="text-slate-300 hover:text-white transition">Home</a>
+                <a href="/our-approach.html" class="text-slate-300 hover:text-white transition">Learn Our Approach</a>
+                <a href="/#demos" class="text-slate-300 hover:text-white transition">Try Demo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Form Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="max-w-2xl mx-auto">
+            
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-white mb-4">Get Early Access</h1>
+                <p class="text-slate-300 text-lg mb-6">
+                    Join our pilot program and help shape the future of AI-powered finance automation.
+                </p>
+            </div>
+
+            <!-- Form -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/20">
+                <form id="pilotForm" class="space-y-6">
+                    
+                    <!-- Name -->
+                    <div>
+                        <label for="name" class="block text-sm font-semibold text-white mb-2">
+                            Full Name <span class="text-red-400">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required
+                            class="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition"
+                            placeholder="Jane Smith"
+                        >
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-white mb-2">
+                            Work Email <span class="text-red-400">*</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            class="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition"
+                            placeholder="jane@company.com"
+                        >
+                    </div>
+
+                    <!-- Title -->
+                    <div>
+                        <label for="title" class="block text-sm font-semibold text-white mb-2">
+                            Job Title <span class="text-red-400">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="title" 
+                            name="title" 
+                            required
+                            class="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition"
+                            placeholder="CFO, Controller, Finance Manager, etc."
+                        >
+                    </div>
+
+                    <!-- Company -->
+                    <div>
+                        <label for="company" class="block text-sm font-semibold text-white mb-2">
+                            Company Name <span class="text-red-400">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="company" 
+                            name="company" 
+                            required
+                            class="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition"
+                            placeholder="Acme Corp"
+                        >
+                    </div>
+
+                    <!-- Company Size -->
+                    <div>
+                        <label for="companySize" class="block text-sm font-semibold text-white mb-2">
+                            Company Size
+                        </label>
+                        <select 
+                            id="companySize" 
+                            name="companySize"
+                            class="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition"
+                        >
+                            <option value="">Select size...</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-200">51-200 employees</option>
+                            <option value="201-500">201-500 employees</option>
+                            <option value="501-1000">501-1000 employees</option>
+                            <option value="1000+">1000+ employees</option>
+                        </select>
+                    </div>
+
+                    <!-- Which Side-Kick -->
+                    <div>
+                        <label class="block text-sm font-semibold text-white mb-2">
+                            Which Side-Kick are you most interested in?
+                        </label>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 bg-slate-900/30 rounded-lg cursor-pointer hover:bg-slate-900/50 transition">
+                                <input type="checkbox" name="sidekick" value="Contract Wizard" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 rounded focus:ring-cyan-500">
+                                <span class="text-white">Contract Wizard (Revenue Recognition)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-slate-900/30 rounded-lg cursor-pointer hover:bg-slate-900/50 transition">
+                                <input type="checkbox" name="sidekick" value="Fraud Fighter" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 rounded focus:ring-cyan-500">
+                                <span class="text-white">Fraud Fighter (Fraud Detection)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-slate-900/30 rounded-lg cursor-pointer hover:bg-slate-900/50 transition">
+                                <input type="checkbox" name="sidekick" value="Revenue Mapper" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 rounded focus:ring-cyan-500">
+                                <span class="text-white">Revenue Mapper (ARR Waterfall)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-slate-900/30 rounded-lg cursor-pointer hover:bg-slate-900/50 transition">
+                                <input type="checkbox" name="sidekick" value="Variance Detective" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 rounded focus:ring-cyan-500">
+                                <span class="text-white">Variance Detective (Variance Analysis)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-slate-900/30 rounded-lg cursor-pointer hover:bg-slate-900/50 transition">
+                                <input type="checkbox" name="sidekick" value="Invoice Magic" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 rounded focus:ring-cyan-500">
+                                <span class="text-white">Invoice Magic (AP Automation)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-slate-900/30 rounded-lg cursor-pointer hover:bg-slate-900/50 transition">
+                                <input type="checkbox" name="sidekick" value="Tax Navigator" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 rounded focus:ring-cyan-500">
+                                <span class="text-white">Tax Navigator (Tax Compliance)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-white mb-2">
+                            Tell us about your finance workflows (Optional)
+                        </label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="4"
+                            class="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition resize-none"
+                            placeholder="What are your biggest finance pain points? What workflows take the most time?"
+                        ></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-4">
+                        <button 
+                            type="submit"
+                            class="w-full px-8 py-4 bg-cyan-500 text-white font-bold rounded-lg hover:bg-cyan-600 transition shadow-lg shadow-cyan-500/50 text-lg"
+                        >
+                            Submit Application
+                        </button>
+                        <p class="text-slate-400 text-sm text-center mt-4">
+                            We'll review your application and reach out within 2 business days
+                        </p>
+                    </div>
+
+                </form>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="successMessage" class="hidden">
+                    <div class="text-center py-12">
+                        <div class="text-6xl mb-4">✅</div>
+                        <h2 class="text-3xl font-bold text-white mb-4">Application Submitted!</h2>
+                        <p class="text-slate-300 mb-6">
+                            Thank you for your interest in Carbon Lab. We'll review your application and be in touch within 2 business days.
+                        </p>
+                        <p class="text-slate-400 mb-8">
+                            In the meantime, feel free to try our live demos:
+                        </p>
+                        <div class="flex justify-center gap-4">
+                            <a href="/revenue-accountant/" class="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition">
+                                Try Contract Wizard
+                            </a>
+                            <a href="/fraud-detection/" class="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition">
+                                Try Fraud Fighter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('pilotForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                title: formData.get('title'),
+                company: formData.get('company'),
+                companySize: formData.get('companySize'),
+                sidekicks: formData.getAll('sidekick'),
+                message: formData.get('message'),
+                timestamp: new Date().toISOString()
+            };
+            
+            // For demo purposes, just show success message
+            // In production, you'd send this to your backend/CRM
+            console.log('Form submission:', data);
+            
+            // Create mailto link with form data
+            const subject = encodeURIComponent('Early Access Application - ' + data.company);
+            const body = encodeURIComponent(`
+Early Access Application
+
+Name: ${data.name}
+Email: ${data.email}
+Title: ${data.title}
+Company: ${data.company}
+Company Size: ${data.companySize || 'Not specified'}
+
+Interested Side-Kicks:
+${data.sidekicks.length > 0 ? data.sidekicks.join('\n') : 'None selected'}
+
+Message:
+${data.message || 'No message provided'}
+
+Submitted: ${data.timestamp}
+            `);
+            
+            // Send email (this will open their email client)
+            window.location.href = `mailto:hello@carbon-lab.io?subject=${subject}&body=${body}`;
+            
+            // Show success message
+            document.getElementById('pilotForm').style.display = 'none';
+            document.getElementById('successMessage').classList.remove('hidden');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>
