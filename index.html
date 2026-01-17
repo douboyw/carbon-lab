@@ -14,23 +14,32 @@
     
     <!-- Header -->
     <header class="container mx-auto px-6 py-8">
-        <div class="flex items-center gap-3">
-            <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 5 L85 27.5 L85 72.5 L50 95 L15 72.5 L15 27.5 Z" 
-                      fill="#1e293b" stroke="#06b6d4" stroke-width="3"/>
-                <circle cx="50" cy="50" r="8" fill="#06b6d4"/>
-                <circle cx="50" cy="30" r="4" fill="#22d3ee"/>
-                <circle cx="67" cy="50" r="4" fill="#22d3ee"/>
-                <circle cx="50" cy="70" r="4" fill="#22d3ee"/>
-                <circle cx="33" cy="50" r="4" fill="#22d3ee"/>
-                <ellipse cx="50" cy="50" rx="20" ry="20" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4"/>
-                <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4" transform="rotate(60 50 50)"/>
-                <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4" transform="rotate(-60 50 50)"/>
-            </svg>
-            <div>
-                <div class="text-2xl font-bold text-white">Carbon Lab</div>
-                <div class="text-sm text-blue-300">Your Finance Team's AI Side-Kick</div>
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 5 L85 27.5 L85 72.5 L50 95 L15 72.5 L15 27.5 Z" 
+                          fill="#1e293b" stroke="#06b6d4" stroke-width="3"/>
+                    <circle cx="50" cy="50" r="8" fill="#06b6d4"/>
+                    <circle cx="50" cy="30" r="4" fill="#22d3ee"/>
+                    <circle cx="67" cy="50" r="4" fill="#22d3ee"/>
+                    <circle cx="50" cy="70" r="4" fill="#22d3ee"/>
+                    <circle cx="33" cy="50" r="4" fill="#22d3ee"/>
+                    <ellipse cx="50" cy="50" rx="20" ry="20" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4"/>
+                    <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4" transform="rotate(60 50 50)"/>
+                    <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4" transform="rotate(-60 50 50)"/>
+                </svg>
+                <div>
+                    <div class="text-2xl font-bold text-white">Carbon Lab</div>
+                    <div class="text-xs text-slate-400">AI Finance Side-Kicks</div>
+                </div>
             </div>
+            <nav class="flex gap-8 items-center">
+                <a href="/" class="text-white font-semibold hover:text-cyan-400 transition">Home</a>
+                <a href="/our-approach.html" class="text-slate-300 hover:text-cyan-400 transition">Our Approach</a>
+                <a href="/pricing.html" class="text-slate-300 hover:text-cyan-400 transition">Pricing</a>
+                <a href="/revenue-accountant/" class="text-slate-300 hover:text-cyan-400 transition">Try Demo</a>
+                <a href="mailto:hello@carbon-lab.io" class="px-6 py-2 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition shadow-lg shadow-cyan-500/30">Contact</a>
+            </nav>
         </div>
     </header>
 
@@ -342,25 +351,63 @@
     </section>
 
     <!-- Footer -->
-    <footer class="container mx-auto px-6 py-12 text-center text-slate-400 border-t border-white/10">
-        <div class="flex items-center justify-center gap-2 mb-4">
-            <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 5 L85 27.5 L85 72.5 L50 95 L15 72.5 L15 27.5 Z" 
-                      fill="#1e293b" stroke="#06b6d4" stroke-width="3"/>
-                <circle cx="50" cy="50" r="8" fill="#06b6d4"/>
-                <circle cx="50" cy="30" r="4" fill="#22d3ee"/>
-                <circle cx="67" cy="50" r="4" fill="#22d3ee"/>
-                <circle cx="50" cy="70" r="4" fill="#22d3ee"/>
-                <circle cx="33" cy="50" r="4" fill="#22d3ee"/>
-                <ellipse cx="50" cy="50" rx="20" ry="20" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4"/>
-                <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4" transform="rotate(60 50 50)"/>
-                <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4" transform="rotate(-60 50 50)"/>
-            </svg>
-            <span class="font-semibold text-lg">Carbon Lab</span>
+    <footer class="container mx-auto px-6 py-12 border-t border-white/10">
+        <div class="max-w-6xl mx-auto">
+            <!-- Footer Navigation -->
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 5 L85 27.5 L85 72.5 L50 95 L15 72.5 L15 27.5 Z" 
+                                  fill="#1e293b" stroke="#06b6d4" stroke-width="3"/>
+                            <circle cx="50" cy="50" r="8" fill="#06b6d4"/>
+                            <circle cx="50" cy="30" r="4" fill="#22d3ee"/>
+                            <circle cx="67" cy="50" r="4" fill="#22d3ee"/>
+                            <circle cx="50" cy="70" r="4" fill="#22d3ee"/>
+                            <circle cx="33" cy="50" r="4" fill="#22d3ee"/>
+                            <ellipse cx="50" cy="50" rx="20" ry="20" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4"/>
+                            <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4" transform="rotate(60 50 50)"/>
+                            <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4" transform="rotate(-60 50 50)"/>
+                        </svg>
+                        <span class="font-semibold text-lg text-white">Carbon Lab</span>
+                    </div>
+                    <p class="text-slate-400 text-sm">AI Finance Side-Kicks that learn YOUR way of working</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-white mb-3">Product</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/revenue-accountant/" class="text-slate-400 hover:text-cyan-400 transition">Contract Wizard Demo</a></li>
+                        <li><a href="/#how-it-works" class="text-slate-400 hover:text-cyan-400 transition">How Training Works</a></li>
+                        <li><a href="/pricing.html" class="text-slate-400 hover:text-cyan-400 transition">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-white mb-3">Company</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/our-approach.html" class="text-slate-400 hover:text-cyan-400 transition">Our Approach</a></li>
+                        <li><a href="mailto:hello@carbon-lab.io" class="text-slate-400 hover:text-cyan-400 transition">Contact Us</a></li>
+                        <li><a href="mailto:hello@carbon-lab.io?subject=Pilot Program" class="text-slate-400 hover:text-cyan-400 transition">Become a Pilot Customer</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-white mb-3">Side-Kicks</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><span class="text-slate-400">Contract Wizard</span></li>
+                        <li><span class="text-slate-400">Invoice Magic</span></li>
+                        <li><span class="text-slate-400">Fraud Fighter</span></li>
+                        <li><span class="text-slate-400">Tax Navigator</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-center text-slate-500 text-sm">
+                <p>© 2026 Carbon Lab. Built with Claude AI.</p>
+                <p class="mt-2">All demos use simulated data for demonstration purposes.</p>
+            </div>
         </div>
-        <p class="mb-2">Your Finance Team's AI Side-Kick</p>
-        <p class="text-sm">© 2025 Carbon Lab. Built with Claude AI.</p>
-        <p class="mt-2 text-sm">All demos use simulated data for demonstration purposes.</p>
     </footer>
 
 </body>
