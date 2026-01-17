@@ -35,10 +35,10 @@
             </div>
             <nav class="flex gap-8 items-center">
                 <a href="/" class="text-white font-semibold hover:text-cyan-400 transition">Home</a>
-                <a href="/our-approach.html" class="text-slate-300 hover:text-cyan-400 transition">Our Approach</a>
+                <a href="/our-approach.html" class="text-slate-300 hover:text-cyan-400 transition">Learn Our Approach</a>
                 <span class="text-slate-600 cursor-not-allowed">Pricing</span>
                 <a href="#demos" class="text-slate-300 hover:text-cyan-400 transition">Try Demo</a>
-                <span class="text-slate-600 cursor-not-allowed">Contact</span>
+                <a href="/pilot.html" class="px-6 py-2 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition shadow-lg shadow-cyan-500/30">Become a Pilot Customer</a>
             </nav>
         </div>
     </header>
@@ -59,18 +59,21 @@
             No technical skills required—just show them how you work.
         </p>
         <div class="flex justify-center gap-4 mb-8">
-            <a href="#demos" class="px-8 py-4 bg-cyan-500 text-white font-bold rounded-lg hover:bg-cyan-600 transition shadow-lg shadow-cyan-500/50 text-lg">
-                Try Live Demos
-            </a>
-            <a href="/our-approach.html" class="px-8 py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 transition border border-cyan-500/30 text-lg">
+            <a href="/our-approach.html" class="px-8 py-4 bg-cyan-500 text-white font-bold rounded-lg hover:bg-cyan-600 transition shadow-lg shadow-cyan-500/50 text-lg">
                 Learn Our Approach
+            </a>
+            <a href="#demos" class="px-8 py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 transition border border-cyan-500/30 text-lg">
+                Try Demo
+            </a>
+            <a href="/pilot.html" class="px-8 py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 transition border border-cyan-500/30 text-lg">
+                Become a Pilot
             </a>
         </div>
     </section>
 
     <!-- Demo Cards -->
     <section id="demos" class="container mx-auto px-6 pb-20">
-        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             
             <!-- Contract Wizard Demo -->
             <a href="/revenue-accountant/" class="group block bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-cyan-400 transition-all hover:scale-105 hover:shadow-2xl">
@@ -134,6 +137,60 @@
                 </div>
             </a>
 
+            <!-- Revenue Mapper Demo -->
+            <div class="block bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 opacity-75">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="text-5xl">📈</div>
+                    <div class="px-3 py-1 bg-slate-500/20 text-slate-400 rounded-full text-xs font-semibold">
+                        COMING SOON
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-3">
+                    Revenue Mapper
+                </h3>
+                <p class="text-slate-300 mb-4">
+                    Train your Side-Kick to build ARR waterfalls YOUR way. Show it how you categorize new, expansion, contraction, and churn. It learns your cohort definitions and movement tracking.
+                </p>
+                <div class="border-t border-white/10 pt-4 mb-4">
+                    <div class="text-sm text-purple-300 font-semibold mb-2">Learns Your Metrics:</div>
+                    <div class="text-sm text-slate-300">✓ Your ARR categorization rules</div>
+                    <div class="text-sm text-slate-300">✓ Your cohort definitions</div>
+                    <div class="text-sm text-slate-300">✓ Your waterfall structure</div>
+                </div>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">ARR Waterfall</span>
+                    <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Cohort Analysis</span>
+                    <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Your Rules</span>
+                </div>
+            </div>
+
+            <!-- Variance Detective Demo -->
+            <div class="block bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 opacity-75">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="text-5xl">🔎</div>
+                    <div class="px-3 py-1 bg-slate-500/20 text-slate-400 rounded-full text-xs font-semibold">
+                        COMING SOON
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-3">
+                    Variance Detective
+                </h3>
+                <p class="text-slate-300 mb-4">
+                    Train your Side-Kick to do variance analysis YOUR way. Show it what's a meaningful variance, what needs explanation, how you categorize drivers. Generates monthly packages automatically.
+                </p>
+                <div class="border-t border-white/10 pt-4 mb-4">
+                    <div class="text-sm text-blue-300 font-semibold mb-2">Learns Your Thresholds:</div>
+                    <div class="text-sm text-slate-300">✓ Your materiality thresholds</div>
+                    <div class="text-sm text-slate-300">✓ Your variance categories</div>
+                    <div class="text-sm text-slate-300">✓ Your explanation formats</div>
+                </div>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Budget vs Actual</span>
+                    <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Auto-Explanations</span>
+                    <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Your Formats</span>
+                </div>
+            </div>
+
             <!-- Invoice Magic Demo -->
             <div class="block bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 opacity-75">
                 <div class="flex justify-between items-start mb-4">
@@ -176,15 +233,15 @@
                     Upload your tax policies. Side-Kick learns your specific jurisdictions, your entity structure, your allocation methods. Generates ASC 740 packages tailored to you.
                 </p>
                 <div class="border-t border-white/10 pt-4 mb-4">
-                    <div class="text-sm text-purple-300 font-semibold mb-2">Adapts to Your Tax Situation:</div>
+                    <div class="text-sm text-orange-300 font-semibold mb-2">Adapts to Your Tax Situation:</div>
                     <div class="text-sm text-slate-300">✓ Your jurisdiction mix</div>
                     <div class="text-sm text-slate-300">✓ Your entity structure</div>
                     <div class="text-sm text-slate-300">✓ Your tax positions</div>
                 </div>
                 <div class="flex gap-2 flex-wrap">
-                    <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Custom Jurisdictions</span>
-                    <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">ASC 740</span>
-                    <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Your Entities</span>
+                    <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">Custom Jurisdictions</span>
+                    <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">ASC 740</span>
+                    <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">Your Entities</span>
                 </div>
             </div>
 
@@ -324,21 +381,21 @@
     <!-- CTA -->
     <section class="container mx-auto px-6 py-16">
         <div class="max-w-3xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-cyan-500/20 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Ready to See It in Action?</h2>
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
             <p class="text-slate-300 mb-8">
-                Try our interactive demos. Train a Side-Kick on YOUR examples. See how it learns from corrections. Watch it automate your workflows.
+                Try our interactive demos, learn our approach, or join our pilot program for early access and special pricing.
             </p>
-            <div class="flex justify-center gap-4">
+            <div class="flex flex-wrap justify-center gap-4">
                 <a href="/revenue-accountant/" class="px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition shadow-lg shadow-cyan-500/50">
-                    Try Contract Wizard Demo
+                    Try Contract Wizard
                 </a>
                 <a href="/fraud-detection/" class="px-8 py-4 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition shadow-lg shadow-red-500/50">
-                    Try Fraud Fighter Demo
+                    Try Fraud Fighter
+                </a>
+                <a href="/pilot.html" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-cyan-500/30">
+                    Become a Pilot Customer
                 </a>
             </div>
-            <p class="text-slate-400 text-sm mt-6">
-                Interactive demos • No signup required • See the 3-step training process
-            </p>
         </div>
     </section>
 
@@ -380,17 +437,19 @@
                     <h3 class="font-semibold text-white mb-3">Company</h3>
                     <ul class="space-y-2 text-sm">
                         <li><a href="/our-approach.html" class="text-slate-400 hover:text-cyan-400 transition">Our Approach</a></li>
+                        <li><a href="/pilot.html" class="text-slate-400 hover:text-cyan-400 transition">Become a Pilot Customer</a></li>
                         <li><a href="mailto:hello@carbon-lab.io" class="text-slate-400 hover:text-cyan-400 transition">Contact Us</a></li>
-                        <li><a href="mailto:hello@carbon-lab.io?subject=Pilot Program" class="text-slate-400 hover:text-cyan-400 transition">Become a Pilot Customer</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="font-semibold text-white mb-3">Side-Kicks</h3>
                     <ul class="space-y-2 text-sm">
-                        <li><span class="text-slate-400">Contract Wizard</span></li>
+                        <li><a href="/revenue-accountant/" class="text-slate-400 hover:text-cyan-400 transition">Contract Wizard</a></li>
+                        <li><a href="/fraud-detection/" class="text-slate-400 hover:text-cyan-400 transition">Fraud Fighter</a></li>
+                        <li><span class="text-slate-400">Revenue Mapper</span></li>
+                        <li><span class="text-slate-400">Variance Detective</span></li>
                         <li><span class="text-slate-400">Invoice Magic</span></li>
-                        <li><span class="text-slate-400">Fraud Fighter</span></li>
                         <li><span class="text-slate-400">Tax Navigator</span></li>
                     </ul>
                 </div>
