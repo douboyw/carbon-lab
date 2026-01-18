@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contract Wizard Training Demo - Carbon Lab</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .heading-font { 
+            font-family: 'Syne', sans-serif; 
+            letter-spacing: -0.02em;
+        }
+        .logo-font, .carbon-font {
+            font-family: 'Space Grotesk', monospace;
+            letter-spacing: 0.05em;
+        }
         .step-inactive { opacity: 0.4; }
         .step-active { opacity: 1; }
         .fade-in { animation: fadeIn 0.5s; }
@@ -16,13 +24,13 @@
         @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     </style>
 </head>
-<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 min-h-screen">
+<body class="bg-gradient-to-br from-neutral-950 via-neutral-900 to-slate-900 min-h-screen">
     
     <!-- Header -->
     <header class="container mx-auto px-6 py-6">
         <div class="flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-white">← Carbon Lab</a>
-            <div class="text-cyan-400 font-semibold">Contract Wizard Training Demo</div>
+            <a href="/" class="logo-font text-2xl font-bold text-white tracking-wide">← Carbon Lab</a>
+            <div class="text-orange-400 font-semibold">Contract Wizard Training Demo</div>
         </div>
     </header>
 
@@ -31,27 +39,27 @@
         <div class="max-w-4xl mx-auto">
             <div class="flex items-center justify-between mb-8">
                 <div id="step-1-indicator" class="flex-1 text-center step-active transition-all">
-                    <div class="w-12 h-12 mx-auto bg-cyan-500/20 border-2 border-cyan-400 rounded-full flex items-center justify-center mb-2">
+                    <div class="w-12 h-12 mx-auto bg-orange-600/20 border-2 border-orange-500 rounded-full flex items-center justify-center mb-2">
                         <span class="text-xl">📚</span>
                     </div>
                     <div class="text-sm font-semibold text-white">Step 1</div>
                     <div class="text-xs text-slate-400">Show Examples</div>
                 </div>
                 <div class="flex-1 h-1 bg-slate-700 mx-2">
-                    <div id="progress-1-2" class="h-full bg-cyan-500 transition-all duration-500" style="width: 0%"></div>
+                    <div id="progress-1-2" class="h-full bg-orange-600 transition-all duration-500" style="width: 0%"></div>
                 </div>
                 <div id="step-2-indicator" class="flex-1 text-center step-inactive transition-all">
-                    <div class="w-12 h-12 mx-auto bg-cyan-500/20 border-2 border-slate-600 rounded-full flex items-center justify-center mb-2">
+                    <div class="w-12 h-12 mx-auto bg-orange-600/20 border-2 border-slate-600 rounded-full flex items-center justify-center mb-2">
                         <span class="text-xl">🎯</span>
                     </div>
                     <div class="text-sm font-semibold text-slate-500">Step 2</div>
                     <div class="text-xs text-slate-600">Review & Correct</div>
                 </div>
                 <div class="flex-1 h-1 bg-slate-700 mx-2">
-                    <div id="progress-2-3" class="h-full bg-cyan-500 transition-all duration-500" style="width: 0%"></div>
+                    <div id="progress-2-3" class="h-full bg-orange-600 transition-all duration-500" style="width: 0%"></div>
                 </div>
                 <div id="step-3-indicator" class="flex-1 text-center step-inactive transition-all">
-                    <div class="w-12 h-12 mx-auto bg-cyan-500/20 border-2 border-slate-600 rounded-full flex items-center justify-center mb-2">
+                    <div class="w-12 h-12 mx-auto bg-orange-600/20 border-2 border-slate-600 rounded-full flex items-center justify-center mb-2">
                         <span class="text-xl">🚀</span>
                     </div>
                     <div class="text-sm font-semibold text-slate-500">Step 3</div>
@@ -66,8 +74,8 @@
         <div class="max-w-4xl mx-auto">
             
             <!-- Step 1: Show Examples -->
-            <div id="step-1" class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/20 fade-in">
-                <h2 class="text-3xl font-bold text-white mb-4">Step 1: Show Examples</h2>
+            <div id="step-1" class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-orange-600/20 fade-in">
+                <h2 class="heading-font text-3xl font-bold text-white mb-4">Step 1: Show Examples</h2>
                 <p class="text-slate-300 mb-8">Upload 10-20 past contracts so your Side-Kick can learn YOUR patterns for identifying performance obligations and revenue recognition.</p>
                 
                 <!-- Sample Contracts -->
@@ -80,7 +88,7 @@
                                     <div class="font-semibold text-white mb-1">SaaS_Contract_Acme_Corp.pdf</div>
                                     <div class="text-sm text-slate-400 mb-2">3-year subscription + implementation services</div>
                                     <div class="flex gap-2 flex-wrap">
-                                        <span class="px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded text-xs">2 obligations</span>
+                                        <span class="px-2 py-1 bg-orange-600/20 text-orange-400 rounded text-xs">2 obligations</span>
                                         <span class="px-2 py-1 bg-purple-500/20 text-purple-300 rounded text-xs">Multi-year</span>
                                         <span class="px-2 py-1 bg-green-500/20 text-green-300 rounded text-xs">Ratable</span>
                                     </div>
@@ -98,7 +106,7 @@
                                     <div class="font-semibold text-white mb-1">Enterprise_License_GlobalTech.pdf</div>
                                     <div class="text-sm text-slate-400 mb-2">Perpetual license + 1-year support</div>
                                     <div class="flex gap-2 flex-wrap">
-                                        <span class="px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded text-xs">2 obligations</span>
+                                        <span class="px-2 py-1 bg-orange-600/20 text-orange-400 rounded text-xs">2 obligations</span>
                                         <span class="px-2 py-1 bg-purple-500/20 text-purple-300 rounded text-xs">Perpetual</span>
                                         <span class="px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded text-xs">Upfront + Ratable</span>
                                     </div>
@@ -116,7 +124,7 @@
                                     <div class="font-semibold text-white mb-1">Professional_Services_Startup_Inc.pdf</div>
                                     <div class="text-sm text-slate-400 mb-2">Fixed-fee consulting engagement</div>
                                     <div class="flex gap-2 flex-wrap">
-                                        <span class="px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded text-xs">1 obligation</span>
+                                        <span class="px-2 py-1 bg-orange-600/20 text-orange-400 rounded text-xs">1 obligation</span>
                                         <span class="px-2 py-1 bg-green-500/20 text-green-300 rounded text-xs">% Complete</span>
                                     </div>
                                 </div>
@@ -137,11 +145,11 @@
                 </div>
 
                 <!-- What Side-Kick Learned -->
-                <div class="bg-gradient-to-r from-slate-800/50 to-cyan-900/20 rounded-xl p-6 border border-cyan-500/20 mb-8">
+                <div class="bg-gradient-to-r from-slate-800/50 to-cyan-900/20 rounded-xl p-6 border border-orange-600/20 mb-8">
                     <h3 class="text-lg font-semibold text-white mb-4">🧠 What Your Side-Kick Learned:</h3>
                     <div class="grid md:grid-cols-2 gap-4 text-sm">
                         <div>
-                            <div class="text-cyan-300 font-semibold mb-2">Pattern Recognition:</div>
+                            <div class="text-orange-400 font-semibold mb-2">Pattern Recognition:</div>
                             <ul class="space-y-1 text-slate-300">
                                 <li>✓ SaaS subscriptions → Ratable over term</li>
                                 <li>✓ Professional services → % completion or milestone</li>
@@ -149,7 +157,7 @@
                             </ul>
                         </div>
                         <div>
-                            <div class="text-cyan-300 font-semibold mb-2">Your Company Rules:</div>
+                            <div class="text-orange-400 font-semibold mb-2">Your Company Rules:</div>
                             <ul class="space-y-1 text-slate-300">
                                 <li>✓ Setup fees ≥ $5K → Separate obligation</li>
                                 <li>✓ Support always bundled with licenses</li>
@@ -160,19 +168,19 @@
                 </div>
 
                 <div class="flex justify-end">
-                    <button onclick="goToStep2()" class="px-8 py-4 bg-cyan-500 text-white font-bold rounded-lg hover:bg-cyan-600 transition shadow-lg shadow-cyan-500/50">
+                    <button onclick="goToStep2()" class="px-8 py-4 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition shadow-lg shadow-cyan-500/50">
                         Continue to Step 2 →
                     </button>
                 </div>
             </div>
 
             <!-- Step 2: Review & Correct -->
-            <div id="step-2" class="hidden bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/20">
-                <h2 class="text-3xl font-bold text-white mb-4">Step 2: Review & Correct</h2>
+            <div id="step-2" class="hidden bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-orange-600/20">
+                <h2 class="heading-font text-3xl font-bold text-white mb-4">Step 2: Review & Correct</h2>
                 <p class="text-slate-300 mb-8">Now your Side-Kick will try analyzing a NEW contract. Review its work and make corrections. It learns from every fix.</p>
                 
                 <!-- New Contract -->
-                <div class="bg-slate-800/50 rounded-lg p-6 border border-cyan-500/30 mb-6">
+                <div class="bg-slate-800/50 rounded-lg p-6 border border-orange-600/30 mb-6">
                     <div class="flex items-start gap-4 mb-4">
                         <div class="text-4xl">📄</div>
                         <div>
@@ -221,13 +229,13 @@
                         </div>
 
                         <!-- Obligation 2 (Added) -->
-                        <div class="bg-slate-900/50 rounded-lg p-6 border-2 border-cyan-500/30">
+                        <div class="bg-slate-900/50 rounded-lg p-6 border-2 border-orange-600/30">
                             <div class="flex justify-between items-start mb-3">
                                 <div>
                                     <div class="text-sm text-slate-400 mb-1">PERFORMANCE OBLIGATION #2</div>
                                     <div class="text-lg font-bold text-white">Implementation Services</div>
                                 </div>
-                                <div class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs font-semibold">
+                                <div class="px-3 py-1 bg-orange-600/20 text-orange-400 rounded-full text-xs font-semibold">
                                     ✓ YOU ADDED
                                 </div>
                             </div>
@@ -244,13 +252,13 @@
                         </div>
 
                         <!-- Obligation 3 (Added) -->
-                        <div class="bg-slate-900/50 rounded-lg p-6 border-2 border-cyan-500/30">
+                        <div class="bg-slate-900/50 rounded-lg p-6 border-2 border-orange-600/30">
                             <div class="flex justify-between items-start mb-3">
                                 <div>
                                     <div class="text-sm text-slate-400 mb-1">PERFORMANCE OBLIGATION #3</div>
                                     <div class="text-lg font-bold text-white">Training Services</div>
                                 </div>
-                                <div class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs font-semibold">
+                                <div class="px-3 py-1 bg-orange-600/20 text-orange-400 rounded-full text-xs font-semibold">
                                     ✓ YOU ADDED
                                 </div>
                             </div>
@@ -269,7 +277,7 @@
                 </div>
 
                 <!-- Learning Feedback -->
-                <div class="bg-gradient-to-r from-slate-800/50 to-cyan-900/20 rounded-xl p-6 border border-cyan-500/20 mb-8">
+                <div class="bg-gradient-to-r from-slate-800/50 to-cyan-900/20 rounded-xl p-6 border border-orange-600/20 mb-8">
                     <div class="flex items-start gap-3">
                         <div class="text-2xl">💡</div>
                         <div>
@@ -286,11 +294,11 @@
 
                 <!-- Generated Output -->
                 <div class="mb-8">
-                    <h3 class="text-xl font-bold text-white mb-4">Generated Output (After Your Corrections):</h3>
+                    <h3 class="heading-font text-xl font-bold text-white mb-4">Generated Output (After Your Corrections):</h3>
                     
                     <!-- Tabs -->
                     <div class="flex gap-2 mb-4">
-                        <button onclick="showTab2('memo')" id="tab2-memo" class="tab2-btn px-4 py-2 bg-cyan-500 text-white rounded-lg font-semibold transition">
+                        <button onclick="showTab2('memo')" id="tab2-memo" class="tab2-btn px-4 py-2 bg-orange-600 text-white rounded-lg font-semibold transition">
                             📝 Revenue Memo
                         </button>
                         <button onclick="showTab2('journal')" id="tab2-journal" class="tab2-btn px-4 py-2 bg-white/10 text-slate-300 rounded-lg font-semibold transition">
@@ -375,23 +383,23 @@
                                 <tbody class="text-slate-300 font-mono text-xs">
                                     <tr class="border-b border-slate-800">
                                         <td class="py-2">Accounts Receivable</td>
-                                        <td class="text-right text-cyan-400">$1,100,000.00</td>
+                                        <td class="text-right text-orange-500">$1,100,000.00</td>
                                         <td class="text-right">—</td>
                                     </tr>
                                     <tr class="border-b border-slate-800">
                                         <td class="py-2 pl-4">Deferred Revenue - Subscription</td>
                                         <td class="text-right">—</td>
-                                        <td class="text-right text-cyan-400">$1,000,000.00</td>
+                                        <td class="text-right text-orange-500">$1,000,000.00</td>
                                     </tr>
                                     <tr class="border-b border-slate-800">
                                         <td class="py-2 pl-4">Deferred Revenue - Implementation</td>
                                         <td class="text-right">—</td>
-                                        <td class="text-right text-cyan-400">$75,000.00</td>
+                                        <td class="text-right text-orange-500">$75,000.00</td>
                                     </tr>
                                     <tr class="border-b border-slate-800">
                                         <td class="py-2 pl-4">Deferred Revenue - Training</td>
                                         <td class="text-right">—</td>
-                                        <td class="text-right text-cyan-400">$25,000.00</td>
+                                        <td class="text-right text-orange-500">$25,000.00</td>
                                     </tr>
                                     <tr class="border-t-2 border-slate-700">
                                         <td class="py-2 font-bold text-white">TOTAL</td>
@@ -416,13 +424,13 @@
                                 <tbody class="text-slate-300 font-mono text-xs">
                                     <tr class="border-b border-slate-800">
                                         <td class="py-2">Deferred Revenue - Subscription</td>
-                                        <td class="text-right text-cyan-400">$41,666.67</td>
+                                        <td class="text-right text-orange-500">$41,666.67</td>
                                         <td class="text-right">—</td>
                                     </tr>
                                     <tr class="border-b border-slate-800">
                                         <td class="py-2 pl-4">Revenue - SaaS Subscription</td>
                                         <td class="text-right">—</td>
-                                        <td class="text-right text-cyan-400">$41,666.67</td>
+                                        <td class="text-right text-orange-500">$41,666.67</td>
                                     </tr>
                                     <tr class="border-t-2 border-slate-700">
                                         <td class="py-2 font-bold text-white">TOTAL</td>
@@ -459,35 +467,35 @@
                                         <td class="text-right">$41,667</td>
                                         <td class="text-right">$25,000</td>
                                         <td class="text-right">—</td>
-                                        <td class="text-right text-cyan-400">$66,667</td>
+                                        <td class="text-right text-orange-500">$66,667</td>
                                     </tr>
                                     <tr class="border-b border-slate-800">
                                         <td class="py-2">Feb 2026</td>
                                         <td class="text-right">$41,667</td>
                                         <td class="text-right">$25,000</td>
                                         <td class="text-right">—</td>
-                                        <td class="text-right text-cyan-400">$66,667</td>
+                                        <td class="text-right text-orange-500">$66,667</td>
                                     </tr>
                                     <tr class="border-b border-slate-800">
                                         <td class="py-2">Mar 2026</td>
                                         <td class="text-right">$41,667</td>
                                         <td class="text-right">$25,000</td>
                                         <td class="text-right">—</td>
-                                        <td class="text-right text-cyan-400">$66,667</td>
+                                        <td class="text-right text-orange-500">$66,667</td>
                                     </tr>
                                     <tr class="border-b border-slate-800 bg-green-500/5">
                                         <td class="py-2">Apr 2026</td>
                                         <td class="text-right">$41,667</td>
                                         <td class="text-right">—</td>
                                         <td class="text-right text-green-400">$25,000</td>
-                                        <td class="text-right text-cyan-400">$66,667</td>
+                                        <td class="text-right text-orange-500">$66,667</td>
                                     </tr>
                                     <tr class="border-b border-slate-800">
                                         <td class="py-2">May 2026</td>
                                         <td class="text-right">$41,667</td>
                                         <td class="text-right">—</td>
                                         <td class="text-right">—</td>
-                                        <td class="text-right text-cyan-400">$41,667</td>
+                                        <td class="text-right text-orange-500">$41,667</td>
                                     </tr>
                                     <tr class="border-b border-slate-800 opacity-50">
                                         <td class="py-2" colspan="5" class="text-center text-slate-500">... continues for 24 months ...</td>
@@ -497,14 +505,14 @@
                                         <td class="text-right">$41,667</td>
                                         <td class="text-right">—</td>
                                         <td class="text-right">—</td>
-                                        <td class="text-right text-cyan-400">$41,667</td>
+                                        <td class="text-right text-orange-500">$41,667</td>
                                     </tr>
                                     <tr class="border-t-2 border-slate-700">
                                         <td class="py-2 font-bold text-white">TOTAL</td>
                                         <td class="text-right font-bold text-white">$1,000,000</td>
                                         <td class="text-right font-bold text-white">$75,000</td>
                                         <td class="text-right font-bold text-white">$25,000</td>
-                                        <td class="text-right font-bold text-cyan-400">$1,100,000</td>
+                                        <td class="text-right font-bold text-orange-500">$1,100,000</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -517,30 +525,30 @@
                 </div>
 
                 <div class="flex justify-between">
-                    <button onclick="goToStep1()" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-cyan-500/30">
+                    <button onclick="goToStep1()" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-orange-600/30">
                         ← Back to Step 1
                     </button>
-                    <button onclick="goToStep3()" class="px-8 py-4 bg-cyan-500 text-white font-bold rounded-lg hover:bg-cyan-600 transition shadow-lg shadow-cyan-500/50">
+                    <button onclick="goToStep3()" class="px-8 py-4 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition shadow-lg shadow-cyan-500/50">
                         Continue to Step 3 →
                     </button>
                 </div>
             </div>
 
             <!-- Step 3: Automate & Scale -->
-            <div id="step-3" class="hidden bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/20">
-                <h2 class="text-3xl font-bold text-white mb-4">Step 3: Automate & Scale</h2>
+            <div id="step-3" class="hidden bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-orange-600/20">
+                <h2 class="heading-font text-3xl font-bold text-white mb-4">Step 3: Automate & Scale</h2>
                 <p class="text-slate-300 mb-8">After 2-3 weeks of training, your Side-Kick now handles 90%+ of contracts automatically. You only review exceptions.</p>
                 
                 <!-- Processing Queue -->
                 <div class="mb-8">
                     <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-xl font-bold text-white">Today's Processing Queue</h3>
-                        <div class="text-cyan-400 font-semibold">23 contracts processed automatically</div>
+                        <h3 class="heading-font text-xl font-bold text-white">Today's Processing Queue</h3>
+                        <div class="text-orange-500 font-semibold">23 contracts processed automatically</div>
                     </div>
 
                     <div class="space-y-3">
                         <!-- Auto-processed -->
-                        <div onclick="showContractDetail()" class="bg-slate-800/50 rounded-lg p-4 border border-slate-700 cursor-pointer hover:border-cyan-500/50 transition">
+                        <div onclick="showContractDetail()" class="bg-slate-800/50 rounded-lg p-4 border border-slate-700 cursor-pointer hover:border-orange-600/50 transition">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3 flex-1">
                                     <div class="text-2xl">📄</div>
@@ -557,7 +565,7 @@
                                     <div class="px-3 py-1 bg-green-500/20 text-green-300 rounded text-xs font-semibold">
                                         COMPLETE
                                     </div>
-                                    <div class="text-cyan-400">→</div>
+                                    <div class="text-orange-500">→</div>
                                 </div>
                             </div>
                         </div>
@@ -624,7 +632,7 @@
 
                 <!-- Contract Detail View (Hidden by default) -->
                 <div id="contract-detail" class="hidden mb-8 slide-up">
-                    <div class="bg-gradient-to-r from-slate-800/50 to-cyan-900/20 rounded-xl p-6 border border-cyan-500/30">
+                    <div class="bg-gradient-to-r from-slate-800/50 to-cyan-900/20 rounded-xl p-6 border border-orange-600/30">
                         <div class="flex items-start justify-between mb-6">
                             <div>
                                 <div class="text-sm text-slate-400 mb-2">CONTRACT DETAILS</div>
@@ -636,7 +644,7 @@
 
                         <!-- Tabs for Detail View -->
                         <div class="flex gap-2 mb-4">
-                            <button onclick="showTab3('summary')" id="tab3-summary" class="tab3-btn px-4 py-2 bg-cyan-500 text-white rounded-lg text-sm font-semibold transition">
+                            <button onclick="showTab3('summary')" id="tab3-summary" class="tab3-btn px-4 py-2 bg-orange-600 text-white rounded-lg text-sm font-semibold transition">
                                 📋 Summary
                             </button>
                             <button onclick="showTab3('journal')" id="tab3-journal" class="tab3-btn px-4 py-2 bg-white/10 text-slate-300 rounded-lg text-sm font-semibold transition">
@@ -652,17 +660,17 @@
                             <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700">
                                 <div class="grid md:grid-cols-2 gap-6 text-sm">
                                     <div>
-                                        <div class="text-cyan-300 font-semibold mb-3">Performance Obligations:</div>
+                                        <div class="text-orange-400 font-semibold mb-3">Performance Obligations:</div>
                                         <div class="space-y-2">
                                             <div class="bg-slate-800/50 rounded p-3">
                                                 <div class="text-white font-semibold mb-1">SaaS Subscription</div>
                                                 <div class="text-slate-400">$120,000 • Ratable over 24 months</div>
-                                                <div class="text-xs text-cyan-400 mt-1">$5,000/month revenue</div>
+                                                <div class="text-xs text-orange-500 mt-1">$5,000/month revenue</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="text-cyan-300 font-semibold mb-3">Recognition Summary:</div>
+                                        <div class="text-orange-400 font-semibold mb-3">Recognition Summary:</div>
                                         <div class="space-y-2 text-slate-300">
                                             <div>Start Date: <span class="text-white">Jan 15, 2026</span></div>
                                             <div>End Date: <span class="text-white">Jan 14, 2028</span></div>
@@ -690,13 +698,13 @@
                                         <tbody class="text-slate-300">
                                             <tr class="border-b border-slate-800">
                                                 <td class="py-2">Accounts Receivable</td>
-                                                <td class="text-right text-cyan-400">$120,000</td>
+                                                <td class="text-right text-orange-500">$120,000</td>
                                                 <td class="text-right">—</td>
                                             </tr>
                                             <tr class="border-b border-slate-800">
                                                 <td class="py-2 pl-4">Deferred Revenue</td>
                                                 <td class="text-right">—</td>
-                                                <td class="text-right text-cyan-400">$120,000</td>
+                                                <td class="text-right text-orange-500">$120,000</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -714,13 +722,13 @@
                                         <tbody class="text-slate-300">
                                             <tr class="border-b border-slate-800">
                                                 <td class="py-2">Deferred Revenue</td>
-                                                <td class="text-right text-cyan-400">$5,000</td>
+                                                <td class="text-right text-orange-500">$5,000</td>
                                                 <td class="text-right">—</td>
                                             </tr>
                                             <tr class="border-b border-slate-800">
                                                 <td class="py-2 pl-4">Revenue - SaaS</td>
                                                 <td class="text-right">—</td>
-                                                <td class="text-right text-cyan-400">$5,000</td>
+                                                <td class="text-right text-orange-500">$5,000</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -735,37 +743,37 @@
                                 <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700">
                                     <h4 class="text-white font-semibold mb-4">Export to Accounting System:</h4>
                                     <div class="grid md:grid-cols-2 gap-3">
-                                        <button class="flex items-center gap-3 p-4 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition group">
+                                        <button class="flex items-center gap-3 p-4 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-orange-600/50 transition group">
                                             <div class="text-3xl">🔷</div>
                                             <div class="text-left flex-1">
-                                                <div class="font-semibold text-white group-hover:text-cyan-400 transition">NetSuite</div>
+                                                <div class="font-semibold text-white group-hover:text-orange-500 transition">NetSuite</div>
                                                 <div class="text-xs text-slate-400">Direct integration</div>
                                             </div>
-                                            <div class="text-cyan-400 opacity-0 group-hover:opacity-100 transition">→</div>
+                                            <div class="text-orange-500 opacity-0 group-hover:opacity-100 transition">→</div>
                                         </button>
-                                        <button class="flex items-center gap-3 p-4 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition group">
+                                        <button class="flex items-center gap-3 p-4 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-orange-600/50 transition group">
                                             <div class="text-3xl">🟢</div>
                                             <div class="text-left flex-1">
-                                                <div class="font-semibold text-white group-hover:text-cyan-400 transition">QuickBooks</div>
+                                                <div class="font-semibold text-white group-hover:text-orange-500 transition">QuickBooks</div>
                                                 <div class="text-xs text-slate-400">Direct integration</div>
                                             </div>
-                                            <div class="text-cyan-400 opacity-0 group-hover:opacity-100 transition">→</div>
+                                            <div class="text-orange-500 opacity-0 group-hover:opacity-100 transition">→</div>
                                         </button>
-                                        <button class="flex items-center gap-3 p-4 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition group">
+                                        <button class="flex items-center gap-3 p-4 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-orange-600/50 transition group">
                                             <div class="text-3xl">🔵</div>
                                             <div class="text-left flex-1">
-                                                <div class="font-semibold text-white group-hover:text-cyan-400 transition">Xero</div>
+                                                <div class="font-semibold text-white group-hover:text-orange-500 transition">Xero</div>
                                                 <div class="text-xs text-slate-400">Direct integration</div>
                                             </div>
-                                            <div class="text-cyan-400 opacity-0 group-hover:opacity-100 transition">→</div>
+                                            <div class="text-orange-500 opacity-0 group-hover:opacity-100 transition">→</div>
                                         </button>
-                                        <button class="flex items-center gap-3 p-4 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition group">
+                                        <button class="flex items-center gap-3 p-4 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-orange-600/50 transition group">
                                             <div class="text-3xl">⬛</div>
                                             <div class="text-left flex-1">
-                                                <div class="font-semibold text-white group-hover:text-cyan-400 transition">Sage Intacct</div>
+                                                <div class="font-semibold text-white group-hover:text-orange-500 transition">Sage Intacct</div>
                                                 <div class="text-xs text-slate-400">Direct integration</div>
                                             </div>
-                                            <div class="text-cyan-400 opacity-0 group-hover:opacity-100 transition">→</div>
+                                            <div class="text-orange-500 opacity-0 group-hover:opacity-100 transition">→</div>
                                         </button>
                                     </div>
                                 </div>
@@ -774,17 +782,17 @@
                                 <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700">
                                     <h4 class="text-white font-semibold mb-4">Download Files:</h4>
                                     <div class="grid md:grid-cols-3 gap-3">
-                                        <button class="flex items-center gap-2 p-3 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition text-sm group">
+                                        <button class="flex items-center gap-2 p-3 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-orange-600/50 transition text-sm group">
                                             <span class="text-xl">📊</span>
-                                            <span class="text-slate-300 group-hover:text-cyan-400 transition">Excel (.xlsx)</span>
+                                            <span class="text-slate-300 group-hover:text-orange-500 transition">Excel (.xlsx)</span>
                                         </button>
-                                        <button class="flex items-center gap-2 p-3 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition text-sm group">
+                                        <button class="flex items-center gap-2 p-3 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-orange-600/50 transition text-sm group">
                                             <span class="text-xl">📄</span>
-                                            <span class="text-slate-300 group-hover:text-cyan-400 transition">CSV</span>
+                                            <span class="text-slate-300 group-hover:text-orange-500 transition">CSV</span>
                                         </button>
-                                        <button class="flex items-center gap-2 p-3 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition text-sm group">
+                                        <button class="flex items-center gap-2 p-3 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-orange-600/50 transition text-sm group">
                                             <span class="text-xl">📝</span>
-                                            <span class="text-slate-300 group-hover:text-cyan-400 transition">PDF Report</span>
+                                            <span class="text-slate-300 group-hover:text-orange-500 transition">PDF Report</span>
                                         </button>
                                     </div>
                                 </div>
@@ -794,7 +802,7 @@
                                     <h4 class="text-white font-semibold mb-3">API Integration:</h4>
                                     <div class="bg-slate-800/50 rounded p-4 border border-slate-700">
                                         <div class="text-xs text-slate-400 mb-2">Webhook URL configured:</div>
-                                        <div class="font-mono text-xs text-cyan-400 bg-slate-900/50 p-2 rounded break-all">
+                                        <div class="font-mono text-xs text-orange-500 bg-slate-900/50 p-2 rounded break-all">
                                             https://your-company.com/api/revenue-recognition
                                         </div>
                                         <div class="text-xs text-green-400 mt-2">✓ Auto-sync enabled • Last synced: 2 minutes ago</div>
@@ -806,11 +814,11 @@
                 </div>
 
                 <!-- Performance Dashboard -->
-                <div class="bg-gradient-to-r from-slate-800/50 to-cyan-900/20 rounded-xl p-6 border border-cyan-500/20 mb-8">
-                    <h3 class="text-xl font-bold text-white mb-6">Performance This Month</h3>
+                <div class="bg-gradient-to-r from-slate-800/50 to-cyan-900/20 rounded-xl p-6 border border-orange-600/20 mb-8">
+                    <h3 class="heading-font text-xl font-bold text-white mb-6">Performance This Month</h3>
                     <div class="grid md:grid-cols-3 gap-6">
                         <div class="text-center">
-                            <div class="text-4xl font-bold text-cyan-400 mb-2">94%</div>
+                            <div class="text-4xl font-bold text-orange-500 mb-2">94%</div>
                             <div class="text-sm text-slate-300">Auto-Processed</div>
                             <div class="text-xs text-slate-500 mt-1">342 of 364 contracts</div>
                         </div>
@@ -838,29 +846,29 @@
                     </div>
                     <div class="grid md:grid-cols-2 gap-4 text-sm">
                         <div>
-                            <div class="text-cyan-300 font-semibold mb-2">Month 1 (Training):</div>
+                            <div class="text-orange-400 font-semibold mb-2">Month 1 (Training):</div>
                             <div class="text-slate-400">60% accuracy • Heavy review needed</div>
                         </div>
                         <div>
-                            <div class="text-cyan-300 font-semibold mb-2">Month 2:</div>
+                            <div class="text-orange-400 font-semibold mb-2">Month 2:</div>
                             <div class="text-slate-400">85% accuracy • Moderate review</div>
                         </div>
                         <div>
-                            <div class="text-cyan-300 font-semibold mb-2">Month 3 (Now):</div>
+                            <div class="text-orange-400 font-semibold mb-2">Month 3 (Now):</div>
                             <div class="text-green-400">97% accuracy • Light review</div>
                         </div>
                         <div>
-                            <div class="text-cyan-300 font-semibold mb-2">Month 6 (Projected):</div>
+                            <div class="text-orange-400 font-semibold mb-2">Month 6 (Projected):</div>
                             <div class="text-slate-400">99%+ accuracy • Exceptions only</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="flex justify-between">
-                    <button onclick="goToStep2()" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-cyan-500/30">
+                    <button onclick="goToStep2()" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-orange-600/30">
                         ← Back to Step 2
                     </button>
-                    <a href="/" class="px-8 py-4 bg-cyan-500 text-white font-bold rounded-lg hover:bg-cyan-600 transition shadow-lg shadow-cyan-500/50">
+                    <a href="/" class="px-8 py-4 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition shadow-lg shadow-cyan-500/50">
                         Back to Home
                     </a>
                 </div>
@@ -871,16 +879,16 @@
 
     <!-- CTA -->
     <section class="container mx-auto px-6 py-16">
-        <div class="max-w-3xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-cyan-500/20 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Ready to Train Your Own Side-Kick?</h2>
+        <div class="max-w-3xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-orange-600/20 text-center">
+            <h2 class="heading-font text-3xl font-bold text-white mb-4">Ready to Train Your Own Side-Kick?</h2>
             <p class="text-slate-300 mb-8">
                 This demo showed Contract Wizard, but the same training process works for ALL finance roles.
             </p>
             <div class="flex justify-center gap-4">
-                <a href="mailto:hello@carbon-lab.io" class="px-8 py-4 bg-cyan-500 text-white font-bold rounded-lg hover:bg-cyan-600 transition shadow-lg shadow-cyan-500/50">
+                <a href="mailto:hello@carbon-lab.io" class="px-8 py-4 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition shadow-lg shadow-cyan-500/50">
                     Become a Pilot Customer
                 </a>
-                <a href="/" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-cyan-500/30">
+                <a href="/" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-orange-600/30">
                     Learn More
                 </a>
             </div>
@@ -900,7 +908,7 @@
                     indicator.classList.remove('step-inactive');
                     indicator.classList.add('step-active');
                     border.classList.remove('border-slate-600');
-                    border.classList.add('border-cyan-400');
+                    border.classList.add('border-orange-500');
                     stepTitle.classList.remove('text-slate-500');
                     stepTitle.classList.add('text-white');
                     stepDesc.classList.remove('text-slate-600');
@@ -909,7 +917,7 @@
                     indicator.classList.remove('step-inactive');
                     indicator.classList.add('step-active');
                     border.classList.remove('border-slate-600');
-                    border.classList.add('border-cyan-400');
+                    border.classList.add('border-orange-500');
                     stepTitle.classList.remove('text-slate-500');
                     stepTitle.classList.add('text-white');
                     stepDesc.classList.remove('text-slate-600');
@@ -917,7 +925,7 @@
                 } else {
                     indicator.classList.remove('step-active');
                     indicator.classList.add('step-inactive');
-                    border.classList.remove('border-cyan-400');
+                    border.classList.remove('border-orange-500');
                     border.classList.add('border-slate-600');
                     stepTitle.classList.remove('text-white');
                     stepTitle.classList.add('text-slate-500');
@@ -961,7 +969,7 @@
             document.querySelectorAll('.tab2-content').forEach(el => el.classList.add('hidden'));
             // Reset all buttons
             document.querySelectorAll('.tab2-btn').forEach(btn => {
-                btn.classList.remove('bg-cyan-500', 'text-white');
+                btn.classList.remove('bg-orange-600', 'text-white');
                 btn.classList.add('bg-white/10', 'text-slate-300');
             });
             // Show selected tab
@@ -969,7 +977,7 @@
             // Highlight selected button
             const button = document.getElementById(`tab2-${tab}`);
             button.classList.remove('bg-white/10', 'text-slate-300');
-            button.classList.add('bg-cyan-500', 'text-white');
+            button.classList.add('bg-orange-600', 'text-white');
         }
 
         // Tab switching for Step 3 contract detail
@@ -978,7 +986,7 @@
             document.querySelectorAll('.tab3-content').forEach(el => el.classList.add('hidden'));
             // Reset all buttons
             document.querySelectorAll('.tab3-btn').forEach(btn => {
-                btn.classList.remove('bg-cyan-500', 'text-white');
+                btn.classList.remove('bg-orange-600', 'text-white');
                 btn.classList.add('bg-white/10', 'text-slate-300');
             });
             // Show selected tab
@@ -986,7 +994,7 @@
             // Highlight selected button
             const button = document.getElementById(`tab3-${tab}`);
             button.classList.remove('bg-white/10', 'text-slate-300');
-            button.classList.add('bg-cyan-500', 'text-white');
+            button.classList.add('bg-orange-600', 'text-white');
         }
 
         // Show/hide contract detail
