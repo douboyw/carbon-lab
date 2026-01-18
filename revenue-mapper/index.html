@@ -7,6 +7,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Carbon Lab Professional Color Palette - Muted Orange */
+        :root {
+            --color-carbon-orange: #d97342;
+            --color-carbon-orange-hover: #c2613a;
+            --color-carbon-orange-light: #e88b5e;
+            --color-carbon-orange-dark: #b85533;
+        }
+        .bg-carbon-orange { background-color: var(--color-carbon-orange); }
+        .bg-carbon-orange-hover:hover { background-color: var(--color-carbon-orange-hover); }
+        .text-carbon-orange { color: var(--color-carbon-orange); }
+        .text-carbon-orange-light { color: var(--color-carbon-orange-light); }
+        .border-carbon-orange { border-color: var(--color-carbon-orange); }
+        .shadow-carbon-orange { box-shadow: 0 10px 25px -5px rgba(217, 115, 66, 0.3); }
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3, .heading-font { 
             font-family: 'Syne', sans-serif; 
@@ -28,15 +41,15 @@
             font-family: 'Space Grotesk', monospace;
             font-weight: 700;
             font-size: 1.75rem;
-            color: #f97316;
+            color: #d97342;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 40px;
             height: 40px;
-            border: 2px solid #f97316;
+            border: 2px solid #d97342;
             clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-            background: rgba(251, 146, 60, 0.1);
+            background: rgba(217, 115, 66, 0.1);
         }
     </style>
 </head>
@@ -46,7 +59,7 @@
     <header class="container mx-auto px-6 py-6">
         <div class="flex justify-between items-center">
             <a href="/" class="carbon-logo logo-font text-2xl font-bold text-white tracking-wide">← Carbon Lab</a>
-            <div class="text-purple-400 font-semibold">Revenue Mapper</div>
+            <div class="text-carbon-orange font-semibold">Revenue Mapper</div>
         </div>
     </header>
 
@@ -62,7 +75,7 @@
             </h1>
             
             <!-- Subtitle -->
-            <p class="text-2xl text-purple-400 mb-8 font-semibold">
+            <p class="text-2xl text-carbon-orange mb-8 font-semibold">
                 Coming Q1 2026
             </p>
             
@@ -73,23 +86,23 @@
                 </h2>
                 <div class="text-left space-y-4 text-slate-300 text-lg">
                     <p>
-                        <span class="text-purple-400 font-semibold">Train your Side-Kick</span> to automatically categorize revenue movements across your business. It learns YOUR specific ARR definitions, cohort structures, and waterfall formats.
+                        <span class="text-carbon-orange font-semibold">Train your Side-Kick</span> to automatically categorize revenue movements across your business. It learns YOUR specific ARR definitions, cohort structures, and waterfall formats.
                     </p>
                     <ul class="space-y-3 ml-6">
                         <li class="flex items-start gap-3">
-                            <span class="text-purple-400 text-xl">•</span>
+                            <span class="text-carbon-orange text-xl">•</span>
                             <span><strong class="text-white">Categorize revenue:</strong> New, expansion, contraction, churn - exactly how YOU define them</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-purple-400 text-xl">•</span>
+                            <span class="text-carbon-orange text-xl">•</span>
                             <span><strong class="text-white">Track cohorts:</strong> Learn YOUR cohort definitions and monitor retention automatically</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-purple-400 text-xl">•</span>
+                            <span class="text-carbon-orange text-xl">•</span>
                             <span><strong class="text-white">Build waterfalls:</strong> Generate ARR waterfalls in YOUR specific format for boards and investors</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-purple-400 text-xl">•</span>
+                            <span class="text-carbon-orange text-xl">•</span>
                             <span><strong class="text-white">Monitor metrics:</strong> NDR, GDR, logo retention - tracked YOUR way</span>
                         </li>
                     </ul>
@@ -101,21 +114,21 @@
                 <h3 class="heading-font text-2xl font-bold text-white mb-6">How Training Will Work</h3>
                 <div class="grid md:grid-cols-3 gap-6 text-left">
                     <div>
-                        <div class="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mb-3 mx-auto border-2 border-orange-500"><span class="text-2xl font-bold text-orange-500">1</span></div>
+                        <div class="w-16 h-16 bg-carbon-orange/20 rounded-full flex items-center justify-center mb-3 mx-auto border-2 border-carbon-orange"><span class="text-2xl font-bold text-carbon-orange">1</span></div>
                         <h4 class="heading-font text-lg font-bold text-white mb-2">Show Examples</h4>
                         <p class="text-slate-400 text-sm">
                             Upload past ARR waterfalls and cohort reports. Your Side-Kick learns YOUR categorization rules.
                         </p>
                     </div>
                     <div>
-                        <div class="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mb-3 mx-auto border-2 border-orange-500"><span class="text-2xl font-bold text-orange-500">2</span></div>
+                        <div class="w-16 h-16 bg-carbon-orange/20 rounded-full flex items-center justify-center mb-3 mx-auto border-2 border-carbon-orange"><span class="text-2xl font-bold text-carbon-orange">2</span></div>
                         <h4 class="heading-font text-lg font-bold text-white mb-2">Review & Correct</h4>
                         <p class="text-slate-400 text-sm">
                             It categorizes next month's movements. You correct any mistakes. It learns from YOUR feedback.
                         </p>
                     </div>
                     <div>
-                        <div class="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mb-3 mx-auto border-2 border-orange-500"><span class="text-2xl font-bold text-orange-500">3</span></div>
+                        <div class="w-16 h-16 bg-carbon-orange/20 rounded-full flex items-center justify-center mb-3 mx-auto border-2 border-carbon-orange"><span class="text-2xl font-bold text-carbon-orange">3</span></div>
                         <h4 class="heading-font text-lg font-bold text-white mb-2">Automate Reports</h4>
                         <p class="text-slate-400 text-sm">
                             After 2-3 weeks, it generates YOUR waterfall formats automatically. You review and approve.
@@ -126,17 +139,17 @@
 
             <!-- CTA Buttons -->
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/pilot.html" class="px-8 py-4 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition shadow-lg shadow-orange-600/50 text-lg">
+                <a href="/pilot.html" class="px-8 py-4 bg-carbon-orange text-white font-bold rounded-lg bg-carbon-orange-hover transition shadow-lg shadow-carbon-orange/50 text-lg">
                     Join Pilot Program
                 </a>
-                <a href="/" class="px-8 py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 transition border border-orange-600/30 text-lg">
+                <a href="/" class="px-8 py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 transition border border-carbon-orange/30 text-lg">
                     ← Back to Home
                 </a>
             </div>
 
             <!-- Notify Me -->
             <div class="mt-12 text-slate-400 text-sm">
-                Want to be notified when Revenue Mapper launches? <a href="/pilot.html" class="text-orange-400 hover:text-orange-300 underline">Join our pilot program</a>
+                Want to be notified when Revenue Mapper launches? <a href="/pilot.html" class="text-carbon-orange-light hover:text-carbon-orange-light underline">Join our pilot program</a>
             </div>
         </div>
     </section>
