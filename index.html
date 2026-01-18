@@ -7,6 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Carbon Lab Professional Color Palette - Muted Orange */
+        :root {
+            --color-carbon-orange: #d97342;
+            --color-carbon-orange-hover: #c2613a;
+            --color-carbon-orange-light: #e88b5e;
+            --color-carbon-orange-dark: #b85533;
+        }
+        
+        /* Custom color utility classes */
+        .bg-carbon-orange { background-color: var(--color-carbon-orange); }
+        .bg-carbon-orange-hover:hover { background-color: var(--color-carbon-orange-hover); }
+        .text-carbon-orange { color: var(--color-carbon-orange); }
+        .text-carbon-orange-light { color: var(--color-carbon-orange-light); }
+        .border-carbon-orange { border-color: var(--color-carbon-orange); }
+        .shadow-carbon-orange { box-shadow: 0 10px 25px -5px rgba(217, 115, 66, 0.3); }
+        
         /* Carbon Lab Custom Typography */
         body { 
             font-family: 'Inter', sans-serif; 
@@ -24,13 +40,13 @@
             letter-spacing: 0.05em;
         }
         
-        /* Carbon hexagon pattern background */
+        /* Carbon hexagon pattern background - updated with muted orange */
         .carbon-pattern {
             background-image: 
-                linear-gradient(30deg, rgba(251, 146, 60, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(251, 146, 60, 0.03) 87.5%, rgba(251, 146, 60, 0.03)),
-                linear-gradient(150deg, rgba(251, 146, 60, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(251, 146, 60, 0.03) 87.5%, rgba(251, 146, 60, 0.03)),
-                linear-gradient(30deg, rgba(251, 146, 60, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(251, 146, 60, 0.03) 87.5%, rgba(251, 146, 60, 0.03)),
-                linear-gradient(150deg, rgba(251, 146, 60, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(251, 146, 60, 0.03) 87.5%, rgba(251, 146, 60, 0.03)),
+                linear-gradient(30deg, rgba(217, 115, 66, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(217, 115, 66, 0.03) 87.5%, rgba(217, 115, 66, 0.03)),
+                linear-gradient(150deg, rgba(217, 115, 66, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(217, 115, 66, 0.03) 87.5%, rgba(217, 115, 66, 0.03)),
+                linear-gradient(30deg, rgba(217, 115, 66, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(217, 115, 66, 0.03) 87.5%, rgba(217, 115, 66, 0.03)),
+                linear-gradient(150deg, rgba(217, 115, 66, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(217, 115, 66, 0.03) 87.5%, rgba(217, 115, 66, 0.03)),
                 linear-gradient(60deg, rgba(10, 10, 10, 0.5) 25%, transparent 25.5%, transparent 75%, rgba(10, 10, 10, 0.5) 75%, rgba(10, 10, 10, 0.5)),
                 linear-gradient(60deg, rgba(10, 10, 10, 0.5) 25%, transparent 25.5%, transparent 75%, rgba(10, 10, 10, 0.5) 75%, rgba(10, 10, 10, 0.5));
             background-size: 80px 140px;
@@ -58,13 +74,13 @@
             position: absolute;
             width: 8px;
             height: 8px;
-            background: rgba(251, 146, 60, 0.4);
-            border: 2px solid rgba(251, 146, 60, 0.6);
+            background: rgba(217, 115, 66, 0.4);
+            border: 2px solid rgba(217, 115, 66, 0.6);
             border-radius: 50%;
             left: -33px;
             top: 50%;
             transform: translateY(-50%);
-            box-shadow: 0 0 10px rgba(251, 146, 60, 0.3);
+            box-shadow: 0 0 10px rgba(217, 115, 66, 0.3);
         }
         
         /* Hexagonal accent elements */
@@ -74,7 +90,7 @@
         
         /* Crystalline text effect for main headings */
         .carbon-crystal {
-            background: linear-gradient(135deg, #ffffff 0%, #f97316 50%, #ffffff 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #d97342 50%, #ffffff 100%);
             background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -101,15 +117,15 @@
             font-family: 'Space Grotesk', monospace;
             font-weight: 700;
             font-size: 1.75rem;
-            color: #f97316;
+            color: #d97342;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 40px;
             height: 40px;
-            border: 2px solid #f97316;
+            border: 2px solid #d97342;
             clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-            background: rgba(251, 146, 60, 0.1);
+            background: rgba(217, 115, 66, 0.1);
         }
     </style>
 </head>
@@ -120,18 +136,18 @@
         <div class="flex items-center justify-between">
             <a href="/" class="carbon-logo logo-font text-2xl font-bold text-white tracking-wide">Carbon Lab</a>
             <nav class="flex gap-8 items-center">
-                <a href="/" class="text-white font-semibold hover:text-orange-500 transition">Home</a>
-                <a href="/our-approach.html" class="text-slate-300 hover:text-orange-500 transition">Learn Our Approach</a>
-                <a href="/pricing.html" class="text-slate-300 hover:text-orange-500 transition">Pricing</a>
-                <a href="#demos" class="text-slate-300 hover:text-orange-500 transition">Try Demo</a>
-                <a href="/pilot.html" class="px-6 py-2 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition shadow-lg shadow-orange-600/30">Get Early Access</a>
+                <a href="/" class="text-white font-semibold hover:text-carbon-orange transition">Home</a>
+                <a href="/our-approach.html" class="text-slate-300 hover:text-carbon-orange transition">Learn Our Approach</a>
+                <a href="/pricing.html" class="text-slate-300 hover:text-carbon-orange transition">Pricing</a>
+                <a href="#demos" class="text-slate-300 hover:text-carbon-orange transition">Try Demo</a>
+                <a href="/pilot.html" class="px-6 py-2 bg-carbon-orange text-white font-semibold rounded-lg bg-carbon-orange-hover transition shadow-lg shadow-carbon-orange/30">Get Early Access</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero -->
     <section class="container mx-auto px-6 py-20 text-center carbon-pattern">
-        <div class="inline-block px-6 py-3 bg-orange-600/20 border border-orange-500 rounded-full text-orange-400 font-semibold mb-6">
+        <div class="inline-block px-6 py-3 bg-carbon-orange/20 border border-carbon-orange rounded-full text-carbon-orange-light font-semibold mb-6">
             AI PARTNERS THAT LEARN FROM YOU
         </div>
         <h1 class="text-6xl font-bold mb-6 carbon-crystal">
@@ -145,13 +161,13 @@
             A true partnership—not just automation.
         </p>
         <div class="flex justify-center gap-4 mb-8">
-            <a href="/our-approach.html" class="px-8 py-4 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition shadow-lg shadow-orange-600/50 text-lg">
+            <a href="/our-approach.html" class="px-8 py-4 bg-carbon-orange text-white font-bold rounded-lg bg-carbon-orange-hover transition shadow-lg shadow-carbon-orange/50 text-lg">
                 Learn Our Approach
             </a>
-            <a href="#demos" class="px-8 py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 transition border border-orange-600/30 text-lg">
+            <a href="#demos" class="px-8 py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 transition border border-carbon-orange/30 text-lg">
                 Try Demo
             </a>
-            <a href="/pilot.html" class="px-8 py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 transition border border-orange-600/30 text-lg">
+            <a href="/pilot.html" class="px-8 py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 transition border border-carbon-orange/30 text-lg">
                 Get Early Access
             </a>
         </div>
@@ -162,33 +178,33 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             
             <!-- Contract Wizard Demo -->
-            <a href="/revenue-accountant/" class="group block bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-orange-500 transition-all hover:scale-105 hover:shadow-2xl">
+            <a href="/revenue-accountant/" class="group block bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-carbon-orange transition-all hover:scale-105 hover:shadow-2xl">
                 <div class="flex justify-between items-start mb-4">
                     
-                    <div class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold">
+                    <div class="px-3 py-1 bg-green-600/20 text-green-200 rounded-full text-xs font-semibold">
                         LIVE DEMO
                     </div>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-orange-400 transition">
+                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-carbon-orange-light transition">
                     Contract Wizard
                 </h3>
                 <p class="text-slate-300 mb-4">
                     Train your Side-Kick to analyze contracts YOUR way. Show it 10 examples, it learns your revenue recognition patterns. Handles ASC 606 compliance automatically.
                 </p>
-                <div class="flex items-center text-orange-500 font-semibold group-hover:gap-3 gap-2 transition-all mb-4">
+                <div class="flex items-center text-carbon-orange font-semibold group-hover:gap-3 gap-2 transition-all mb-4">
                     Try Live Demo
                     <span class="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
                 <div class="border-t border-white/10 pt-4 mb-4">
-                    <div class="text-sm text-orange-400 font-semibold mb-2">Training Features:</div>
+                    <div class="text-sm text-carbon-orange-light font-semibold mb-2">Training Features:</div>
                     <div class="text-sm text-slate-300">✓ Show it how YOU identify obligations</div>
                     <div class="text-sm text-slate-300">✓ Upload your past contracts</div>
                     <div class="text-sm text-slate-300">✓ It learns your SSP allocation rules</div>
                 </div>
                 <div class="flex gap-2 flex-wrap">
-                    <span class="px-3 py-1 bg-orange-600/20 text-orange-400 rounded-full text-sm">Trainable</span>
-                    <span class="px-3 py-1 bg-orange-600/20 text-orange-400 rounded-full text-sm">ASC 606</span>
-                    <span class="px-3 py-1 bg-orange-600/20 text-orange-400 rounded-full text-sm">Your Workflow</span>
+                    <span class="px-3 py-1 bg-carbon-orange/20 text-carbon-orange-light rounded-full text-sm">Trainable</span>
+                    <span class="px-3 py-1 bg-carbon-orange/20 text-carbon-orange-light rounded-full text-sm">ASC 606</span>
+                    <span class="px-3 py-1 bg-carbon-orange/20 text-carbon-orange-light rounded-full text-sm">Your Workflow</span>
                 </div>
             </a>
 
@@ -196,7 +212,7 @@
             <a href="/fraud-detection/" class="group block bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-red-400 transition-all hover:scale-105 hover:shadow-2xl">
                 <div class="flex justify-between items-start mb-4">
                     
-                    <div class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold">
+                    <div class="px-3 py-1 bg-green-600/20 text-green-200 rounded-full text-xs font-semibold">
                         LIVE DEMO
                     </div>
                 </div>
@@ -224,64 +240,64 @@
             </a>
 
             <!-- Revenue Mapper Demo -->
-            <a href="/revenue-mapper/" class="block bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 opacity-75 hover:opacity-100 transition-all hover:scale-105 hover:shadow-2xl group">
+            <a href="/revenue-mapper/" class="block bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-carbon-orange opacity-75 hover:opacity-100 transition-all hover:scale-105 hover:shadow-2xl group">
                 <div class="flex justify-between items-start mb-4">
                     
                     <div class="px-3 py-1 bg-slate-500/20 text-slate-400 rounded-full text-xs font-semibold">
                         COMING Q1 2026
                     </div>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition">
+                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-slate-300 transition">
                     Revenue Mapper
                 </h3>
                 <p class="text-slate-300 mb-4">
                     Train your Side-Kick to build ARR waterfalls YOUR way. Show it how you categorize new, expansion, contraction, and churn. It learns your cohort definitions and movement tracking.
                 </p>
-                <div class="flex items-center text-purple-400 font-semibold group-hover:gap-3 gap-2 transition-all mb-4">
+                <div class="flex items-center text-carbon-orange font-semibold group-hover:gap-3 gap-2 transition-all mb-4">
                     <span>Learn More</span>
                     <span class="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
                 <div class="border-t border-white/10 pt-4 mb-4">
-                    <div class="text-sm text-purple-300 font-semibold mb-2">Learns Your Metrics:</div>
+                    <div class="text-sm text-slate-300 font-semibold mb-2">Learns Your Metrics:</div>
                     <div class="text-sm text-slate-300">✓ Your ARR categorization rules</div>
                     <div class="text-sm text-slate-300">✓ Your cohort definitions</div>
                     <div class="text-sm text-slate-300">✓ Your waterfall structure</div>
                 </div>
                 <div class="flex gap-2 flex-wrap">
-                    <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">ARR Waterfall</span>
-                    <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Cohort Analysis</span>
-                    <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Your Rules</span>
+                    <span class="px-3 py-1 bg-carbon-orange/20 text-slate-300 rounded-full text-sm">ARR Waterfall</span>
+                    <span class="px-3 py-1 bg-carbon-orange/20 text-slate-300 rounded-full text-sm">Cohort Analysis</span>
+                    <span class="px-3 py-1 bg-carbon-orange/20 text-slate-300 rounded-full text-sm">Your Rules</span>
                 </div>
             </a>
 
             <!-- Variance Detective Demo -->
-            <a href="/variance-detective/" class="block bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400 opacity-75 hover:opacity-100 transition-all hover:scale-105 hover:shadow-2xl group">
+            <a href="/variance-detective/" class="block bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-carbon-orange opacity-75 hover:opacity-100 transition-all hover:scale-105 hover:shadow-2xl group">
                 <div class="flex justify-between items-start mb-4">
                     
                     <div class="px-3 py-1 bg-slate-500/20 text-slate-400 rounded-full text-xs font-semibold">
                         COMING Q1 2026
                     </div>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-blue-300 transition">
+                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-slate-300 transition">
                     Variance Detective
                 </h3>
                 <p class="text-slate-300 mb-4">
                     Train your Side-Kick to do variance analysis YOUR way. Show it what's a meaningful variance, what needs explanation, how you categorize drivers. Generates monthly packages automatically.
                 </p>
-                <div class="flex items-center text-blue-400 font-semibold group-hover:gap-3 gap-2 transition-all mb-4">
+                <div class="flex items-center text-carbon-orange font-semibold group-hover:gap-3 gap-2 transition-all mb-4">
                     <span>Learn More</span>
                     <span class="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
                 <div class="border-t border-white/10 pt-4 mb-4">
-                    <div class="text-sm text-blue-300 font-semibold mb-2">Learns Your Thresholds:</div>
+                    <div class="text-sm text-slate-300 font-semibold mb-2">Learns Your Thresholds:</div>
                     <div class="text-sm text-slate-300">✓ Your materiality thresholds</div>
                     <div class="text-sm text-slate-300">✓ Your variance categories</div>
                     <div class="text-sm text-slate-300">✓ Your explanation formats</div>
                 </div>
                 <div class="flex gap-2 flex-wrap">
-                    <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Budget vs Actual</span>
-                    <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Auto-Explanations</span>
-                    <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Your Formats</span>
+                    <span class="px-3 py-1 bg-carbon-orange/20 text-slate-300 rounded-full text-sm">Budget vs Actual</span>
+                    <span class="px-3 py-1 bg-carbon-orange/20 text-slate-300 rounded-full text-sm">Auto-Explanations</span>
+                    <span class="px-3 py-1 bg-carbon-orange/20 text-slate-300 rounded-full text-sm">Your Formats</span>
                 </div>
             </a>
 
@@ -293,7 +309,7 @@
                         COMING Q2 2026
                     </div>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-green-300 transition">
+                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-green-200 transition">
                     Invoice Magic
                 </h3>
                 <p class="text-slate-300 mb-4">
@@ -304,33 +320,33 @@
                     <span class="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
                 <div class="border-t border-white/10 pt-4 mb-4">
-                    <div class="text-sm text-green-300 font-semibold mb-2">Customizes to You:</div>
+                    <div class="text-sm text-green-200 font-semibold mb-2">Customizes to You:</div>
                     <div class="text-sm text-slate-300">✓ Your vendor list & patterns</div>
                     <div class="text-sm text-slate-300">✓ Your approval workflows</div>
                     <div class="text-sm text-slate-300">✓ Your coding rules</div>
                 </div>
                 <div class="flex gap-2 flex-wrap">
-                    <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Learns Vendors</span>
-                    <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">3-Way Match</span>
-                    <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Your Rules</span>
+                    <span class="px-3 py-1 bg-green-600/20 text-green-200 rounded-full text-sm">Learns Vendors</span>
+                    <span class="px-3 py-1 bg-green-600/20 text-green-200 rounded-full text-sm">3-Way Match</span>
+                    <span class="px-3 py-1 bg-green-600/20 text-green-200 rounded-full text-sm">Your Rules</span>
                 </div>
             </a>
 
             <!-- Tax Navigator Demo -->
-            <a href="/tax-navigator/" class="block bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-orange-500 opacity-75 hover:opacity-100 transition-all hover:scale-105 hover:shadow-2xl group">
+            <a href="/tax-navigator/" class="block bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-carbon-orange opacity-75 hover:opacity-100 transition-all hover:scale-105 hover:shadow-2xl group">
                 <div class="flex justify-between items-start mb-4">
                     
                     <div class="px-3 py-1 bg-slate-500/20 text-slate-400 rounded-full text-xs font-semibold">
                         COMING Q2 2026
                     </div>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-orange-400 transition">
+                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-carbon-orange-light transition">
                     Tax Navigator
                 </h3>
                 <p class="text-slate-300 mb-4">
                     Upload your tax policies. Side-Kick learns your specific jurisdictions, your entity structure, your allocation methods. Generates ASC 740 packages tailored to you.
                 </p>
-                <div class="flex items-center text-orange-500 font-semibold group-hover:gap-3 gap-2 transition-all mb-4">
+                <div class="flex items-center text-carbon-orange font-semibold group-hover:gap-3 gap-2 transition-all mb-4">
                     <span>Learn More</span>
                     <span class="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
@@ -355,42 +371,42 @@
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold text-white text-center mb-12">Your Side-Kick, Your Way</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-orange-600/20">
+                <div class="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-carbon-orange/20">
                     <h3 class="text-xl font-bold text-white mb-3">True Partnership</h3>
                     <p class="text-slate-300 mb-4">
                         Your Side-Kick isn't just automation—it's a working relationship. You teach it your judgment, your edge cases, your exceptions. It learns what "looks right" to YOU.
                     </p>
-                    <div class="text-sm text-orange-400">
+                    <div class="text-sm text-carbon-orange-light">
                         The more you work together, the better it understands your standards.
                     </div>
                 </div>
 
-                <div class="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-orange-600/20">
+                <div class="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-carbon-orange/20">
                     <h3 class="text-xl font-bold text-white mb-3">Continuous Feedback Loop</h3>
                     <p class="text-slate-300 mb-4">
                         Every correction you make teaches your Side-Kick something new. Every approval reinforces what it got right. This constant feedback makes it smarter about YOUR specific business.
                     </p>
-                    <div class="text-sm text-orange-400">
+                    <div class="text-sm text-carbon-orange-light">
                         It's not "set it and forget it"—it's an ongoing collaboration.
                     </div>
                 </div>
 
-                <div class="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-orange-600/20">
+                <div class="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-carbon-orange/20">
                     <h3 class="text-xl font-bold text-white mb-3">Learns From Your Expertise</h3>
                     <p class="text-slate-300 mb-4">
                         You're the expert. Your Side-Kick learns from YOUR decisions, YOUR experience, YOUR institutional knowledge. It captures expertise that would otherwise only exist in someone's head.
                     </p>
-                    <div class="text-sm text-orange-400">
+                    <div class="text-sm text-carbon-orange-light">
                         Your judgment becomes the training data.
                     </div>
                 </div>
 
-                <div class="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-orange-600/20">
+                <div class="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-carbon-orange/20">
                     <h3 class="text-xl font-bold text-white mb-3">Gets Better Over Time</h3>
                     <p class="text-slate-300 mb-4">
                         Unlike traditional software that stays the same, your Side-Kick improves with every interaction. Month 6 is better than Month 3. Year 2 is better than Year 1.
                     </p>
-                    <div class="text-sm text-orange-400">
+                    <div class="text-sm text-carbon-orange-light">
                         The relationship compounds in value.
                     </div>
                 </div>
@@ -405,22 +421,22 @@
             <p class="text-slate-300 text-center mb-12 max-w-2xl mx-auto">Every Side-Kick learns from YOUR feedback. The more you teach them, the better they understand your work.</p>
             <div class="grid md:grid-cols-4 gap-8 text-center">
                 <div>
-                    <div class="text-5xl font-bold text-orange-500 mb-2">2-3</div>
+                    <div class="text-5xl font-bold text-carbon-orange mb-2">2-3</div>
                     <div class="text-slate-300">Weeks to Train</div>
                     <div class="text-sm text-slate-400 mt-1">Then 80%+ automated</div>
                 </div>
                 <div>
-                    <div class="text-5xl font-bold text-orange-500 mb-2">95%+</div>
+                    <div class="text-5xl font-bold text-carbon-orange mb-2">95%+</div>
                     <div class="text-slate-300">Accuracy Rate</div>
                     <div class="text-sm text-slate-400 mt-1">On your workflows</div>
                 </div>
                 <div>
-                    <div class="text-5xl font-bold text-orange-500 mb-2">100%</div>
+                    <div class="text-5xl font-bold text-carbon-orange mb-2">100%</div>
                     <div class="text-slate-300">Customized</div>
                     <div class="text-sm text-slate-400 mt-1">To your business</div>
                 </div>
                 <div>
-                    <div class="text-5xl font-bold text-orange-500 mb-2">70%</div>
+                    <div class="text-5xl font-bold text-carbon-orange mb-2">70%</div>
                     <div class="text-slate-300">Less Manual Work</div>
                     <div class="text-sm text-slate-400 mt-1">More time for analysis</div>
                 </div>
@@ -437,8 +453,8 @@
             </p>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-orange-600/20 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-orange-500">
-                        <span class="text-3xl font-bold text-orange-500">1</span>
+                    <div class="w-20 h-20 bg-carbon-orange/20 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-carbon-orange">
+                        <span class="text-3xl font-bold text-carbon-orange">1</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">1. Show Examples</h3>
                     <p class="text-slate-300 text-sm">
@@ -446,8 +462,8 @@
                     </p>
                 </div>
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-orange-600/20 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-orange-500">
-                        <span class="text-3xl font-bold text-orange-500">2</span>
+                    <div class="w-20 h-20 bg-carbon-orange/20 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-carbon-orange">
+                        <span class="text-3xl font-bold text-carbon-orange">2</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">2. Review & Correct</h3>
                     <p class="text-slate-300 text-sm">
@@ -455,8 +471,8 @@
                     </p>
                 </div>
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-orange-600/20 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-orange-500">
-                        <span class="text-3xl font-bold text-orange-500">3</span>
+                    <div class="w-20 h-20 bg-carbon-orange/20 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-carbon-orange">
+                        <span class="text-3xl font-bold text-carbon-orange">3</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">3. Automate & Scale</h3>
                     <p class="text-slate-300 text-sm">
@@ -464,36 +480,36 @@
                     </p>
                 </div>
             </div>
-            <div class="mt-12 bg-gradient-to-r from-neutral-950/50 to-neutral-900/20 backdrop-blur-lg rounded-xl p-8 border border-orange-600/20">
+            <div class="mt-12 bg-gradient-to-r from-neutral-950/50 to-neutral-900/20 backdrop-blur-lg rounded-xl p-8 border border-carbon-orange/20">
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div>
                         <h3 class="text-2xl font-bold text-white mb-4">The More You Train, The Smarter It Gets</h3>
                         <ul class="space-y-3 text-slate-300">
                             <li class="flex items-start">
-                                <span class="text-orange-500 mr-2 font-bold">✓</span>
+                                <span class="text-carbon-orange mr-2 font-bold">✓</span>
                                 <span><strong class="text-white">Week 1:</strong> 60% accurate, learning basics</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-orange-500 mr-2 font-bold">✓</span>
+                                <span class="text-carbon-orange mr-2 font-bold">✓</span>
                                 <span><strong class="text-white">Week 3:</strong> 85% accurate, handling routines</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-orange-500 mr-2 font-bold">✓</span>
+                                <span class="text-carbon-orange mr-2 font-bold">✓</span>
                                 <span><strong class="text-white">Month 2:</strong> 92% accurate, mostly autonomous</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-orange-500 mr-2 font-bold">✓</span>
+                                <span class="text-carbon-orange mr-2 font-bold">✓</span>
                                 <span><strong class="text-white">Month 3+:</strong> 95%+ accurate on YOUR workflows</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="bg-slate-900/50 rounded-lg p-6 border border-orange-600/20">
-                        <div class="text-sm text-orange-400 mb-4 font-semibold">Training Progress Example:</div>
+                    <div class="bg-slate-900/50 rounded-lg p-6 border border-carbon-orange/20">
+                        <div class="text-sm text-carbon-orange-light mb-4 font-semibold">Training Progress Example:</div>
                         <div class="space-y-3">
                             <div>
                                 <div class="flex justify-between text-sm mb-1">
                                     <span class="text-slate-300">Pattern Recognition</span>
-                                    <span class="text-orange-500 font-bold">95%</span>
+                                    <span class="text-carbon-orange font-bold">95%</span>
                                 </div>
                                 <div class="bg-slate-700 rounded-full h-2.5">
                                     <div class="bg-orange-500 rounded-full h-2.5" style="width: 95%"></div>
@@ -502,7 +518,7 @@
                             <div>
                                 <div class="flex justify-between text-sm mb-1">
                                     <span class="text-slate-300">Your Specific Rules</span>
-                                    <span class="text-orange-500 font-bold">88%</span>
+                                    <span class="text-carbon-orange font-bold">88%</span>
                                 </div>
                                 <div class="bg-slate-700 rounded-full h-2.5">
                                     <div class="bg-orange-500 rounded-full h-2.5" style="width: 88%"></div>
@@ -530,19 +546,19 @@
 
     <!-- CTA -->
     <section class="container mx-auto px-6 py-16">
-        <div class="max-w-3xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-orange-600/20 text-center">
+        <div class="max-w-3xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-carbon-orange/20 text-center">
             <h2 class="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
             <p class="text-slate-300 mb-8">
                 Try our interactive demos, learn our approach, or join our pilot program for early access and special pricing.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="/revenue-accountant/" class="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition shadow-lg shadow-orange-600/50">
+                <a href="/revenue-accountant/" class="px-8 py-4 bg-carbon-orange text-white font-semibold rounded-lg bg-carbon-orange-hover transition shadow-lg shadow-carbon-orange/50">
                     Try Contract Wizard
                 </a>
                 <a href="/fraud-detection/" class="px-8 py-4 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition shadow-lg shadow-red-500/50">
                     Try Fraud Fighter
                 </a>
-                <a href="/pilot.html" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-orange-600/30">
+                <a href="/pilot.html" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-carbon-orange/30">
                     Get Early Access
                 </a>
             </div>
@@ -562,31 +578,31 @@
                 <div>
                     <h3 class="font-semibold text-white mb-3">Product</h3>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="/revenue-accountant/" class="text-slate-400 hover:text-orange-500 transition">Contract Wizard Demo</a></li>
-                        <li><a href="/fraud-detection/" class="text-slate-400 hover:text-orange-500 transition">Fraud Fighter Demo</a></li>
-                        <li><a href="/#how-it-works" class="text-slate-400 hover:text-orange-500 transition">How Training Works</a></li>
-                        <li><a href="/pricing.html" class="text-slate-400 hover:text-orange-500 transition">Pricing</a></li>
+                        <li><a href="/revenue-accountant/" class="text-slate-400 hover:text-carbon-orange transition">Contract Wizard Demo</a></li>
+                        <li><a href="/fraud-detection/" class="text-slate-400 hover:text-carbon-orange transition">Fraud Fighter Demo</a></li>
+                        <li><a href="/#how-it-works" class="text-slate-400 hover:text-carbon-orange transition">How Training Works</a></li>
+                        <li><a href="/pricing.html" class="text-slate-400 hover:text-carbon-orange transition">Pricing</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="font-semibold text-white mb-3">Company</h3>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="/our-approach.html" class="text-slate-400 hover:text-orange-500 transition">Our Approach</a></li>
-                        <li><a href="/pilot.html" class="text-slate-400 hover:text-orange-500 transition">Get Early Access</a></li>
-                        <li><a href="mailto:hello@carbon-lab.io" class="text-slate-400 hover:text-orange-500 transition">Contact Us</a></li>
+                        <li><a href="/our-approach.html" class="text-slate-400 hover:text-carbon-orange transition">Our Approach</a></li>
+                        <li><a href="/pilot.html" class="text-slate-400 hover:text-carbon-orange transition">Get Early Access</a></li>
+                        <li><a href="mailto:hello@carbon-lab.io" class="text-slate-400 hover:text-carbon-orange transition">Contact Us</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="font-semibold text-white mb-3">Side-Kicks</h3>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="/revenue-accountant/" class="text-slate-400 hover:text-orange-500 transition">Contract Wizard</a></li>
-                        <li><a href="/fraud-detection/" class="text-slate-400 hover:text-orange-500 transition">Fraud Fighter</a></li>
-                        <li><a href="/revenue-mapper/" class="text-slate-400 hover:text-orange-500 transition">Revenue Mapper</a></li>
-                        <li><a href="/variance-detective/" class="text-slate-400 hover:text-orange-500 transition">Variance Detective</a></li>
-                        <li><a href="/invoice-magic/" class="text-slate-400 hover:text-orange-500 transition">Invoice Magic</a></li>
-                        <li><a href="/tax-navigator/" class="text-slate-400 hover:text-orange-500 transition">Tax Navigator</a></li>
+                        <li><a href="/revenue-accountant/" class="text-slate-400 hover:text-carbon-orange transition">Contract Wizard</a></li>
+                        <li><a href="/fraud-detection/" class="text-slate-400 hover:text-carbon-orange transition">Fraud Fighter</a></li>
+                        <li><a href="/revenue-mapper/" class="text-slate-400 hover:text-carbon-orange transition">Revenue Mapper</a></li>
+                        <li><a href="/variance-detective/" class="text-slate-400 hover:text-carbon-orange transition">Variance Detective</a></li>
+                        <li><a href="/invoice-magic/" class="text-slate-400 hover:text-carbon-orange transition">Invoice Magic</a></li>
+                        <li><a href="/tax-navigator/" class="text-slate-400 hover:text-carbon-orange transition">Tax Navigator</a></li>
                     </ul>
                 </div>
             </div>
