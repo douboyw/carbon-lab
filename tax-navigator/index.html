@@ -7,6 +7,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Carbon Lab Professional Color Palette - Muted Orange */
+        :root {
+            --color-carbon-orange: #d97342;
+            --color-carbon-orange-hover: #c2613a;
+            --color-carbon-orange-light: #e88b5e;
+            --color-carbon-orange-dark: #b85533;
+        }
+        .bg-carbon-orange { background-color: var(--color-carbon-orange); }
+        .bg-carbon-orange-hover:hover { background-color: var(--color-carbon-orange-hover); }
+        .text-carbon-orange { color: var(--color-carbon-orange); }
+        .text-carbon-orange-light { color: var(--color-carbon-orange-light); }
+        .border-carbon-orange { border-color: var(--color-carbon-orange); }
+        .shadow-carbon-orange { box-shadow: 0 10px 25px -5px rgba(217, 115, 66, 0.3); }
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3, .heading-font { 
             font-family: 'Syne', sans-serif; 
@@ -28,15 +41,15 @@
             font-family: 'Space Grotesk', monospace;
             font-weight: 700;
             font-size: 1.75rem;
-            color: #f97316;
+            color: #d97342;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 40px;
             height: 40px;
-            border: 2px solid #f97316;
+            border: 2px solid #d97342;
             clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-            background: rgba(251, 146, 60, 0.1);
+            background: rgba(217, 115, 66, 0.1);
         }
     </style>
 </head>
@@ -46,7 +59,7 @@
     <header class="container mx-auto px-6 py-6">
         <div class="flex justify-between items-center">
             <a href="/" class="carbon-logo logo-font text-2xl font-bold text-white tracking-wide">← Carbon Lab</a>
-            <div class="text-orange-400 font-semibold">Tax Navigator</div>
+            <div class="text-carbon-orange-light font-semibold">Tax Navigator</div>
         </div>
     </header>
 
@@ -62,34 +75,34 @@
             </h1>
             
             <!-- Subtitle -->
-            <p class="text-2xl text-orange-400 mb-8 font-semibold">
+            <p class="text-2xl text-carbon-orange-light mb-8 font-semibold">
                 Coming Q2 2026
             </p>
             
             <!-- Description -->
-            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-orange-600/20 mb-12">
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-carbon-orange/20 mb-12">
                 <h2 class="heading-font text-3xl font-bold text-white mb-6">
                     What Tax Navigator Will Do
                 </h2>
                 <div class="text-left space-y-4 text-slate-300 text-lg">
                     <p>
-                        <span class="text-orange-400 font-semibold">Train your Side-Kick</span> to handle complex tax compliance and ASC 740 requirements. It learns YOUR entity structure, YOUR jurisdictions, and YOUR tax positions.
+                        <span class="text-carbon-orange-light font-semibold">Train your Side-Kick</span> to handle complex tax compliance and ASC 740 requirements. It learns YOUR entity structure, YOUR jurisdictions, and YOUR tax positions.
                     </p>
                     <ul class="space-y-3 ml-6">
                         <li class="flex items-start gap-3">
-                            <span class="text-orange-400 text-xl">•</span>
+                            <span class="text-carbon-orange-light text-xl">•</span>
                             <span><strong class="text-white">Multi-jurisdiction tracking:</strong> Manage YOUR specific mix of state, federal, and international tax</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-orange-400 text-xl">•</span>
+                            <span class="text-carbon-orange-light text-xl">•</span>
                             <span><strong class="text-white">Entity structure mapping:</strong> Learn YOUR org chart and how entities relate for tax purposes</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-orange-400 text-xl">•</span>
+                            <span class="text-carbon-orange-light text-xl">•</span>
                             <span><strong class="text-white">ASC 740 packages:</strong> Generate tax provision calculations using YOUR methodology</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-orange-400 text-xl">•</span>
+                            <span class="text-carbon-orange-light text-xl">•</span>
                             <span><strong class="text-white">Tax position tracking:</strong> Monitor YOUR uncertain tax positions and documentation needs</span>
                         </li>
                     </ul>
@@ -97,25 +110,25 @@
             </div>
 
             <!-- Training Preview -->
-            <div class="bg-gradient-to-r from-orange-900/20 to-slate-900/20 backdrop-blur-lg rounded-2xl p-8 border border-orange-600/20 mb-12">
+            <div class="bg-gradient-to-r from-orange-900/20 to-slate-900/20 backdrop-blur-lg rounded-2xl p-8 border border-carbon-orange/20 mb-12">
                 <h3 class="heading-font text-2xl font-bold text-white mb-6">How Training Will Work</h3>
                 <div class="grid md:grid-cols-3 gap-6 text-left">
                     <div>
-                        <div class="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mb-3 mx-auto border-2 border-orange-500"><span class="text-2xl font-bold text-orange-500">1</span></div>
+                        <div class="w-16 h-16 bg-carbon-orange/20 rounded-full flex items-center justify-center mb-3 mx-auto border-2 border-carbon-orange"><span class="text-2xl font-bold text-carbon-orange">1</span></div>
                         <h4 class="heading-font text-lg font-bold text-white mb-2">Show Examples</h4>
                         <p class="text-slate-400 text-sm">
                             Upload past tax packages and entity charts. Your Side-Kick learns YOUR structure and calculation methods.
                         </p>
                     </div>
                     <div>
-                        <div class="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mb-3 mx-auto border-2 border-orange-500"><span class="text-2xl font-bold text-orange-500">2</span></div>
+                        <div class="w-16 h-16 bg-carbon-orange/20 rounded-full flex items-center justify-center mb-3 mx-auto border-2 border-carbon-orange"><span class="text-2xl font-bold text-carbon-orange">2</span></div>
                         <h4 class="heading-font text-lg font-bold text-white mb-2">Review & Correct</h4>
                         <p class="text-slate-400 text-sm">
                             It calculates next quarter's provision. You review allocations and positions. It learns YOUR tax strategy.
                         </p>
                     </div>
                     <div>
-                        <div class="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mb-3 mx-auto border-2 border-orange-500"><span class="text-2xl font-bold text-orange-500">3</span></div>
+                        <div class="w-16 h-16 bg-carbon-orange/20 rounded-full flex items-center justify-center mb-3 mx-auto border-2 border-carbon-orange"><span class="text-2xl font-bold text-carbon-orange">3</span></div>
                         <h4 class="heading-font text-lg font-bold text-white mb-2">Automate Compliance</h4>
                         <p class="text-slate-400 text-sm">
                             After 2-3 cycles, it handles routine calculations. You focus on strategy and unusual items.
@@ -126,17 +139,17 @@
 
             <!-- CTA Buttons -->
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/pilot.html" class="px-8 py-4 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition shadow-lg shadow-orange-600/50 text-lg">
+                <a href="/pilot.html" class="px-8 py-4 bg-carbon-orange text-white font-bold rounded-lg bg-carbon-orange-hover transition shadow-lg shadow-carbon-orange/50 text-lg">
                     Join Pilot Program
                 </a>
-                <a href="/" class="px-8 py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 transition border border-orange-600/30 text-lg">
+                <a href="/" class="px-8 py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 transition border border-carbon-orange/30 text-lg">
                     ← Back to Home
                 </a>
             </div>
 
             <!-- Notify Me -->
             <div class="mt-12 text-slate-400 text-sm">
-                Want to be notified when Tax Navigator launches? <a href="/pilot.html" class="text-orange-400 hover:text-orange-300 underline">Join our pilot program</a>
+                Want to be notified when Tax Navigator launches? <a href="/pilot.html" class="text-carbon-orange-light hover:text-carbon-orange-light underline">Join our pilot program</a>
             </div>
         </div>
     </section>
