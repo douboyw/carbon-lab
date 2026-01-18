@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Carbon Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 min-h-screen">
+    
+    <!-- Header -->
+    <header class="container mx-auto px-6 py-6">
+        <div class="flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-white">Carbon Lab</a>
+            <nav class="flex gap-8 items-center">
+                <a href="/" class="text-slate-300 hover:text-cyan-400 transition">Home</a>
+                <a href="/our-approach.html" class="text-slate-300 hover:text-cyan-400 transition">Learn Our Approach</a>
+                <a href="/pricing.html" class="text-white font-semibold">Pricing</a>
+                <a href="/#demos" class="text-slate-300 hover:text-cyan-400 transition">Try Demo</a>
+                <a href="/pilot.html" class="px-6 py-2 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition shadow-lg shadow-cyan-500/30">Get Early Access</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold text-white mb-6">Pricing</h1>
+                <p class="text-xl text-slate-300">
+                    We're finalizing our pricing model based on pilot customer feedback.
+                </p>
+            </div>
+
+            <!-- Current Status -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-cyan-500/20 text-center mb-12">
+                <div class="text-6xl mb-6">🚧</div>
+                <h2 class="text-3xl font-bold text-white mb-4">Pricing Coming Soon</h2>
+                <p class="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
+                    We're working with our pilot customers to build a pricing model that's fair, transparent, and aligned with the value you receive.
+                </p>
+                <div class="bg-cyan-500/10 border border-cyan-500/30 rounded-xl p-6 text-left max-w-2xl mx-auto">
+                    <h3 class="text-lg font-semibold text-white mb-4">What we're considering:</h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-cyan-400 text-xl">•</span>
+                            <span><strong class="text-white">Per Side-Kick pricing</strong> - Pay only for what you use</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-cyan-400 text-xl">•</span>
+                            <span><strong class="text-white">Transaction-based tiers</strong> - Scale with your business</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-cyan-400 text-xl">•</span>
+                            <span><strong class="text-white">All-in packages</strong> - Multiple Side-Kicks at a discount</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-cyan-400 text-xl">•</span>
+                            <span><strong class="text-white">Enterprise custom pricing</strong> - For complex needs</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ROI Preview -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Thinking About ROI?</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    
+                    <div class="bg-slate-900/50 rounded-xl p-6 border border-slate-700">
+                        <h3 class="text-xl font-semibold text-white mb-4">Typical Cost Scenario</h3>
+                        <div class="space-y-3 text-slate-300">
+                            <div class="flex justify-between">
+                                <span>Senior Accountant (FTE)</span>
+                                <span class="text-white font-semibold">$85K/year</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Benefits & overhead (30%)</span>
+                                <span class="text-white font-semibold">$26K/year</span>
+                            </div>
+                            <div class="flex justify-between border-t border-slate-700 pt-3">
+                                <span class="font-semibold text-white">Total annual cost</span>
+                                <span class="text-cyan-400 font-bold">$111K</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/50 rounded-xl p-6 border border-slate-700">
+                        <h3 class="text-xl font-semibold text-white mb-4">What You Get Instead</h3>
+                        <div class="space-y-3 text-slate-300">
+                            <div class="flex items-start gap-3">
+                                <span class="text-green-400 text-xl">✓</span>
+                                <span>Keep your team focused on high-value work</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-green-400 text-xl">✓</span>
+                                <span>Handle 3x the volume without hiring</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-green-400 text-xl">✓</span>
+                                <span>Scale up/down instantly with business needs</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-green-400 text-xl">✓</span>
+                                <span>No recruiting, training, or turnover costs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Early Access CTA -->
+            <div class="bg-gradient-to-r from-cyan-900/30 to-slate-900/30 rounded-2xl p-12 border border-cyan-500/30 text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Lock In Early-Adopter Pricing</h2>
+                <p class="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
+                    Our pilot customers get special pricing and are helping us shape the final pricing model. Join now to get grandfathered in.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/pilot.html" class="px-8 py-4 bg-cyan-500 text-white font-bold rounded-lg hover:bg-cyan-600 transition shadow-lg shadow-cyan-500/50 text-lg">
+                        Get Early Access
+                    </a>
+                    <a href="/#demos" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-cyan-500/30 text-lg">
+                        Try Our Demos
+                    </a>
+                </div>
+                <p class="text-slate-400 text-sm mt-6">
+                    Questions about pricing? <a href="mailto:hello@carbon-lab.io" class="text-cyan-400 hover:text-cyan-300 underline">Email us</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-6 py-12 border-t border-white/10">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <h3 class="font-semibold text-white mb-3">Product</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/revenue-accountant/" class="text-slate-400 hover:text-cyan-400 transition">Contract Wizard Demo</a></li>
+                    <li><a href="/fraud-detection/" class="text-slate-400 hover:text-cyan-400 transition">Fraud Fighter Demo</a></li>
+                    <li><a href="/#how-it-works" class="text-slate-400 hover:text-cyan-400 transition">How Training Works</a></li>
+                    <li><a href="/pricing.html" class="text-slate-400 hover:text-cyan-400 transition">Pricing</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="font-semibold text-white mb-3">Company</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/our-approach.html" class="text-slate-400 hover:text-cyan-400 transition">Our Approach</a></li>
+                    <li><a href="/pilot.html" class="text-slate-400 hover:text-cyan-400 transition">Get Early Access</a></li>
+                    <li><a href="mailto:hello@carbon-lab.io" class="text-slate-400 hover:text-cyan-400 transition">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="font-semibold text-white mb-3">Side-Kicks</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/revenue-accountant/" class="text-slate-400 hover:text-cyan-400 transition">Contract Wizard</a></li>
+                    <li><a href="/fraud-detection/" class="text-slate-400 hover:text-cyan-400 transition">Fraud Fighter</a></li>
+                    <li><span class="text-slate-400">Revenue Mapper</span></li>
+                    <li><span class="text-slate-400">Variance Detective</span></li>
+                    <li><span class="text-slate-400">Invoice Magic</span></li>
+                    <li><span class="text-slate-400">Tax Navigator</span></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="border-t border-white/10 pt-8 text-center text-slate-500 text-sm">
+            <p>© 2026 Carbon Lab. Built with Claude AI.</p>
+            <p class="mt-2">All demos use simulated data for demonstration purposes.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
