@@ -20,6 +20,28 @@
         .step-active { opacity: 1; }
         .pulse-red { animation: pulseRed 2s infinite; }
         @keyframes pulseRed { 0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); } 50% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); } }
+        /* Logo styling with carbon structure */
+        .carbon-logo {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .carbon-logo::before {
+            content: 'C';
+            font-family: 'Space Grotesk', monospace;
+            font-weight: 700;
+            font-size: 1.75rem;
+            color: #f97316;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #f97316;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+            background: rgba(251, 146, 60, 0.1);
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-neutral-950 via-neutral-900 to-slate-900 min-h-screen">
@@ -27,7 +49,7 @@
     <!-- Header -->
     <header class="container mx-auto px-6 py-6">
         <div class="flex justify-between items-center">
-            <a href="/" class="logo-font text-2xl font-bold text-white tracking-wide">← Carbon Lab</a>
+            <a href="/" class="carbon-logo logo-font text-2xl font-bold text-white tracking-wide">← Carbon Lab</a>
             <div class="text-red-400 font-semibold">Fraud Fighter Training Demo</div>
         </div>
     </header>
@@ -38,7 +60,7 @@
             <div class="flex items-center justify-between mb-8">
                 <div id="step-1-indicator" class="flex-1 text-center step-active transition-all">
                     <div class="w-12 h-12 mx-auto bg-red-500/20 border-2 border-red-400 rounded-full flex items-center justify-center mb-2">
-                        <span class="text-xl">📚</span>
+                        <span class="text-xl font-bold text-orange-500">1</span>
                     </div>
                     <div class="text-sm font-semibold text-white">Step 1</div>
                     <div class="text-xs text-slate-400">Show Examples</div>
@@ -48,7 +70,7 @@
                 </div>
                 <div id="step-2-indicator" class="flex-1 text-center step-inactive transition-all">
                     <div class="w-12 h-12 mx-auto bg-red-500/20 border-2 border-slate-600 rounded-full flex items-center justify-center mb-2">
-                        <span class="text-xl">🎯</span>
+                        <span class="text-xl font-bold text-slate-500">2</span>
                     </div>
                     <div class="text-sm font-semibold text-slate-500">Step 2</div>
                     <div class="text-xs text-slate-600">Review & Correct</div>
@@ -58,7 +80,7 @@
                 </div>
                 <div id="step-3-indicator" class="flex-1 text-center step-inactive transition-all">
                     <div class="w-12 h-12 mx-auto bg-red-500/20 border-2 border-slate-600 rounded-full flex items-center justify-center mb-2">
-                        <span class="text-xl">🚀</span>
+                        <span class="text-xl font-bold text-slate-500">3</span>
                     </div>
                     <div class="text-sm font-semibold text-slate-500">Step 3</div>
                     <div class="text-xs text-slate-600">Automate</div>
@@ -356,7 +378,6 @@
                     <!-- Fraud Alert Tab -->
                     <div id="tab2-report-content" class="tab2-content bg-slate-900/50 rounded-lg p-6 border border-red-500/30">
                         <div class="flex items-start gap-4 mb-6 pulse-red">
-                            <div class="text-5xl">🚨</div>
                             <div>
                                 <div class="text-2xl font-bold text-red-400 mb-2">HIGH FRAUD RISK DETECTED</div>
                                 <div class="text-slate-300">Customer: CloudTech Solutions Inc • Contract Value: $85,000</div>
@@ -729,7 +750,7 @@
                 This demo showed customer validation, but the same training process works for ALL fraud detection: invoice fraud, payment fraud, expense fraud, and more.
             </p>
             <div class="flex justify-center gap-4">
-                <a href="mailto:hello@carbon-lab.io?subject=Fraud Fighter Demo" class="px-8 py-4 bg-red-500 text-white font-bold rounded-lg hover:bg-red-600 transition shadow-lg shadow-red-500/50">
+                <a href="/pilot.html" class="px-8 py-4 bg-red-500 text-white font-bold rounded-lg hover:bg-red-600 transition shadow-lg shadow-red-500/50">
                     Become a Pilot Customer
                 </a>
                 <a href="/" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-red-500/30">
