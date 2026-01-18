@@ -7,6 +7,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Carbon Lab Professional Color Palette - Muted Orange */
+        :root {
+            --color-carbon-orange: #d97342;
+            --color-carbon-orange-hover: #c2613a;
+            --color-carbon-orange-light: #e88b5e;
+            --color-carbon-orange-dark: #b85533;
+        }
+        .bg-carbon-orange { background-color: var(--color-carbon-orange); }
+        .bg-carbon-orange-hover:hover { background-color: var(--color-carbon-orange-hover); }
+        .text-carbon-orange { color: var(--color-carbon-orange); }
+        .text-carbon-orange-light { color: var(--color-carbon-orange-light); }
+        .border-carbon-orange { border-color: var(--color-carbon-orange); }
+        .shadow-carbon-orange { box-shadow: 0 10px 25px -5px rgba(217, 115, 66, 0.3); }
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3 { font-family: 'Syne', sans-serif; letter-spacing: -0.02em; }
         .logo-font { font-family: 'Space Grotesk', monospace; letter-spacing: 0.05em; }
@@ -22,15 +35,15 @@
             font-family: 'Space Grotesk', monospace;
             font-weight: 700;
             font-size: 1.75rem;
-            color: #f97316;
+            color: #d97342;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 40px;
             height: 40px;
-            border: 2px solid #f97316;
+            border: 2px solid #d97342;
             clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-            background: rgba(251, 146, 60, 0.1);
+            background: rgba(217, 115, 66, 0.1);
         }
     </style>
 </head>
@@ -41,11 +54,11 @@
         <div class="flex justify-between items-center">
             <a href="/" class="carbon-logo logo-font text-2xl font-bold text-white tracking-wide">Carbon Lab</a>
             <nav class="flex gap-8 items-center">
-                <a href="/" class="text-slate-300 hover:text-orange-500 transition">Home</a>
-                <a href="/our-approach.html" class="text-slate-300 hover:text-orange-500 transition">Learn Our Approach</a>
+                <a href="/" class="text-slate-300 hover:text-carbon-orange transition">Home</a>
+                <a href="/our-approach.html" class="text-slate-300 hover:text-carbon-orange transition">Learn Our Approach</a>
                 <a href="/pricing.html" class="text-white font-semibold">Pricing</a>
-                <a href="/#demos" class="text-slate-300 hover:text-orange-500 transition">Try Demo</a>
-                <a href="/pilot.html" class="px-6 py-2 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition shadow-lg shadow-orange-600/30">Get Early Access</a>
+                <a href="/#demos" class="text-slate-300 hover:text-carbon-orange transition">Try Demo</a>
+                <a href="/pilot.html" class="px-6 py-2 bg-carbon-orange text-white font-semibold rounded-lg bg-carbon-orange-hover transition shadow-lg shadow-carbon-orange/30">Get Early Access</a>
             </nav>
         </div>
     </header>
@@ -63,29 +76,29 @@
             </div>
 
             <!-- Current Status -->
-            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-orange-600/20 text-center mb-12">
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-carbon-orange/20 text-center mb-12">
                 <div class="text-6xl mb-6">🚧</div>
                 <h2 class="text-3xl font-bold text-white mb-4">Pricing Coming Soon</h2>
                 <p class="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
                     We're working with our pilot customers to build a pricing model that's fair, transparent, and aligned with the value you receive.
                 </p>
-                <div class="bg-orange-600/10 border border-orange-600/30 rounded-xl p-6 text-left max-w-2xl mx-auto">
+                <div class="bg-carbon-orange/10 border border-carbon-orange/30 rounded-xl p-6 text-left max-w-2xl mx-auto">
                     <h3 class="text-lg font-semibold text-white mb-4">What we're considering:</h3>
                     <ul class="space-y-3 text-slate-300">
                         <li class="flex items-start gap-3">
-                            <span class="text-orange-500 text-xl">•</span>
+                            <span class="text-carbon-orange text-xl">•</span>
                             <span><strong class="text-white">Per Side-Kick pricing</strong> - Pay only for what you use</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-orange-500 text-xl">•</span>
+                            <span class="text-carbon-orange text-xl">•</span>
                             <span><strong class="text-white">Transaction-based tiers</strong> - Scale with your business</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-orange-500 text-xl">•</span>
+                            <span class="text-carbon-orange text-xl">•</span>
                             <span><strong class="text-white">All-in packages</strong> - Multiple Side-Kicks at a discount</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-orange-500 text-xl">•</span>
+                            <span class="text-carbon-orange text-xl">•</span>
                             <span><strong class="text-white">Enterprise custom pricing</strong> - For complex needs</span>
                         </li>
                     </ul>
@@ -152,21 +165,21 @@
                 </div>
 
                 <!-- ROI Examples -->
-                <div class="mt-8 bg-gradient-to-r from-neutral-900/20 to-slate-900/20 rounded-xl p-6 border border-orange-600/20">
+                <div class="mt-8 bg-gradient-to-r from-neutral-900/20 to-slate-900/20 rounded-xl p-6 border border-carbon-orange/20">
                     <h3 class="text-lg font-semibold text-white mb-4 text-center">Real ROI Scenarios</h3>
                     <div class="grid md:grid-cols-3 gap-6 text-sm">
                         <div class="text-center">
-                            <div class="text-orange-500 font-bold text-2xl mb-2">3-4 Days</div>
+                            <div class="text-carbon-orange font-bold text-2xl mb-2">3-4 Days</div>
                             <div class="text-slate-300">Saved per month-end close</div>
                             <div class="text-slate-500 text-xs mt-1">Team can start strategic work sooner</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-orange-500 font-bold text-2xl mb-2">3x Volume</div>
+                            <div class="text-carbon-orange font-bold text-2xl mb-2">3x Volume</div>
                             <div class="text-slate-300">Handled without new headcount</div>
                             <div class="text-slate-500 text-xs mt-1">Grow revenue without growing finance team</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-orange-500 font-bold text-2xl mb-2">70%</div>
+                            <div class="text-carbon-orange font-bold text-2xl mb-2">70%</div>
                             <div class="text-slate-300">Reduction in manual work</div>
                             <div class="text-slate-500 text-xs mt-1">More time for analysis and insights</div>
                         </div>
@@ -175,21 +188,21 @@
             </div>
 
             <!-- Early Access CTA -->
-            <div class="bg-gradient-to-r from-neutral-900/30 to-slate-900/30 rounded-2xl p-12 border border-orange-600/30 text-center">
+            <div class="bg-gradient-to-r from-neutral-900/30 to-slate-900/30 rounded-2xl p-12 border border-carbon-orange/30 text-center">
                 <h2 class="text-3xl font-bold text-white mb-4">Lock In Early-Adopter Pricing</h2>
                 <p class="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
                     Our pilot customers get special pricing and are helping us shape the final pricing model. Join now to get grandfathered in.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="/pilot.html" class="px-8 py-4 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition shadow-lg shadow-orange-600/50 text-lg">
+                    <a href="/pilot.html" class="px-8 py-4 bg-carbon-orange text-white font-bold rounded-lg bg-carbon-orange-hover transition shadow-lg shadow-carbon-orange/50 text-lg">
                         Get Early Access
                     </a>
-                    <a href="/#demos" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-orange-600/30 text-lg">
+                    <a href="/#demos" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-carbon-orange/30 text-lg">
                         Try Our Demos
                     </a>
                 </div>
                 <p class="text-slate-400 text-sm mt-6">
-                    Questions about pricing? <a href="mailto:hello@carbon-lab.io" class="text-orange-500 hover:text-orange-400 underline">Email us</a>
+                    Questions about pricing? <a href="mailto:hello@carbon-lab.io" class="text-carbon-orange hover:text-carbon-orange-light underline">Email us</a>
                 </p>
             </div>
 
@@ -202,27 +215,27 @@
             <div>
                 <h3 class="font-semibold text-white mb-3">Product</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="/revenue-accountant/" class="text-slate-400 hover:text-orange-500 transition">Contract Wizard Demo</a></li>
-                    <li><a href="/fraud-detection/" class="text-slate-400 hover:text-orange-500 transition">Fraud Fighter Demo</a></li>
-                    <li><a href="/#how-it-works" class="text-slate-400 hover:text-orange-500 transition">How Training Works</a></li>
-                    <li><a href="/pricing.html" class="text-slate-400 hover:text-orange-500 transition">Pricing</a></li>
+                    <li><a href="/revenue-accountant/" class="text-slate-400 hover:text-carbon-orange transition">Contract Wizard Demo</a></li>
+                    <li><a href="/fraud-detection/" class="text-slate-400 hover:text-carbon-orange transition">Fraud Fighter Demo</a></li>
+                    <li><a href="/#how-it-works" class="text-slate-400 hover:text-carbon-orange transition">How Training Works</a></li>
+                    <li><a href="/pricing.html" class="text-slate-400 hover:text-carbon-orange transition">Pricing</a></li>
                 </ul>
             </div>
             
             <div>
                 <h3 class="font-semibold text-white mb-3">Company</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="/our-approach.html" class="text-slate-400 hover:text-orange-500 transition">Our Approach</a></li>
-                    <li><a href="/pilot.html" class="text-slate-400 hover:text-orange-500 transition">Get Early Access</a></li>
-                    <li><a href="mailto:hello@carbon-lab.io" class="text-slate-400 hover:text-orange-500 transition">Contact Us</a></li>
+                    <li><a href="/our-approach.html" class="text-slate-400 hover:text-carbon-orange transition">Our Approach</a></li>
+                    <li><a href="/pilot.html" class="text-slate-400 hover:text-carbon-orange transition">Get Early Access</a></li>
+                    <li><a href="mailto:hello@carbon-lab.io" class="text-slate-400 hover:text-carbon-orange transition">Contact Us</a></li>
                 </ul>
             </div>
             
             <div>
                 <h3 class="font-semibold text-white mb-3">Side-Kicks</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="/revenue-accountant/" class="text-slate-400 hover:text-orange-500 transition">Contract Wizard</a></li>
-                    <li><a href="/fraud-detection/" class="text-slate-400 hover:text-orange-500 transition">Fraud Fighter</a></li>
+                    <li><a href="/revenue-accountant/" class="text-slate-400 hover:text-carbon-orange transition">Contract Wizard</a></li>
+                    <li><a href="/fraud-detection/" class="text-slate-400 hover:text-carbon-orange transition">Fraud Fighter</a></li>
                     <li><span class="text-slate-400">Revenue Mapper</span></li>
                     <li><span class="text-slate-400">Variance Detective</span></li>
                     <li><span class="text-slate-400">Invoice Magic</span></li>
