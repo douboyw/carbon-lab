@@ -55,6 +55,19 @@
             clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
             background: rgba(217, 115, 66, 0.1);
         }
+        
+        /* Subtle hexagonal background pattern */
+        .carbon-pattern {
+            background-image: 
+                linear-gradient(30deg, rgba(217, 115, 66, 0.015) 12%, transparent 12.5%, transparent 87%, rgba(217, 115, 66, 0.015) 87.5%, rgba(217, 115, 66, 0.015)),
+                linear-gradient(150deg, rgba(217, 115, 66, 0.015) 12%, transparent 12.5%, transparent 87%, rgba(217, 115, 66, 0.015) 87.5%, rgba(217, 115, 66, 0.015)),
+                linear-gradient(30deg, rgba(217, 115, 66, 0.015) 12%, transparent 12.5%, transparent 87%, rgba(217, 115, 66, 0.015) 87.5%, rgba(217, 115, 66, 0.015)),
+                linear-gradient(150deg, rgba(217, 115, 66, 0.015) 12%, transparent 12.5%, transparent 87%, rgba(217, 115, 66, 0.015) 87.5%, rgba(217, 115, 66, 0.015)),
+                linear-gradient(60deg, rgba(10, 10, 10, 0.25) 25%, transparent 25.5%, transparent 75%, rgba(10, 10, 10, 0.25) 75%, rgba(10, 10, 10, 0.25)),
+                linear-gradient(60deg, rgba(10, 10, 10, 0.25) 25%, transparent 25.5%, transparent 75%, rgba(10, 10, 10, 0.25) 75%, rgba(10, 10, 10, 0.25));
+            background-size: 80px 140px;
+            background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-neutral-950 via-neutral-900 to-slate-900 min-h-screen">
@@ -68,7 +81,7 @@
     </header>
 
     <!-- Progress Bar -->
-    <section class="container mx-auto px-6 py-8">
+    <section class="container mx-auto px-6 py-8 carbon-pattern">
         <div class="max-w-4xl mx-auto">
             <div class="flex items-center justify-between mb-8">
                 <div id="step-1-indicator" class="flex-1 text-center step-active transition-all">
@@ -107,7 +120,7 @@
         <div class="max-w-4xl mx-auto">
             
             <!-- Step 1: Show Examples -->
-            <div id="step-1" class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-slate-700">
+            <div id="step-1" class="bg-white/10 backdrop-blur-lg rounded-2xl p-8">
                 <h2 class="heading-font text-3xl font-bold text-white mb-4">Step 1: Show Examples</h2>
                 <p class="text-slate-300 mb-8">Upload 10-20 examples of BOTH valid and fraudulent transactions so your Fraud Fighter learns YOUR company's normal patterns vs. suspicious activity.</p>
                 
@@ -115,7 +128,7 @@
                 <div class="mb-8">
                     <h3 class="heading-font text-xl font-bold text-carbon-orange mb-4">• Valid Customer Examples</h3>
                     <div class="space-y-3">
-                        <div class="bg-slate-800/50 rounded-lg p-4 border border-carbon-orange/30">
+                        <div class="bg-slate-800/50 rounded-lg p-4">
                             <div class="flex items-start justify-between">
                                 <div class="flex items-start gap-4 flex-1">
                                     <div class="text-3xl"></div>
@@ -133,7 +146,7 @@
                             </div>
                         </div>
 
-                        <div class="bg-slate-800/50 rounded-lg p-4 border border-carbon-orange/30">
+                        <div class="bg-slate-800/50 rounded-lg p-4">
                             <div class="flex items-start justify-between">
                                 <div class="flex items-start gap-4 flex-1">
                                     <div class="text-3xl"></div>
@@ -157,7 +170,7 @@
                 <div class="mb-8">
                     <h3 class="heading-font text-xl font-bold text-white mb-4">Fraudulent/Suspicious Examples</h3>
                     <div class="space-y-3">
-                        <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
+                        <div class="bg-slate-800/50 rounded-lg p-4">
                             <div class="flex items-start justify-between">
                                 <div class="flex items-start gap-4 flex-1">
                                     <div class="text-3xl"></div>
@@ -175,7 +188,7 @@
                             </div>
                         </div>
 
-                        <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
+                        <div class="bg-slate-800/50 rounded-lg p-4">
                             <div class="flex items-start justify-between">
                                 <div class="flex items-start gap-4 flex-1">
                                     <div class="text-3xl"></div>
@@ -193,10 +206,10 @@
                             </div>
                         </div>
 
-                        <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700 opacity-50">
+                        <div class="bg-slate-800/50 rounded-lg p-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-4">
-                                    <div class="text-3xl">📄</div>
+                                    <div class="text-3xl"></div>
                                     <div class="text-slate-400">+ 16 more examples (valid & fraudulent)...</div>
                                 </div>
                                 <div class="text-carbon-orange text-sm font-semibold">• All Learned</div>
@@ -206,7 +219,7 @@
                 </div>
 
                 <!-- What Side-Kick Learned -->
-                <div class="bg-gradient-to-r from-slate-800/50 to-slate-900/20 rounded-xl p-6 border border-slate-700 mb-8">
+                <div class="bg-gradient-to-r from-slate-800/50 to-slate-900/20 rounded-xl p-6">
                     <h3 class="text-lg font-semibold text-white mb-4">🧠 What Your Fraud Fighter Learned:</h3>
                     <div class="grid md:grid-cols-2 gap-4 text-sm">
                         <div>
@@ -240,14 +253,14 @@
             </div>
 
             <!-- Step 2: Review & Correct -->
-            <div id="step-2" class="hidden bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-slate-700">
+            <div id="step-2" class="hidden bg-white/10 backdrop-blur-lg rounded-2xl p-8">
                 <h2 class="heading-font text-3xl font-bold text-white mb-4">Step 2: Review & Correct</h2>
                 <p class="text-slate-300 mb-8">Now your Fraud Fighter will analyze a NEW customer contract. Review its assessment and make corrections. It learns from your expertise.</p>
                 
                 <!-- New Customer Contract -->
-                <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-500/30 mb-6">
+                <div class="bg-slate-800/50 rounded-lg p-6">
                     <div class="flex items-start gap-4 mb-4">
-                        <div class="text-4xl">📄</div>
+                        <div class="text-4xl"></div>
                         <div>
                             <div class="text-xl font-bold text-white mb-2">NEW: CloudTech Solutions - $85K Annual SaaS Contract</div>
                             <div class="text-slate-300 mb-2">Inbound sales lead, contract signed quickly, requesting immediate setup</div>
@@ -280,7 +293,7 @@
                                 INCORRECT
                             </div>
                         </div>
-                        <div class="bg-slate-500/10 border border-slate-700 rounded p-3">
+                        <div class="bg-slate-500/10">
                             <div class="text-slate-400 text-sm font-semibold mb-1">Your Correction:</div>
                             <div class="text-slate-300 text-sm">This should be HIGH RISK (75/100). Multiple red flags present that Side-Kick missed.</div>
                         </div>
@@ -299,7 +312,7 @@
                                     MISSED
                                 </div>
                             </div>
-                            <div class="bg-slate-500/10 border border-slate-700 rounded p-3 mt-2">
+                            <div class="bg-slate-500/10">
                                 <div class="text-slate-400 text-sm font-semibold mb-1">✏️ Your Correction:</div>
                                 <div class="text-slate-300 text-sm">RED FLAG: Domain less than 6 months old. This is a major warning sign based on your training examples.</div>
                             </div>
@@ -329,7 +342,7 @@
                                     MISSED
                                 </div>
                             </div>
-                            <div class="bg-slate-500/10 border border-slate-700 rounded p-3 mt-2">
+                            <div class="bg-slate-500/10">
                                 <div class="text-slate-400 text-sm font-semibold mb-1">✏️ Your Correction:</div>
                                 <div class="text-slate-300 text-sm">YELLOW FLAG: Minimal online presence. Legitimate $85K/year companies typically have established digital footprint.</div>
                             </div>
@@ -346,7 +359,7 @@
                                     MISSED
                                 </div>
                             </div>
-                            <div class="bg-slate-500/10 border border-slate-700 rounded p-3 mt-2">
+                            <div class="bg-slate-500/10">
                                 <div class="text-slate-400 text-sm font-semibold mb-1">✏️ Your Correction:</div>
                                 <div class="text-slate-300 text-sm">RED FLAG: Wire transfer unusual for new customers. Your company policy requires ACH/check for first transaction.</div>
                             </div>
@@ -355,9 +368,9 @@
                 </div>
 
                 <!-- Learning Feedback -->
-                <div class="bg-gradient-to-r from-slate-800/50 to-slate-900/20 rounded-xl p-6 border border-slate-700 mb-8 mt-6">
+                <div class="bg-gradient-to-r from-slate-800/50 to-slate-900/20 rounded-xl p-6">
                     <div class="flex items-start gap-3">
-                        <div class="text-2xl">💡</div>
+                        <div class="text-2xl"></div>
                         <div>
                             <h3 class="text-lg font-semibold text-white mb-2">Fraud Fighter Updated Its Model:</h3>
                             <ul class="space-y-2 text-sm text-slate-300">
@@ -381,7 +394,7 @@
                             Fraud Alert
                         </button>
                         <button onclick="showTab2('analysis')" id="tab2-analysis" class="tab2-btn px-4 py-2 bg-white/10 text-slate-300 rounded-lg font-semibold transition">
-                            📊 Risk Analysis
+                             Risk Analysis
                         </button>
                         <button onclick="showTab2('actions')" id="tab2-actions" class="tab2-btn px-4 py-2 bg-white/10 text-slate-300 rounded-lg font-semibold transition">
                             Recommended Actions
@@ -389,7 +402,7 @@
                     </div>
 
                     <!-- Fraud Alert Tab -->
-                    <div id="tab2-report-content" class="tab2-content bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                    <div id="tab2-report-content" class="tab2-content bg-slate-900/50 rounded-lg p-6">
                         <div class="flex items-start gap-4 mb-6 pulse-red">
                             <div>
                                 <div class="text-2xl font-bold text-slate-300 mb-2">HIGH FRAUD RISK DETECTED</div>
@@ -405,7 +418,7 @@
                                 </div>
                             </div>
 
-                            <div class="bg-slate-500/10 border border-slate-700 rounded p-4">
+                            <div class="bg-slate-500/10">
                                 <div class="text-slate-400 font-semibold mb-3">🚩 Critical Red Flags (3):</div>
                                 <ul class="space-y-2 text-slate-300">
                                     <li><strong>• Domain Age:</strong> Registered only 45 days ago (threshold: 90 days)</li>
@@ -414,7 +427,7 @@
                                 </ul>
                             </div>
 
-                            <div class="bg-slate-500/10 border border-slate-500/30 rounded p-4">
+                            <div class="bg-slate-500/10">
                                 <div class="text-slate-400 font-semibold mb-3">Warning Signs (2):</div>
                                 <ul class="space-y-2 text-slate-300">
                                     <li><strong>• Limited Online Presence:</strong> Only 3 LinkedIn employees for $85K contract</li>
@@ -430,7 +443,7 @@
                     </div>
 
                     <!-- Risk Analysis Tab -->
-                    <div id="tab2-analysis-content" class="tab2-content hidden bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                    <div id="tab2-analysis-content" class="tab2-content hidden bg-slate-900/50 rounded-lg p-6">
                         <div class="text-sm text-slate-400 mb-4">DETAILED RISK BREAKDOWN</div>
                         
                         <div class="space-y-4">
@@ -487,11 +500,11 @@
                     </div>
 
                     <!-- Recommended Actions Tab -->
-                    <div id="tab2-actions-content" class="tab2-content hidden bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                    <div id="tab2-actions-content" class="tab2-content hidden bg-slate-900/50 rounded-lg p-6">
                         <div class="text-sm text-slate-400 mb-4">SUGGESTED NEXT STEPS</div>
                         
                         <div class="space-y-4">
-                            <div class="bg-slate-500/10 border border-slate-700 rounded p-4">
+                            <div class="bg-slate-500/10">
                                 <div class="text-slate-400 font-semibold mb-3">🛑 Immediate Actions:</div>
                                 <ul class="space-y-2 text-sm text-slate-300">
                                     <li>1. <strong>Pause contract execution</strong> - Do not proceed with setup</li>
@@ -500,7 +513,7 @@
                                 </ul>
                             </div>
 
-                            <div class="bg-slate-500/10 border border-slate-500/30 rounded p-4">
+                            <div class="bg-slate-500/10">
                                 <div class="text-slate-400 font-semibold mb-3">Enhanced Verification Required:</div>
                                 <ul class="space-y-2 text-sm text-slate-300">
                                     <li>• <strong>D&B Report:</strong> Request Dun & Bradstreet business verification</li>
@@ -511,7 +524,7 @@
                                 </ul>
                             </div>
 
-                            <div class="bg-carbon-orange/10 border border-carbon-orange/30 rounded p-4">
+                            <div class="bg-carbon-orange/10">
                                 <div class="text-carbon-orange-light font-semibold mb-3">If Verification Passes:</div>
                                 <ul class="space-y-2 text-sm text-slate-300">
                                     <li>• Start with pilot/trial period (30 days)</li>
@@ -531,7 +544,7 @@
                 </div>
 
                 <div class="flex justify-between">
-                    <button onclick="goToStep1()" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-slate-700">
+                    <button onclick="goToStep1()" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition">
                         < Back to Step 1
                     </button>
                     <button onclick="goToStep3()" class="px-8 py-4 bg-slate-500 text-white font-bold rounded-lg hover:bg-slate-600 transition shadow-lg shadow-slate-500/50">
@@ -541,7 +554,7 @@
             </div>
 
             <!-- Step 3: Automate & Scale -->
-            <div id="step-3" class="hidden bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-slate-700">
+            <div id="step-3" class="hidden bg-white/10 backdrop-blur-lg rounded-2xl p-8">
                 <h2 class="heading-font text-3xl font-bold text-white mb-4">Step 3: Automate & Scale</h2>
                 <p class="text-slate-300 mb-8">After 2-3 weeks of training, your Fraud Fighter now monitors ALL new customers automatically. You only review flagged cases.</p>
                 
@@ -554,7 +567,7 @@
 
                     <div class="space-y-3">
                         <!-- Auto-approved -->
-                        <div class="bg-slate-800/50 rounded-lg p-4 border border-carbon-orange/30">
+                        <div class="bg-slate-800/50 rounded-lg p-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3 flex-1">
                                     <div class="text-2xl"></div>
@@ -575,7 +588,7 @@
                             </div>
                         </div>
 
-                        <div class="bg-slate-800/50 rounded-lg p-4 border border-carbon-orange/30">
+                        <div class="bg-slate-800/50 rounded-lg p-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3 flex-1">
                                     <div class="text-2xl"></div>
@@ -616,7 +629,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-3 pt-3 border-t border-slate-700">
+                            <div class="mt-3 pt-3">
                                 <div class="text-sm text-slate-400 font-semibold mb-2">Red Flags:</div>
                                 <div class="grid grid-cols-2 gap-2 text-xs text-slate-300">
                                     <div>• Domain: 22 days old</div>
@@ -647,17 +660,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-3 pt-3 border-t border-slate-500/30">
+                            <div class="mt-3 pt-3">
                                 <div class="text-sm text-slate-400">
                                     <strong class="text-slate-400">Suggested:</strong> Request D&B report before approval
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700 opacity-50">
+                        <div class="bg-slate-800/50 rounded-lg p-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3">
-                                    <div class="text-2xl">📄</div>
+                                    <div class="text-2xl"></div>
                                     <div class="text-slate-400">+ 43 more customers auto-processed</div>
                                 </div>
                                 <div class="text-carbon-orange text-sm font-semibold">• All Cleared</div>
@@ -667,7 +680,7 @@
                 </div>
 
                 <!-- Performance Dashboard -->
-                <div class="bg-gradient-to-r from-slate-800/50 to-slate-900/20 rounded-xl p-6 border border-slate-700 mb-8">
+                <div class="bg-gradient-to-r from-slate-800/50 to-slate-900/20 rounded-xl p-6">
                     <h3 class="heading-font text-xl font-bold text-white mb-6">Performance This Month</h3>
                     <div class="grid md:grid-cols-3 gap-6">
                         <div class="text-center">
@@ -689,7 +702,7 @@
                 </div>
 
                 <!-- Continuous Learning -->
-                <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700 mb-8">
+                <div class="bg-slate-900/50 rounded-lg p-6">
                     <div class="flex items-start gap-3 mb-4">
                         <div class="text-2xl">📈</div>
                         <div>
@@ -718,10 +731,10 @@
                 </div>
 
                 <!-- Integration Options -->
-                <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                <div class="bg-slate-900/50 rounded-lg p-6">
                     <h3 class="text-lg font-semibold text-white mb-4">Automated Integrations:</h3>
                     <div class="grid md:grid-cols-2 gap-4">
-                        <div class="bg-slate-800/50 rounded p-4 border border-carbon-orange/30">
+                        <div class="bg-slate-800/50 rounded p-4">
                             <div class="font-semibold text-white mb-2">• Active Integrations</div>
                             <ul class="text-sm text-slate-300 space-y-1">
                                 <li>• Email alerts to finance team</li>
@@ -730,8 +743,8 @@
                                 <li>• Auto-block in payment system</li>
                             </ul>
                         </div>
-                        <div class="bg-slate-800/50 rounded p-4 border border-carbon-orange/30">
-                            <div class="font-semibold text-white mb-2">📊 Data Sources</div>
+                        <div class="bg-slate-800/50 rounded p-4">
+                            <div class="font-semibold text-white mb-2"> Data Sources</div>
                             <ul class="text-sm text-slate-300 space-y-1">
                                 <li>• WHOIS domain lookup</li>
                                 <li>• LinkedIn API verification</li>
@@ -743,7 +756,7 @@
                 </div>
 
                 <div class="flex justify-between mt-8">
-                    <button onclick="goToStep2()" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-slate-700">
+                    <button onclick="goToStep2()" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition">
                         < Back to Step 2
                     </button>
                     <a href="/" class="px-8 py-4 bg-slate-500 text-white font-bold rounded-lg hover:bg-slate-600 transition shadow-lg shadow-slate-500/50">
@@ -757,7 +770,7 @@
 
     <!-- CTA -->
     <section class="container mx-auto px-6 py-16">
-        <div class="max-w-3xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-slate-700 text-center">
+        <div class="max-w-3xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-12">
             <h2 class="heading-font text-3xl font-bold text-white mb-4">Ready to Train Your Own Fraud Fighter?</h2>
             <p class="text-slate-300 mb-8">
                 This demo showed customer validation, but the same training process works for ALL fraud detection: invoice fraud, payment fraud, expense fraud, and more.
@@ -766,7 +779,7 @@
                 <a href="/pilot.html" class="px-8 py-4 bg-slate-500 text-white font-bold rounded-lg hover:bg-slate-600 transition shadow-lg shadow-slate-500/50">
                     Become a Pilot Customer
                 </a>
-                <a href="/" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition border border-slate-700">
+                <a href="/" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition">
                     Learn More
                 </a>
             </div>
@@ -778,37 +791,47 @@
             // Update step indicators
             for (let i = 1; i <= 3; i++) {
                 const indicator = document.getElementById(`step-${i}-indicator`);
-                const border = indicator.querySelector('div div');
-                const stepTitle = indicator.querySelectorAll('div')[2];
-                const stepDesc = indicator.querySelectorAll('div')[3];
+                const circle = indicator.querySelector('div'); // The circle container with border
+                const numberSpan = indicator.querySelector('span'); // The number inside
+                const titleDiv = indicator.querySelectorAll('div')[1]; // "Step X"
+                const descDiv = indicator.querySelectorAll('div')[2]; // Description
                 
                 if (i < activeStep) {
+                    // Completed step
                     indicator.classList.remove('step-inactive');
                     indicator.classList.add('step-active');
-                    border.classList.remove('border-slate-700');
-                    border.classList.add('border-slate-700');
-                    stepTitle.classList.remove('text-slate-500');
-                    stepTitle.classList.add('text-white');
-                    stepDesc.classList.remove('text-slate-600');
-                    stepDesc.classList.add('text-slate-400');
+                    circle.classList.remove('border-slate-600');
+                    circle.classList.add('border-carbon-orange');
+                    numberSpan.classList.remove('text-slate-500');
+                    numberSpan.classList.add('text-carbon-orange');
+                    titleDiv.classList.remove('text-slate-500');
+                    titleDiv.classList.add('text-white');
+                    descDiv.classList.remove('text-slate-600');
+                    descDiv.classList.add('text-slate-400');
                 } else if (i === activeStep) {
+                    // Active step
                     indicator.classList.remove('step-inactive');
                     indicator.classList.add('step-active');
-                    border.classList.remove('border-slate-700');
-                    border.classList.add('border-slate-700');
-                    stepTitle.classList.remove('text-slate-500');
-                    stepTitle.classList.add('text-white');
-                    stepDesc.classList.remove('text-slate-600');
-                    stepDesc.classList.add('text-slate-400');
+                    circle.classList.remove('border-slate-600');
+                    circle.classList.add('border-carbon-orange');
+                    numberSpan.classList.remove('text-slate-500');
+                    numberSpan.classList.add('text-carbon-orange');
+                    titleDiv.classList.remove('text-slate-500');
+                    titleDiv.classList.add('text-white');
+                    descDiv.classList.remove('text-slate-600');
+                    descDiv.classList.add('text-slate-400');
                 } else {
+                    // Inactive/future step
                     indicator.classList.remove('step-active');
                     indicator.classList.add('step-inactive');
-                    border.classList.remove('border-slate-700');
-                    border.classList.add('border-slate-700');
-                    stepTitle.classList.remove('text-white');
-                    stepTitle.classList.add('text-slate-500');
-                    stepDesc.classList.remove('text-slate-400');
-                    stepDesc.classList.add('text-slate-600');
+                    circle.classList.remove('border-carbon-orange');
+                    circle.classList.add('border-slate-600');
+                    numberSpan.classList.remove('text-carbon-orange');
+                    numberSpan.classList.add('text-slate-500');
+                    titleDiv.classList.remove('text-white');
+                    titleDiv.classList.add('text-slate-500');
+                    descDiv.classList.remove('text-slate-400');
+                    descDiv.classList.add('text-slate-600');
                 }
             }
             
