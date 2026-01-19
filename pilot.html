@@ -45,6 +45,19 @@
             clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
             background: rgba(217, 115, 66, 0.1);
         }
+        
+        /* Subtle hexagonal background pattern */
+        .carbon-pattern {
+            background-image: 
+                linear-gradient(30deg, rgba(217, 115, 66, 0.015) 12%, transparent 12.5%, transparent 87%, rgba(217, 115, 66, 0.015) 87.5%, rgba(217, 115, 66, 0.015)),
+                linear-gradient(150deg, rgba(217, 115, 66, 0.015) 12%, transparent 12.5%, transparent 87%, rgba(217, 115, 66, 0.015) 87.5%, rgba(217, 115, 66, 0.015)),
+                linear-gradient(30deg, rgba(217, 115, 66, 0.015) 12%, transparent 12.5%, transparent 87%, rgba(217, 115, 66, 0.015) 87.5%, rgba(217, 115, 66, 0.015)),
+                linear-gradient(150deg, rgba(217, 115, 66, 0.015) 12%, transparent 12.5%, transparent 87%, rgba(217, 115, 66, 0.015) 87.5%, rgba(217, 115, 66, 0.015)),
+                linear-gradient(60deg, rgba(10, 10, 10, 0.25) 25%, transparent 25.5%, transparent 75%, rgba(10, 10, 10, 0.25) 75%, rgba(10, 10, 10, 0.25)),
+                linear-gradient(60deg, rgba(10, 10, 10, 0.25) 25%, transparent 25.5%, transparent 75%, rgba(10, 10, 10, 0.25) 75%, rgba(10, 10, 10, 0.25));
+            background-size: 80px 140px;
+            background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-neutral-950 via-neutral-900 to-slate-900 min-h-screen">
@@ -63,7 +76,7 @@
     </header>
 
     <!-- Form Section -->
-    <section class="container mx-auto px-6 py-16">
+    <section class="container mx-auto px-6 py-16 carbon-pattern">
         <div class="max-w-2xl mx-auto">
             
             <!-- Header -->
@@ -75,7 +88,7 @@
             </div>
 
             <!-- Form -->
-            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-carbon-orange/20">
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8">
                 <form id="pilotForm" class="space-y-6">
                     
                     <!-- Name -->
@@ -88,7 +101,7 @@
                             id="name" 
                             name="name" 
                             required
-                            class="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition"
+                            class="w-full px-4 py-3 bg-slate-900/50"
                             placeholder="Jane Smith"
                         >
                     </div>
@@ -103,7 +116,7 @@
                             id="email" 
                             name="email" 
                             required
-                            class="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition"
+                            class="w-full px-4 py-3 bg-slate-900/50"
                             placeholder="jane@company.com"
                         >
                     </div>
@@ -118,7 +131,7 @@
                             id="title" 
                             name="title" 
                             required
-                            class="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition"
+                            class="w-full px-4 py-3 bg-slate-900/50"
                             placeholder="CFO, Controller, Finance Manager, etc."
                         >
                     </div>
@@ -133,7 +146,7 @@
                             id="company" 
                             name="company" 
                             required
-                            class="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition"
+                            class="w-full px-4 py-3 bg-slate-900/50"
                             placeholder="Acme Corp"
                         >
                     </div>
@@ -146,7 +159,7 @@
                         <select 
                             id="companySize" 
                             name="companySize"
-                            class="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition"
+                            class="w-full px-4 py-3 bg-slate-900/50"
                         >
                             <option value="">Select size...</option>
                             <option value="1-10">1-10 employees</option>
@@ -200,7 +213,7 @@
                             id="message" 
                             name="message" 
                             rows="4"
-                            class="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition resize-none"
+                            class="w-full px-4 py-3 bg-slate-900/50"
                             placeholder="What are your biggest finance pain points? What workflows take the most time?"
                         ></textarea>
                     </div>
