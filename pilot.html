@@ -73,6 +73,7 @@
                 <a href="/#demos" class="text-slate-300 hover:text-white transition">Try Demo</a>
             </nav>
         </div>
+    </div>
     </header>
 
     <!-- Form Section -->
@@ -91,143 +92,46 @@
             <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8">
                 <form id="pilotForm" class="space-y-6">
                     
-                    <!-- Name -->
-                    <div>
-                        <label for="name" class="block text-sm font-semibold text-white mb-2">
-                            Full Name <span class="text-red-400">*</span>
-                        </label>
-                        <input 
-                            type="text" 
-                            id="name" 
-                            name="name" 
-                            required
-                            class="w-full px-4 py-3 bg-slate-900/50"
-                            placeholder="Jane Smith"
-                        >
-                    </div>
-
-                    <!-- Email -->
+                    <!-- Work Email -->
                     <div>
                         <label for="email" class="block text-sm font-semibold text-white mb-2">
-                            Work Email <span class="text-red-400">*</span>
+                            Work Email <span class="text-carbon-orange">*</span>
                         </label>
                         <input 
                             type="email" 
                             id="email" 
                             name="email" 
                             required
-                            class="w-full px-4 py-3 bg-slate-900/50"
+                            class="w-full px-4 py-3 bg-slate-900/50 text-white border border-slate-700 rounded-lg focus:border-carbon-orange focus:ring-2 focus:ring-carbon-orange/50 focus:outline-none transition"
                             placeholder="jane@company.com"
                         >
                     </div>
 
-                    <!-- Title -->
-                    <div>
-                        <label for="title" class="block text-sm font-semibold text-white mb-2">
-                            Job Title <span class="text-red-400">*</span>
-                        </label>
-                        <input 
-                            type="text" 
-                            id="title" 
-                            name="title" 
-                            required
-                            class="w-full px-4 py-3 bg-slate-900/50"
-                            placeholder="CFO, Controller, Finance Manager, etc."
-                        >
-                    </div>
-
-                    <!-- Company -->
+                    <!-- Company Name -->
                     <div>
                         <label for="company" class="block text-sm font-semibold text-white mb-2">
-                            Company Name <span class="text-red-400">*</span>
+                            Company Name <span class="text-carbon-orange">*</span>
                         </label>
                         <input 
                             type="text" 
                             id="company" 
                             name="company" 
                             required
-                            class="w-full px-4 py-3 bg-slate-900/50"
+                            class="w-full px-4 py-3 bg-slate-900/50 text-white border border-slate-700 rounded-lg focus:border-carbon-orange focus:ring-2 focus:ring-carbon-orange/50 focus:outline-none transition"
                             placeholder="Acme Corp"
                         >
-                    </div>
-
-                    <!-- Company Size -->
-                    <div>
-                        <label for="companySize" class="block text-sm font-semibold text-white mb-2">
-                            Company Size
-                        </label>
-                        <select 
-                            id="companySize" 
-                            name="companySize"
-                            class="w-full px-4 py-3 bg-slate-900/50"
-                        >
-                            <option value="">Select size...</option>
-                            <option value="1-10">1-10 employees</option>
-                            <option value="11-50">11-50 employees</option>
-                            <option value="51-200">51-200 employees</option>
-                            <option value="201-500">201-500 employees</option>
-                            <option value="501-1000">501-1000 employees</option>
-                            <option value="1000+">1000+ employees</option>
-                        </select>
-                    </div>
-
-                    <!-- Which Side-Kick -->
-                    <div>
-                        <label class="block text-sm font-semibold text-white mb-2">
-                            Which Side-Kick are you most interested in?
-                        </label>
-                        <div class="space-y-2">
-                            <label class="flex items-center gap-3 p-3 bg-slate-900/30 rounded-lg cursor-pointer hover:bg-slate-900/50 transition">
-                                <input type="checkbox" name="sidekick" value="Contract Wizard" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 rounded focus:ring-cyan-500">
-                                <span class="text-white">Contract Wizard (Revenue Recognition)</span>
-                            </label>
-                            <label class="flex items-center gap-3 p-3 bg-slate-900/30 rounded-lg cursor-pointer hover:bg-slate-900/50 transition">
-                                <input type="checkbox" name="sidekick" value="Fraud Fighter" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 rounded focus:ring-cyan-500">
-                                <span class="text-white">Fraud Fighter (Fraud Detection)</span>
-                            </label>
-                            <label class="flex items-center gap-3 p-3 bg-slate-900/30 rounded-lg cursor-pointer hover:bg-slate-900/50 transition">
-                                <input type="checkbox" name="sidekick" value="Revenue Mapper" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 rounded focus:ring-cyan-500">
-                                <span class="text-white">Revenue Mapper (ARR Waterfall)</span>
-                            </label>
-                            <label class="flex items-center gap-3 p-3 bg-slate-900/30 rounded-lg cursor-pointer hover:bg-slate-900/50 transition">
-                                <input type="checkbox" name="sidekick" value="Variance Detective" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 rounded focus:ring-cyan-500">
-                                <span class="text-white">Variance Detective (Variance Analysis)</span>
-                            </label>
-                            <label class="flex items-center gap-3 p-3 bg-slate-900/30 rounded-lg cursor-pointer hover:bg-slate-900/50 transition">
-                                <input type="checkbox" name="sidekick" value="Invoice Magic" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 rounded focus:ring-cyan-500">
-                                <span class="text-white">Invoice Magic (AP Automation)</span>
-                            </label>
-                            <label class="flex items-center gap-3 p-3 bg-slate-900/30 rounded-lg cursor-pointer hover:bg-slate-900/50 transition">
-                                <input type="checkbox" name="sidekick" value="Tax Navigator" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 rounded focus:ring-cyan-500">
-                                <span class="text-white">Tax Navigator (Tax Compliance)</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Message -->
-                    <div>
-                        <label for="message" class="block text-sm font-semibold text-white mb-2">
-                            Tell us about your finance workflows (Optional)
-                        </label>
-                        <textarea 
-                            id="message" 
-                            name="message" 
-                            rows="4"
-                            class="w-full px-4 py-3 bg-slate-900/50"
-                            placeholder="What are your biggest finance pain points? What workflows take the most time?"
-                        ></textarea>
                     </div>
 
                     <!-- Submit Button -->
                     <div class="pt-4">
                         <button 
                             type="submit"
-                            class="w-full px-8 py-4 bg-carbon-orange text-white font-bold rounded-lg bg-carbon-orange-hover transition shadow-lg shadow-carbon-orange/50 text-lg"
+                            class="w-full px-8 py-4 bg-white text-slate-900 font-bold rounded-lg hover:bg-slate-100 transition shadow-lg shadow-white/20 text-lg"
                         >
-                            Submit Application
+                            Get Early Access
                         </button>
                         <p class="text-slate-400 text-sm text-center mt-4">
-                            We'll review your application and reach out within 2 business days
+                            We'll reach out within 1 business day to schedule a personalized demo
                         </p>
                     </div>
 
@@ -266,13 +170,8 @@
             // Get form data
             const formData = new FormData(this);
             const data = {
-                name: formData.get('name'),
                 email: formData.get('email'),
-                title: formData.get('title'),
                 company: formData.get('company'),
-                companySize: formData.get('companySize'),
-                sidekicks: formData.getAll('sidekick'),
-                message: formData.get('message'),
                 timestamp: new Date().toISOString()
             };
             
@@ -281,21 +180,12 @@
             console.log('Form submission:', data);
             
             // Create mailto link with form data
-            const subject = encodeURIComponent('Early Access Application - ' + data.company);
+            const subject = encodeURIComponent('Early Access Request - ' + data.company);
             const body = encodeURIComponent(`
-Early Access Application
+Early Access Request
 
-Name: ${data.name}
-Email: ${data.email}
-Title: ${data.title}
+Work Email: ${data.email}
 Company: ${data.company}
-Company Size: ${data.companySize || 'Not specified'}
-
-Interested Side-Kicks:
-${data.sidekicks.length > 0 ? data.sidekicks.join('\n') : 'None selected'}
-
-Message:
-${data.message || 'No message provided'}
 
 Submitted: ${data.timestamp}
             `);
