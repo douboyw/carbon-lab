@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side-Kick Dashboard - Carbon Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Carbon Lab Professional Color Palette */
+        :root {
+            --color-carbon-orange: #d97342;
+            --color-carbon-orange-hover: #c2613a;
+            --color-carbon-orange-light: #e88b5e;
+        }
+        .bg-carbon-orange { background-color: var(--color-carbon-orange); }
+        .bg-carbon-orange-hover:hover { background-color: var(--color-carbon-orange-hover); }
+        .text-carbon-orange { color: var(--color-carbon-orange); }
+        .text-carbon-orange-light { color: var(--color-carbon-orange-light); }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Syne', sans-serif; letter-spacing: -0.02em; }
+        .logo-font { font-family: 'Space Grotesk', monospace; }
+        
+        /* Carbon logo */
+        .carbon-logo::before {
+            content: 'C';
+            font-family: 'Space Grotesk', monospace;
+            font-weight: 700;
+            font-size: 1.75rem;
+            color: #d97342;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #d97342;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+            background: rgba(217, 115, 66, 0.1);
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-slate-900 border-b border-slate-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-8">
+                    <a href="/" class="carbon-logo logo-font text-2xl font-bold text-white tracking-wide flex items-center">Carbon Lab</a>
+                    <nav class="flex gap-6">
+                        <a href="#" class="text-carbon-orange font-semibold">Dashboard</a>
+                        <a href="#" class="text-slate-400 hover:text-white transition">Side-Kicks</a>
+                        <a href="#" class="text-slate-400 hover:text-white transition">Activity</a>
+                        <a href="#" class="text-slate-400 hover:text-white transition">Settings</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="text-right">
+                        <div class="text-sm font-semibold">Acme Corp</div>
+                        <div class="text-xs text-slate-400">jane@acme.com</div>
+                    </div>
+                    <div class="w-10 h-10 bg-carbon-orange rounded-full flex items-center justify-center font-bold">
+                        JD
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-8">
+        
+        <!-- Page Header -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-white mb-2">Your Side-Kicks</h1>
+            <p class="text-slate-400">Manage your AI finance team and monitor their performance</p>
+        </div>
+
+        <!-- Stats Overview -->
+        <div class="grid grid-cols-4 gap-6 mb-8">
+            <div class="bg-slate-900 rounded-lg p-6">
+                <div class="text-slate-400 text-sm mb-1">Active Side-Kicks</div>
+                <div class="text-3xl font-bold text-white">2</div>
+                <div class="text-xs text-green-400 mt-2">Both operational</div>
+            </div>
+            <div class="bg-slate-900 rounded-lg p-6">
+                <div class="text-slate-400 text-sm mb-1">Tasks This Month</div>
+                <div class="text-3xl font-bold text-white">847</div>
+                <div class="text-xs text-carbon-orange mt-2">+23% vs last month</div>
+            </div>
+            <div class="bg-slate-900 rounded-lg p-6">
+                <div class="text-slate-400 text-sm mb-1">Time Saved</div>
+                <div class="text-3xl font-bold text-white">142h</div>
+                <div class="text-xs text-carbon-orange mt-2">This month</div>
+            </div>
+            <div class="bg-slate-900 rounded-lg p-6">
+                <div class="text-slate-400 text-sm mb-1">Accuracy Rate</div>
+                <div class="text-3xl font-bold text-white">97%</div>
+                <div class="text-xs text-green-400 mt-2">Above target</div>
+            </div>
+        </div>
+
+        <!-- Active Side-Kicks -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold text-white mb-4">Active Side-Kicks</h2>
+            <div class="grid grid-cols-2 gap-6">
+                
+                <!-- Contract Wizard Card -->
+                <div class="bg-slate-900 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-carbon-orange/20 to-transparent p-6 border-b border-slate-800">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-1">Contract Wizard</h3>
+                                <div class="text-sm text-slate-400">Revenue Recognition</div>
+                            </div>
+                            <div class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">
+                                Active
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <div class="text-sm text-slate-400">Contracts Processed</div>
+                                <div class="text-2xl font-bold text-white">142</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-slate-400">Accuracy</div>
+                                <div class="text-2xl font-bold text-white">98%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-slate-400">Training Progress</span>
+                                <span class="text-carbon-orange font-semibold">Fully Trained</span>
+                            </div>
+                            <div class="bg-slate-800 rounded-full h-2">
+                                <div class="bg-carbon-orange rounded-full h-2" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="text-sm text-slate-400">Recent Activity:</div>
+                            <div class="text-sm text-slate-300">• Processed Q4 2025 renewals (12 contracts)</div>
+                            <div class="text-sm text-slate-300">• Generated revenue schedules for FY26</div>
+                            <div class="text-sm text-slate-300">• Flagged 2 contracts for manual review</div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="flex-1 px-4 py-2 bg-carbon-orange text-white font-semibold rounded-lg hover:bg-carbon-orange-hover transition">
+                                View Details
+                            </button>
+                            <button class="px-4 py-2 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition">
+                                Train
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fraud Fighter Card -->
+                <div class="bg-slate-900 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-carbon-orange/20 to-transparent p-6 border-b border-slate-800">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-1">Fraud Fighter</h3>
+                                <div class="text-sm text-slate-400">Fraud Detection</div>
+                            </div>
+                            <div class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">
+                                Active
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <div class="text-sm text-slate-400">Transactions Reviewed</div>
+                                <div class="text-2xl font-bold text-white">2,847</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-slate-400">Flags Raised</div>
+                                <div class="text-2xl font-bold text-white">14</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-slate-400">Training Progress</span>
+                                <span class="text-carbon-orange font-semibold">Fully Trained</span>
+                            </div>
+                            <div class="bg-slate-800 rounded-full h-2">
+                                <div class="bg-carbon-orange rounded-full h-2" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="text-sm text-slate-400">Recent Activity:</div>
+                            <div class="text-sm text-slate-300">• Monitored 2,847 transactions this week</div>
+                            <div class="text-sm text-slate-300">• Detected duplicate vendor payment (blocked)</div>
+                            <div class="text-sm text-slate-300">• Flagged unusual expense pattern for review</div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="flex-1 px-4 py-2 bg-carbon-orange text-white font-semibold rounded-lg hover:bg-carbon-orange-hover transition">
+                                View Details
+                            </button>
+                            <button class="px-4 py-2 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition">
+                                Train
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Coming Soon Side-Kicks -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold text-white mb-4">Available Side-Kicks</h2>
+            <div class="grid grid-cols-3 gap-6">
+                
+                <!-- Revenue Mapper -->
+                <div class="bg-slate-900/50 rounded-xl p-6">
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-lg font-bold text-white">Revenue Mapper</h3>
+                        <div class="px-3 py-1 bg-slate-500/20 text-slate-400 rounded-full text-xs font-semibold">
+                            Q1 2026
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">ARR waterfalls and cohort analysis</p>
+                    <button class="w-full px-4 py-2 bg-slate-800 text-slate-400 font-semibold rounded-lg cursor-not-allowed">
+                        Coming Soon
+                    </button>
+                </div>
+
+                <!-- Variance Detective -->
+                <div class="bg-slate-900/50 rounded-xl p-6">
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-lg font-bold text-white">Variance Detective</h3>
+                        <div class="px-3 py-1 bg-slate-500/20 text-slate-400 rounded-full text-xs font-semibold">
+                            Q1 2026
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">Automated variance analysis</p>
+                    <button class="w-full px-4 py-2 bg-slate-800 text-slate-400 font-semibold rounded-lg cursor-not-allowed">
+                        Coming Soon
+                    </button>
+                </div>
+
+                <!-- Invoice Magic -->
+                <div class="bg-slate-900/50 rounded-xl p-6">
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-lg font-bold text-white">Invoice Magic</h3>
+                        <div class="px-3 py-1 bg-slate-500/20 text-slate-400 rounded-full text-xs font-semibold">
+                            Q2 2026
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">AP automation and processing</p>
+                    <button class="w-full px-4 py-2 bg-slate-800 text-slate-400 font-semibold rounded-lg cursor-not-allowed">
+                        Coming Soon
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Recent Activity Feed -->
+        <div>
+            <h2 class="text-xl font-bold text-white mb-4">Recent Activity</h2>
+            <div class="bg-slate-900 rounded-xl p-6">
+                <div class="space-y-4">
+                    
+                    <div class="flex items-start gap-4 pb-4 border-b border-slate-800">
+                        <div class="w-2 h-2 bg-carbon-orange rounded-full mt-2"></div>
+                        <div class="flex-1">
+                            <div class="flex items-start justify-between mb-1">
+                                <div class="font-semibold text-white">Contract Wizard processed 12 Q4 renewals</div>
+                                <div class="text-xs text-slate-500">2 hours ago</div>
+                            </div>
+                            <div class="text-sm text-slate-400">All contracts validated and revenue schedules generated automatically</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 pb-4 border-b border-slate-800">
+                        <div class="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>
+                        <div class="flex-1">
+                            <div class="flex items-start justify-between mb-1">
+                                <div class="font-semibold text-white">Fraud Fighter flagged duplicate payment</div>
+                                <div class="text-xs text-slate-500">5 hours ago</div>
+                            </div>
+                            <div class="text-sm text-slate-400">Potential duplicate vendor payment detected and blocked for review</div>
+                            <button class="mt-2 text-sm text-carbon-orange hover:text-carbon-orange-light font-semibold">
+                                Review Flag →
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 pb-4 border-b border-slate-800">
+                        <div class="w-2 h-2 bg-carbon-orange rounded-full mt-2"></div>
+                        <div class="flex-1">
+                            <div class="flex items-start justify-between mb-1">
+                                <div class="font-semibold text-white">Fraud Fighter learned new pattern</div>
+                                <div class="text-xs text-slate-500">Yesterday</div>
+                            </div>
+                            <div class="text-sm text-slate-400">Updated vendor payment patterns based on your approval</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 pb-4 border-b border-slate-800">
+                        <div class="w-2 h-2 bg-carbon-orange rounded-full mt-2"></div>
+                        <div class="flex-1">
+                            <div class="flex items-start justify-between mb-1">
+                                <div class="font-semibold text-white">Contract Wizard generated FY26 revenue forecast</div>
+                                <div class="text-xs text-slate-500">Yesterday</div>
+                            </div>
+                            <div class="text-sm text-slate-400">Based on current contract portfolio and renewal probabilities</div>
+                            <button class="mt-2 text-sm text-carbon-orange hover:text-carbon-orange-light font-semibold">
+                                View Forecast →
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                        <div class="flex-1">
+                            <div class="flex items-start justify-between mb-1">
+                                <div class="font-semibold text-white">Month-end close completed</div>
+                                <div class="text-xs text-slate-500">3 days ago</div>
+                            </div>
+                            <div class="text-sm text-slate-400">Both Side-Kicks contributed to 4-day close cycle (vs 7-day manual)</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
